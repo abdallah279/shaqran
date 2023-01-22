@@ -1,7 +1,7 @@
 .header-m{
 
     .header-top{
-        padding: 14px 0;
+        padding: 15px 0;
         background-color: $light4;
 
         .head-top-con{
@@ -9,17 +9,17 @@
             .head-info{
                 display: flex;
                 align-items: center;
-                gap: 40px;
+                gap: 30px;
     
                 .item{
                     display: flex;
                     align-items: center;
                     gap: 8px;
-                    font-size: 14px;
+                    font-size: 13px;
                     color: $light;
     
                     .img{
-                        max-width: 15px;
+                        max-width: 14px;
                         max-height: 12px;
                         font-size: 10px;
                         color: $light;
@@ -36,11 +36,11 @@
                 transition: $main-transition;
 
                 .lang{
-                    font-size: 15px;
+                    font-size: 14px;
                 }
 
                 i{
-                    font-size: 12px;
+                    font-size: 11px;
                 }
 
                 &:hover{

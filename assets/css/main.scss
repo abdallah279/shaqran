@@ -130,15 +130,20 @@
     .filter-side{
         flex: 1;
     }
+
+    .filter-cards{
+        flex: 4.6;
+    }
 }
 
 // Start cards-container
 .cards-container{
-    flex: 4.6;
-    @include grid(234px, 18px);
+    @include grid(234px, 20px);
+    transition: all .6s cubic-bezier(0.68, -0.30, 0.265, 2.1);
 
     .card-m{
         position: relative;
+        transition: all .6s cubic-bezier(0.68, -0.30, 0.265, 2.1);
 
         .card-head{
             border-radius: 8px;
@@ -256,14 +261,14 @@
                             position: relative;
 
                             &:first-child{
-                                padding-left: 8px;
+                                @include dir-padding-right(8px);
                             }
                             &:first-child::after{
                                 position: absolute;
                                 content: '';
                                 top: 50%;
                                 transform: translateY(-50%);
-                                left: 0;
+                                @include dir-right(0);
                                 width: 1px;
                                 height: 20px;
                                 background-color: $border-color;
@@ -309,8 +314,6 @@
             }
         }
 
-
-        
         &:hover{
             .card-head{
                 border: none;
@@ -320,7 +323,7 @@
                     &.not-scale{
                         transform: scale(1);
                     }
-                    transform: scale(1.3);
+                    transform: scale(1.2);
 
                 }
             }
@@ -338,9 +341,52 @@
 
 
         }
+
+    }
+
+    &.verticale{
+        display: flex;
+        flex-direction: column;
+
+        .card-m{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 20px;
+            border: 1px solid $light4;
+            border-radius: 10px;
+            transition: $main-transition ;
+
+            .card-head{
+                height: 100%;
+                width: 280px;
+            }
+            
+            .card-m-body{
+                padding: 0 0 10px;
+                .card-content{
+                    transform: translateY(0px);
+                    border: none;
+                    border-radius: 0;
+                }
+            }
+            
+            &:hover{
+                box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+
+                .card-head{
+                    box-shadow: none;
+                }
+
+                .card-m-body{
+                    .card-content{
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
     }
 }
-
 
 // Start download Section
 .download-sec{
@@ -474,6 +520,20 @@
         bottom: 0;
         .owl-dot{
             background-color: $blue2 !important;
+        }
+    }
+}
+
+// Start Condtions Text
+.cond-text{
+    .form-text{
+        font-size: 14px;
+        color: $light5;
+        line-height: 1.8;
+        margin-bottom: 10px;
+
+        &:last-of-type{
+            margin-bottom: 0;
         }
     }
 }

@@ -1,6 +1,6 @@
 // loader js
 $(window).on("load", function () {
-    $(".loader").delay(600).fadeOut(1000);
+    $(".loader").delay(400).fadeOut(1000);
 });
 
 // Active Link
@@ -28,48 +28,10 @@ $(".navbar-m .links a").each(function () {
 //   searchIcon.classList.toggle('active');
 // })
 
-// Toggle dropDown
-let dropMenu = document.querySelectorAll('.dropdown-active');
-
-document.body.addEventListener('click', (e)=>{
-
-  if(e.target.closest('.active-m') || e.target.classList.contains('active-m')){
-
-    removeAllActive()
-    closeAllDrop()
-
-  } else if (e.target.classList.contains('show-drop') || e.target.closest('.show-drop')){
-
-    removeAllActive()
-    e.target.parentElement.classList.add('active-m');
-
-    closeAllDrop();
-
-    for(let i =0; i < dropMenu.length; i++){
-      if(dropMenu[i].getAttribute('data-drop') == e.target.getAttribute('data-drop') || dropMenu[i].getAttribute('data-drop') == e.target.closest('.show-drop').getAttribute('data-drop')){
-        dropMenu[i].classList.add('active-drop');
-      }
-    }
-
-  } else{
-
-    closeAllDrop()
-    removeAllActive()
-  }
-})
-
-function closeAllDrop(){
-  dropMenu.forEach((drop) =>{
-    drop.classList.remove('active-drop');
-  })
-}
-
-function removeAllActive(){
-  let activeM = document.querySelectorAll('.active-m');
-  activeM.forEach((ac) =>{
-    ac.classList.remove('active-m');
-  });
-}
+// dropDown stopPropagation
+$(".dropdown-menu").click(function(e){
+    e.stopPropagation();
+});
 
 
 // PassWord Show In Setting Page
@@ -98,25 +60,24 @@ function showPassword(input, icon){
 
 let isRtl = $('html[lang="ar"]').length > 0;
 
-
-// select-2
-// if($(".select-plugin")){
-//   $(".select-plugin").select2({
-//     dir: isRtl ? "rtl" : "ltr",
-//     minimumResultsForSearch: Infinity,
-//     dropdownCssClass: "dropdown-select-2",
-//     });
-// }
-
+// Normal Select To
 $(".select").select2({
   dir: isRtl ? "rtl" : "ltr",
   minimumResultsForSearch: Infinity,
 });
 
+// Search Select To
 $(".select-search").select2({
   dir: isRtl ? "rtl" : "ltr",
   minimumResultsForSearch: Infinity,
   theme: "custom-option-select-me"
+});
+
+// Filter Select To
+$(".select-filter").select2({
+  dir: isRtl ? "rtl" : "ltr",
+  minimumResultsForSearch: Infinity,
+  theme: "filter-m"
 });
 
 
@@ -141,26 +102,30 @@ $(document).ready(function(){
 
 });
 
-// favorite Icon
-// let favIcons = document.querySelectorAll('.favorite-icon');
 
-// favIcons.forEach((icon)=>{
+// Select All CheckBoxs
+$( 'input[type="checkbox"]' ).click( function () {
+  if($(this).is($('.check-all'))){
+      var dataCheck = $(this).attr("data-check");
+      $(`.${dataCheck} input[type="checkbox"]` ).prop('checked', this.checked)
+  } else{
 
-//   icon.addEventListener('click', ()=>{
-//     let ic = icon.querySelector('i')
+    if(this.closest('.check-boxs')){
+      this.closest('.check-boxs').querySelector('.check-all').checked = false;
+    }
+  }
+})
 
-//     if(ic.classList.contains('fa-regular')){
-  
-//       ic.classList.remove('fa-regular');
-//       ic.classList.add('fa-solid');
+// Filter
+let filterSelect = document.querySelector('.select-filter');
+if(filterSelect){
 
-//     } else {
+  filterSelect.onchange = function(){
+    if(filterSelect.options[filterSelect.selectedIndex].getAttribute('data-filter') == 'linear'){
+        $('.cards-container').addClass('verticale');
+    } else{
+        $('.cards-container').removeClass('verticale');
+    }
+  }
 
-//       ic.classList.add('fa-regular');
-//       ic.classList.remove('fa-solid');
-
-//     }
-
-//   })
-
-// });
+}

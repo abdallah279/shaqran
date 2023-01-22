@@ -151,6 +151,12 @@
     &:hover{
       color: $blue;
     }
+
+    i{
+      #{$ltr} & {
+        transform: rotateY(180deg);
+      }
+    }
   }
 
   &.media{
@@ -184,6 +190,24 @@
   @media screen and (max-width:$screen-sm) {
     font-size: 19px;
     margin-bottom: 18px;
+  }
+}
+
+// section-heading
+.section-heading{
+  margin-bottom: 25px;
+
+  .filter-select{
+    width: fit-content;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    .label-filter{
+      font-size: 16px;
+      font-family: fontDemi;
+      color: $black;
+    }
   }
 }
 
@@ -570,8 +594,14 @@
     display: block;
     height: 100%;
     border-style: solid;
-    border-width: 14px 8px 14px 0 ;
-    border-color: $blue2 transparent $blue2 $blue2;
+    #{$ltr} & {
+      border-width: 14px 0px 14px 8px ;
+      border-color: $blue2 $blue2 $blue2 transparent;
+    }
+    #{$rtl} & {
+      border-width: 14px 8px 14px 0 ;
+      border-color: $blue2 transparent $blue2 $blue2;
+    }
   }
 }
 
@@ -670,7 +700,14 @@
       color: $dark;
       transition: $main-transition;
       border: 1px solid $border-color;
-      
+
+      &.photo-input{
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: $placholder-color;
+        cursor: pointer;
+      }
 
       &::placeholder{
         font-size: 13px;
@@ -701,15 +738,15 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      @include dir-right(12px);
-      color: $placholder-color;
+      @include dir-right(14px);
+      color: $light;
       font-size: 15px;
       cursor: pointer;
     }
   }
 }
 
-// Select Two
+// Select Two For Search
 .select-search {
   ~ .select2-container--custom-option-select-me {
     width: 100% !important;
@@ -799,29 +836,109 @@
   }
 }
 
+// Select Two For Filter
+.select-filter {
+  ~ .select2-container--filter-m {
+    width: 85px !important;
 
-// Select Two
+    .select2-selection--single {
+      height: auto;
+      @include dir-padding-left(8px);
+      border-color: transparent;
+      background-color: transparent;
+      border-radius: none;
+      display: flex;
+      align-items: center;
+
+      .select2-selection__rendered {
+        color: $light;
+        font-size: 15px;
+        padding: 0 !important;
+      }
+
+      .select2-selection__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+        border: 0;
+        @include dir-right(20px);
+
+        &::after {
+          content: "\f107";
+          font-family: "Font Awesome 5 Free";
+          display: flex;
+          font-size: 14px;
+          color: $light;
+          font-weight: 900;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      @media (max-width: $screen-xs) {
+        padding: 10px 5px;
+      }
+    }
+
+    .select2-selection--single .select2-selection__arrow b {
+      display: none;
+    }
+    
+  }
+}
+
+.select2-container--filter-m{
+
+  .select2-dropdown {
+    width: 150px !important;
+    box-shadow: $main-shadow !important;
+    background-color: white;
+    border-radius: 8px !important;
+    overflow: hidden;
+    border: none;
+    margin-top: 10px;
+    .select2-results__options{
+      padding: 8px 20px;
+    }
+    .select2-results__option--highlighted.select2-results__option--selectable{
+      background-color: transparent;
+      color: $blue2;
+    }
+    
+    .select2-results__option.select2-results__option--selectable{
+      font-size: 15px;
+    }
+    
+    .select2-results__option{
+      background-color: transparent;
+      padding: 8px 0;
+      color: $light;
+      font-size: 14px;
+    }
+  }
+}
+
+
+// Normal Select Two
 .select {
   ~ .select2 {
     width: 100% !important;
-    min-height: 48px;
-    outline: none;
-    border: none;
-    font-size: 14px;
-    color: $dark;
-    transition: $main-transition;
 
     .select2-selection--single {
       height: 48px;
-      border-radius: 8px;
-      border-color: #ebc5c5;
       display: flex;
       align-items: center;
+      border-radius: 5px;
+      // padding: 0 12px;
+      outline: none;
+      font-size: 14px;
+      color: $dark;
+      border-color: $border-color;
 
       
       .select2-selection__rendered {
         color: $placholder-color;
-        font-size: 12px;
+        font-size: 13px;
       }
 
       .select2-selection__arrow {
@@ -832,7 +949,7 @@
         @include dir-right(12px);
 
         &::after {
-          content: "\f107";
+          content: "\f0dd";
           font-family: "Font Awesome 5 Free";
           display: flex;
           font-size: 13px;
@@ -921,118 +1038,175 @@
 }
 
 // CheckBox Input
-.check-boxs{
-  margin-top: 12px;
+.check-box{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &.form-check-m{
+    gap: 6px;
+    margin-bottom: 0px;
+  }
+
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+  }
 
   .check{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    input {
-      padding: 0;
-      height: initial;
-      width: initial;
-      margin-bottom: 0;
-      display: none;
-      cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid $border-color;
+    cursor: pointer;
+    transition: $main-transition;
+    position: relative;
+  
+    &:hover{
+      background-color: $white2;
     }
+  }
 
-    label {
-      position: relative;
+  &.form-check-m{
+    .check{
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+    }
+  }
+
+  input:checked + .check{
+    background-color: transparent;
+    border-color: $blue2;
+
+    &::after {
+      content: '\f00c';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 13px;
+      color: $blue2;
+    }
+  }
+
+  .check-text{
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  &.form-check-m{
+
+    input:checked + .check{
+      background-color: $blue2;
+  
+      &::after {
+        color: $white;
+      }
+    }
+  
+    .check-anchor{
       cursor: pointer;
+      color: $black;
       font-size: 15px;
-      color: $dark;
-
-      &:before {
-        content:'';
-        appearance: none;
-        background-color: #fff;
-        border: 1px solid $dark;
-        padding: 8px;
-        border-radius: 3px;
-        display: inline-block;
-        position: relative;
-        vertical-align: middle;
-        cursor: pointer;
-        @include dir-margin-right(6px);
+  
+      a{
+        color: $blue2;
+        text-decoration: underline;
+        transition: $main-transition;
+  
+        &:hover{
+          // text-decoration: none;
+          color: $blue;
+        }
       }
     }
   }
-}
 
-.check-boxs .check input:checked + label:before {
-  background-color: $dark;
-  border-color: $dark
-}
 
-.check-boxs .check input:checked + label:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 6px;
-  @include dir-left(6px);
-  width: 6px;
-  height: 10px;
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+
 }
 
 // RadioBoxs Inputs
-.radio-boxs{
+.radio-box{
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 8px;
+  margin-bottom: 8px;
 
-  .box{
-    
-    input {
-      display: none;
-    }
-    
-    label {
-      cursor: pointer;
-      position: relative;
-      color: $light;
-      font-size: 15px;
-      transition: $main-transition;
+  &:last-child{
+    margin-bottom: 0;
+  }
 
-      &:before {
-        content:'';
-        border: 2px solid #444;
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        display: inline-block;
-        vertical-align: middle;
-        cursor: pointer;
-        @include dir-margin-right(5px);
-        transition: $main-transition;
-      }
-    }
+  .input-radio{
+    width: 18px;
+    height: 18px;
+    accent-color: $blue2;
+    cursor: pointer;
+  }
+
+  .label-radio{
+    font-size: 15px;
+    color: $black;
+    cursor: pointer;
   }
 }
 
-.radio-boxs .box input:checked + label {
-  color: $dark;
+// user-photo-con
+.user-photo-con{
+  @include center;
+  flex-direction: column;
+  gap: 18px;
+
+  .user-text{
+    font-size: 16px;
+    color: $black;
+  }
 }
 
-.radio-boxs .box input:checked + label:before {
-  border-color: $dark;
-}
+.user-img{
+  position: relative;
+  @include circle(100px);
+  // border: 2px solid rgba($color: #000000, $alpha: .3);
+  backdrop-filter: blur(10px);
 
-.radio-boxs .box input:checked + label:after {
-  transition: $main-transition;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 5.4px;
-  @include dir-left(3.5px);
-  width: 15px;
-  height: 15px;
-  background-color: $dark;
-  border-radius: 50%;
+  .profile-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .user-camera{
+    position: absolute;
+    bottom: -6px;
+    @include dir-left(6px);
+    @include circle(30px);
+    @include center;
+    cursor: pointer;
+    background-color: $blue2;
+
+    img{
+      max-width: 16px;
+      max-height: 16px;
+    }
+  }
 }
 
 // upload-img
@@ -1074,11 +1248,12 @@
 .hidden-img{
   position: relative;
   flex-shrink: 0;
-  width: 90px;
-  height: 90px;
+  width: 45px;
+  height: 45px;
+  margin-top: 8px;
   
   img{
-    border-radius: 12px;
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1097,15 +1272,13 @@
 
 .remove-img{
   position:absolute;
-  top: -8px;
-  @include dir-right(-8px);
-  @include circle(20px);
+  top: -5px;
+  @include dir-right(-5px);
+  @include circle(15px);
   background-color: $red;
   color: #fff;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 12px;
+  @include center;
   cursor: pointer;
 }
 
@@ -1310,6 +1483,14 @@
         content: '\f107';
         font-family: "Font Awesome 5 Free";
         font-weight: 800;
+        #{$ltr} & {
+          margin-left: auto;
+          margin-right: unset;
+        }
+        #{$rtl} & {
+          margin-right: auto;
+          margin-left: unset;
+        }
     }
   
     
@@ -1330,6 +1511,14 @@
       margin-bottom: 3px;
       transition: $main-transition;
       cursor: pointer;
+      background: none;
+      width: 100%;
+
+      i{
+        #{$ltr} & {
+          transform: rotateY(180deg);
+        }
+      }
 
       &:last-of-type{
         margin-bottom: 0;
@@ -1344,4 +1533,29 @@
       }
     }
   }
+}
+
+.dropdown-menu{
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .6s cubic-bezier(0.68, -0.30, 0.265, 2.1);
+  box-shadow: $main-shadow;
+  padding: 15px;
+  border-radius: 6px;
+  width: 180px;
+  inset: 20px 112% auto auto;
+  transform: translate3d(0px, 0px, 0px);
+  border: none;
+
+  &.show{
+    opacity: 1;
+    pointer-events: auto;
+    inset: 0px 112% auto auto !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
+}
+
+.dropend .dropdown-toggle::after{
+  display: none;
 }

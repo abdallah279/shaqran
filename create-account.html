@@ -10,15 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
     <!-- Select 2 -->
     <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
-    <!-- fancybox -->
-    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
     <!-- intlTelInput -->
-    <!-- <link rel="stylesheet" href="./assets/plugins/intlTelInput/intlTelInput.css"> -->
     <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -168,17 +162,55 @@
             <div class="row">
                 <div class="col-lg-8 col-xl-6 mx-auto">
 
-                    <form action="investigation-code.html" class="form-style">
+                    <form action="index.html" class="form-style">
 
                         <!-- Form Heading -->
                         <div class="form-heading">
-                            <h3 class="form-title">إستعادة إسم المستخدم</h3>
+                            <h3 class="form-title">إنشاء حساب</h3>
                             <p class="form-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد 
                                 هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو 
                             </p>
                         </div>
 
-                        <!-- Phone Number -->
+                        <div class="input-g">
+                            <div class="user-photo-con">
+                                <div class="user-img">
+                                    <div class="profile-img">
+                                        <img src="assets/imgs/team-2.jpg" class="img" alt="">
+                                    </div>
+                                    <input type="file" id="profileImg" class="hidden-input img-upload-input profile">
+                                    <label for="profileImg" class="user-camera">
+                                        <img src="assets/imgs/icons/icons8-camera-24.png" alt="">
+                                    </label>
+                                </div>
+
+                                <span class="user-text">الصورة الشخصية</span>
+                            </div>
+                        </div>
+
+                        <!-- UserName -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                إسم المستخدم
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل إسم المستخدم">
+                            </div>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الإسم
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل الإسم">
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
                         <div class="input-g">
                             <label class="main-label">
                                 رقم الجوال
@@ -189,9 +221,117 @@
                             </div>
                         </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="main-btn transparent lg mt-4">إرسال</button>
+                        <!-- Email -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                البريد الإلكتروني
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="email" class="input-me" placeholder="ادخل البريد الإلكتروني">
+                            </div>
+                        </div>
 
+                        <!-- Country -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الدولة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر الدولة</option>
+                                    <option value="">السعودية</option>
+                                    <option value="">مصر</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                المدينة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر المدينة</option>
+                                    <option value="">جدة</option>
+                                    <option value="">الرياض</option>
+                                    <option value="">الدمام</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Id -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم الهوية / الإقامة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم الهوية / الإقامة">
+                            </div>
+                        </div>
+
+                        <!-- Photo -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                صورة جواز السفر
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="file" name="" id="idPhoto" class="hidden-input img-upload-input">
+                                <label for="idPhoto" class="input-me photo-input">
+                                    ارفق صورة جواز السفر
+                                </label>
+                                <i class="fa-regular fa-file main-icon"></i>
+                            </div>
+                            <div class="photo-input-new"></div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                كلمة المرور
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                تأكيد كلمة المرور
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
+                            </div>
+                        </div>
+
+                        <!-- Check Box -->
+                        <div class="input-g">
+                            <div class="check-box form-check-m">
+                                <input type="checkbox" name="" id="conditions">
+                                <label class="check" for="conditions"></label>
+                                <label class="check-anchor" for="conditions">
+                                    موافق على 
+                                    <a href="termes-conditions.html">الشروط والأحكام</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="main-btn transparent lg mt-4 mb-3">إنشاء حساب</button>
+
+                        <!-- Have Account -->
+                        <a href="login.html" class="not-account-link">
+                            يوجد لديك حساب ,
+                            <span class="not-link">قم بتسجيل الدخول</span>
+                        </a>
                     </form>
 
                 </div>
@@ -310,14 +450,77 @@
     <script src="./assets/plugins/select2/select2.js"></script>
     <!-- intlTelInput -->
     <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
+
+    <!-- Upload Img -->
+    <script>
+        let loginInputs = document.querySelectorAll('.img-upload-input');
+
+        loginInputs.forEach((input) =>{
+            if(input.classList.contains('profile')){
+                let img = input.parentElement.querySelector('.profile-img .img');
+                let imageSrc = img.getAttribute('src');
+                input.onchange = function(){
+    
+                    let reader = new FileReader();
+                    if(input.files[0]){
+                        reader.readAsDataURL(input.files[0]);
+                    } else{
+                        img.setAttribute('src', imageSrc);
+                        img.classList.remove('wid');
+                    }
+    
+                    reader.onload = ()=>{
+    
+                        img.setAttribute('src', reader.result);
+                        img.classList.add('wid');
+    
+                    }
+                }
+            } else{
+                let imgContainer = input.closest('.input-g').querySelector('.photo-input-new');
+                // let imageSrc = img.getAttribute('src');
+                input.onchange = function(){
+
+                    imgContainer.innerHTML = ``;
+                    let imgHidden = document.createElement('div');
+                    imgHidden.classList.add('hidden-img');
+
+                    imgContainer.append(imgHidden);
+
+                    // Create Remove Button
+                    let removeBtn = document.createElement('span');
+                    removeBtn.classList.add('remove-img');
+                    removeBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+                
+                    // Append The Button To Main Div
+                    imgHidden.append(removeBtn);
+                
+                    // Remove Parent Div From Page When Click The Button
+                    removeBtn.onclick= function(e){
+                        e.target.closest('.hidden-img').remove();
+                    }
+    
+                    let reader = new FileReader();
+                    reader.onload = ()=>{
+                        // Create Img
+                        let img = document.createElement('img');
+                        img.setAttribute('src', reader.result);
+                        
+                        // Append The Img To Main Div
+                        imgHidden.append(img);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        });
+    </script>
+
     <!-- intlTelInput -->
     <script>
         var input = document.querySelector("#telephone");
         window.intlTelInput(input,({
             autoPlaceholder:"ادخل",
-            customPlaceholder:"kggg",
             initialCountry:'sa',
-            // nationalMode:false,
             separateDialCode:true,
         }));
 
