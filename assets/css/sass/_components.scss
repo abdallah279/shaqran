@@ -310,28 +310,47 @@
     }
 }
 
-// Dots Slider
-.owl-dots{
-  @include center;
-  gap: 10px;
-  position: absolute !important;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  z-index: 3;
+.rate-icons{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: 6px;
 
-  .owl-dot{
-      width: 18px;
-      height: 8px;
-      border-radius: 10px;
-      opacity: .5;
+  i{
+      font-size: 13px;
+      color: $gold2;
+  }
 
-      &.active{
-          width: 35px;
-          opacity: 1;
-      }
+  &.lg{
+    margin-bottom: 20px;
+    i{
+      font-size: 15px;
+    }
   }
 }
+
+// Dots Slider
+// .owl-dots{
+//   @include center;
+//   gap: 10px;
+//   position: absolute !important;
+//   bottom: 20px;
+//   left: 0;
+//   width: 100%;
+//   z-index: 3;
+
+//   .owl-dot{
+//       width: 18px;
+//       height: 8px;
+//       border-radius: 10px;
+//       opacity: .5;
+
+//       &.active{
+//           width: 35px;
+//           opacity: 1;
+//       }
+//   }
+// }
 
 // Nav Slider
 .owl-nav{
@@ -478,7 +497,7 @@
     }
 
     &.transparent{
-      background-color: transparent;
+      background-color: $white;
       color: $blue2;
       border-color: $blue2;
 
@@ -524,6 +543,25 @@
     }
 }
 
+.sm-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 5px;
+  border: 1px solid $blue2;
+  color: $blue2;
+  font-size: 16px;
+  @include center;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: $main-transition;
+
+  &:hover, &.active{
+    background-color: $blue2;
+    color: $white;
+  }
+}
+
 .buttons-m{
   @include center;
   flex-wrap: wrap;
@@ -556,9 +594,47 @@
   box-shadow: $sec-shadow;
 }
 
+.bg-light{
+  background-color: $white3;
+}
+
+.card-style{
+  background-color: $white;
+  border-radius: 8px;
+  position: relative;
+
+  a.anchor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.card-padding{
+  padding: 23px;
+}
+
+.main-card-title{
+  font-size: 17px;
+  min-height: 65px;
+  padding: 0 20px;
+  @include between;
+  color: $black;
+  border-bottom: 1px solid $light3;
+  margin-bottom: 0;
+}
+
+.desc{
+  font-size: 14px;
+  color: $light;
+  line-height: 1.9;
+}
+
 .star{
   position: absolute;
-  top: 10px;
+  top: 12px;
   @include dir-left(10px);
   background-color: $white;
   font-size: 12px;
@@ -601,6 +677,41 @@
     #{$rtl} & {
       border-width: 14px 8px 14px 0 ;
       border-color: $blue2 transparent $blue2 $blue2;
+    }
+  }
+
+  &.red{
+    .text{
+      background-color: $red;
+    }
+
+    .transparent{
+      #{$ltr} & {
+        border-color: $red $red $red transparent;
+      }
+      #{$rtl} & {
+        border-color: $red transparent $red $red;
+      }
+    }
+  }
+
+  &.lg{
+    position: absolute;
+    top: 12px;
+    height: 35px;
+
+    .text{
+      font-size: 14px;
+    }
+
+    .transparent{
+
+      #{$ltr} & {
+        border-width: 16px 0px 16px 10px ;
+      }
+      #{$rtl} & {
+        border-width: 16px 10px 16px 0 ;
+      }
     }
   }
 }
@@ -668,13 +779,10 @@
 .input-g{
   margin-bottom: 18px;
 
-  // &:last-of-type{
-  //   margin-bottom: 0;
-  // }
-
   .main-label{
     margin-bottom: 10px;
     font-size: 16px;
+    // font-family: fontDemi;
     color: $dark;
     display: flex;
     align-items: center;
@@ -730,6 +838,16 @@
 
       &.text-area{
         height: 145px;
+        padding: 12px;
+      }
+
+      &.text-area-lg{
+        height: 298px;
+        padding: 12px;
+      }
+
+      &.text-area-sm{
+        height: 90px;
         padding: 12px;
       }
     }
@@ -981,6 +1099,53 @@
   li {
     word-wrap: break-word;
     font-size: 14px;
+  }
+}
+
+.buttons-container{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.number-input{
+  @include center;
+  gap: 8px;
+  border: 1px solid $light;
+  border-radius: 5px;
+  width: 100px;
+  height: 42px;
+
+  input{
+    color: $light;
+    font-size: 16px;
+    width: 25px;
+    text-align: center;
+  }
+
+  .btn-num{
+    font-size: 16px;
+    color: $blue2;
+    cursor: pointer;
+  }
+}
+
+.add-to-cart{
+  padding: 0 15px;
+  height: 42px;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  transition: $main-transition;
+  font-size: 15px;
+  @include center;
+  gap: 8px;
+  color: $blue;
+  background-color: transparent;
+
+  &:hover{
+    background-color: $blue;
+    color: $white;
   }
 }
 
@@ -1319,6 +1484,11 @@
 }
 
 /********************* Rating Modal *********************/
+.rating-star{
+  align-items: flex-start !important;
+  margin-bottom: 22px;
+}
+
 .js-wc-star-rating{
 
   .js-wc-rating-value , .js-wc-label{
@@ -1326,7 +1496,7 @@
   }
 
   i{
-    font-size: 32px !important;
+    font-size: 26px !important;
     cursor: pointer;
   }
 }
@@ -1558,4 +1728,56 @@
 
 .dropend .dropdown-toggle::after{
   display: none;
+}
+
+
+/********************* pagenation *********************/
+.product-pagenation{
+  @include between;
+  margin-top: 35px;
+
+  .pagenation-text{
+    font-size: 19px;
+    font-family: fontDemi;
+    color: $black;
+    
+    .numbers{
+      font-size: 18px;
+      color: $light;
+      @include dir-margin-left(15px);
+      font-family: fontMed;
+    }
+  }
+
+  .pagination-me{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .page-link{
+      border: none;
+      font-size: 20px;
+      border-radius: 4px;
+      color: $light5;
+      padding: .225rem .75rem;
+      border: 1px solid transparent;
+      transition: $main-transition;
+
+      i{
+        font-size: 15px;
+      }
+
+      &:focus{
+        box-shadow: none;
+        background-color: transparent;
+        border-color: $blue2;
+      }
+    }
+
+    .page-item.active .page-link{
+      border-color: $blue2;
+      color: $blue2;
+      background-color: transparent;
+    }
+  }
 }
