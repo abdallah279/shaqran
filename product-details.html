@@ -119,7 +119,7 @@
                         <a href="#" class="link">
                             <img src="assets/imgs/icons/heart.png" alt="">
                         </a>
-                        <a href="#" class="link">
+                        <a href="shopping-cart.html" class="link">
                             <img src="assets/imgs/icons/cart.png" alt="">
                             <span class="number">00.00</span>
                         </a>
@@ -179,27 +179,10 @@
                             <img src="assets/imgs/product-photo-2.jpg" alt="" class="pro-slide-img">
                             <img src="assets/imgs/product-photo-3.jpg" alt="" class="pro-slide-img">
 
-                            <img src="assets/imgs/product-photo.png" alt="" class="pro-slide-img">
-                            <img src="assets/imgs/product-photo-4.jpg" alt="" class="pro-slide-img">
-                            <img src="assets/imgs/product-photo-2.jpg" alt="" class="pro-slide-img">
-                            <img src="assets/imgs/product-photo-3.jpg" alt="" class="pro-slide-img">
-
                         </div>
 
                         <!-- Carousel Thumbs -->
                         <div class="dots-imgs owl-carousel owl-theme" id="thumbs">
-                            <div class="owl-dot">
-                                <img src="assets/imgs/product-photo.png" alt="" class="dot-img">
-                            </div>
-                            <div class="owl-dot">
-                                <img src="assets/imgs/product-photo-4.jpg" alt="" class="dot-img">
-                            </div>
-                            <div class="owl-dot">
-                                <img src="assets/imgs/product-photo-2.jpg" alt="" class="dot-img">
-                            </div>
-                            <div class="owl-dot">
-                                <img src="assets/imgs/product-photo-3.jpg" alt="" class="dot-img">
-                            </div>
                             <div class="owl-dot">
                                 <img src="assets/imgs/product-photo.png" alt="" class="dot-img">
                             </div>
@@ -283,7 +266,22 @@
     
                                 </div>
 
-                                
+                                <div class="numbers-form input-g">
+                                    <div class="number-item pr-old">
+                                        <span class="price">150 ر.س</span>
+                                        <span class="old-price">200 ر.س</span>
+                                    </div>
+
+                                    <div class="number-item">
+                                        <span class="first">العدد المتوفر:</span>
+                                        <span class="two">23</span>
+                                    </div>
+
+                                    <div class="number-item">
+                                        <span class="first">تاريخ انتهاء الخصم:</span>
+                                        <span class="two">25/9/2023</span>
+                                    </div>
+                                </div>
     
                                 <div class="input-g">
                                     <label for="" class="main-label">أضف ملاحظة على طلبك</label>
@@ -817,7 +815,7 @@
             <p class="copy-text">
                 <span>جميع الحقوق محفوظة لشركة شقران للتسويق</span>
                 <span>-</span>
-                <a href="#">تصميم وبرمجة مؤسسة أوامر الشبكة</a>
+                <a href="https://aait.sa/" target="_blank">تصميم وبرمجة مؤسسة أوامر الشبكة</a>
             </p>
         </div>
     </div>
@@ -943,26 +941,6 @@
             stars: 5,
         });
 
-    </script>
-
-    <!-- Input Count -->
-    <script>
-        $(document).ready(function() {
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 1 ? 1 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
-		});
     </script>
 
     <!-- Heart -->
