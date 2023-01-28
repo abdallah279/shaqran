@@ -175,36 +175,99 @@
                 </div>
 
                 <!-- Navbar Buttons -->
-                <div class="buttons-m">
-                    <a href="login.html" class="main-btn sm transparent">تسجيل دخول</a>
-                    <a href="open-stor.html" class="main-btn sm up">افتح متجرك</a>
+                <div <div class="buttons-m">
+                    <a href="add-ads.html" class="main-btn sm transparent">أضف اعلان</a>
+                    <a href="add-mazad.html" class="main-btn sm up">أضف مزاد</a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- End Navbar -->
 
-    <!-- Start Login Section -->
-    <div class="login-section main-padding">
+    <!-- Start Form Section -->
+    <div class="account-section main-padding">
         <div class="container">
+
+            <!-- Page Title -->
+            <div class="page-title">
+                <h3 class="title">حسابي</h3>
+
+                <div class="buttons-m">
+                    <a href="platform-commission.html" class="main-btn sm2 blue up">عمولة المنصة</a>
+                    <a href="open-store.html" class="main-btn sm2 transparent">افتح متجرك</a>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-lg-8 col-xl-6 mx-auto">
 
-                    <form action="index.html" class="form-style">
+                <!-- SideBar -->
+                <div class="col-xl-3">
+                    <div class="side-bar">
 
-                        <!-- Form Heading -->
-                        <div class="form-heading">
-                            <h3 class="form-title">إنشاء حساب</h3>
-                            <p class="form-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد 
-                                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو 
-                            </p>
+                        <!-- Side Link -->
+                        <div class="side-links mb-5">
+
+                            <a href="user-account.html" class="side-link active">
+                                الملف الشخصي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                طلباتي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                إعلاناتي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                مزايداتي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                محفظتي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                فواتيري
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                تقييماتي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                محادثاتي
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
+                            <a href="#" class="side-link">
+                                عناويني
+                                <i class="fa-solid fa-angle-left"></i>
+                            </a>
+
                         </div>
 
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="col-lg-8 col-xl-6 ">
+
+                    <form action="" class="form-style">
+
+                        <!-- Photo -->
                         <div class="input-g">
                             <div class="user-photo-con">
                                 <div class="user-img">
                                     <div class="profile-img">
-                                        <img src="assets/imgs/Ellipse 6185.png" class="img" alt="">
+                                        <img src="assets/imgs/stor1.png" class="img" alt="">
                                     </div>
                                     <input type="file" id="profileImg" class="hidden-input img-upload-input profile">
                                     <label for="profileImg" class="user-camera">
@@ -213,17 +276,6 @@
                                 </div>
 
                                 <span class="user-text">الصورة الشخصية</span>
-                            </div>
-                        </div>
-
-                        <!-- UserName -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                إسم المستخدم
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="text" class="input-me" placeholder="ادخل إسم المستخدم">
                             </div>
                         </div>
 
@@ -240,6 +292,7 @@
 
                         <!-- Phone -->
                         <div class="input-g">
+                            <!-- <a href="#"></a> -->
                             <label class="main-label">
                                 رقم الجوال
                                 <span class="label-hint">*</span>
@@ -291,31 +344,252 @@
                             </div>
                         </div>
 
-                        <!-- Id -->
+                        <!-- Address -->
                         <div class="input-g">
                             <label class="main-label">
-                                رقم الهوية / الإقامة
+                                العنوان
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل رقم الهوية / الإقامة">
+                                <input type="text" class="input-me" placeholder="ادخل العنوان">
+                                <i class="fa-solid fa-location-dot main-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Cat -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الأقسام
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر الأقسام</option>
+                                    <option value="">الأقسام</option>
+                                    <option value="">الأقسام</option>
+                                    <option value="">الأقسام</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم السجل التجاري / رمز وثيقة العمل الحر
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم السجل التجاري / رمز وثيقة العمل الحر">
                             </div>
                         </div>
 
                         <!-- Photo -->
                         <div class="input-g">
                             <label class="main-label">
-                                صورة جواز السفر
+                                صورة السجل التجاري / وثيقة العمل الحر
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
                                 <input type="file" name="" id="idPhoto" class="hidden-input img-upload-input">
                                 <label for="idPhoto" class="input-me photo-input">
-                                    ارفق صورة جواز السفر
+                                    ارفق صورة السجل التجاري / وثيقة العمل الحر
                                 </label>
                                 <i class="fa-regular fa-file main-icon"></i>
                             </div>
                             <div class="photo-input-new"></div>
+                        </div>
+
+                        <!-- Radio -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                توفر رقم ضريبي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+
+                                <div class="row">
+        
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio1" id="radioUp" class="input-radio">
+                                            <label for="radioUp" class="label-radio"> متوفر</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio1" id="radioDown" class="input-radio">
+                                            <label for="radioDown" class="label-radio">غير متوفر</label>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الرقم الضريبي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل الرقم الضريبي">
+                            </div>
+                        </div>
+
+                        <!-- Photo -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                صورة وثيقة الرقم الضريبي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="file" name="" id="idPhoto2" class="hidden-input img-upload-input">
+                                <label for="idPhoto2" class="input-me photo-input">
+                                    ارفق صورة وثيقة الرقم الضريبي
+                                </label>
+                                <i class="fa-regular fa-file main-icon"></i>
+                            </div>
+                            <div class="photo-input-new"></div>
+                        </div>
+
+                        <!-- Radio -->
+                        <div class="input-g">
+                            <label class="main-label">
+                               طريقة دفع مستحقات الادارة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+
+                                <div class="row">
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio2" id="radioBak" class="input-radio">
+                                            <label for="radioBak" class="label-radio">باقات</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio2" id="radio3om" class="input-radio">
+                                            <label for="radio3om" class="label-radio">عمولة</label>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Radio -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                خدمة التوصيل الذاتي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+
+                                <div class="row">
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio3" id="radioAvl" class="input-radio">
+                                            <label for="radioAvl" class="label-radio">متوفرة</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio3" id="radioUnAvl" class="input-radio">
+                                            <label for="radioUnAvl" class="label-radio">غير متوفرة</label>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                قيمة التوصيل
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل قيمة التوصيل">
+                                <span class="main-icon blue">ر.س</span>
+                            </div>
+                        </div>
+
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                أقل قيمة للتوصيل المجاني
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل أقل قيمة للتوصيل المجاني">
+                                <span class="main-icon blue">ر.س</span>
+                            </div>
+                        </div>
+
+                        <!-- Company -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                شركات الشحن المتاح التوصيل من خلالها
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select" multiple>
+                                    <option value="" selected disabled>اختر شركات الشحن المتاح التوصيل من خلالها</option>
+                                    <option value="">شركات الشحن</option>
+                                    <option value="">شركات الشحن</option>
+                                    <option value="">شركات الشحن</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Bank Name -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                إسم البنك
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل إسم البنك">
+                            </div>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                إسم صاحب الحساب
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل إسم صاحب الحساب">
+                            </div>
+                        </div>
+
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم الحساب البنكي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم الحساب البنكي">
+                            </div>
+                        </div>
+
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم الايبان
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم الايبان">
+                            </div>
                         </div>
 
                         <!-- Password -->
@@ -343,30 +617,38 @@
                         <!-- Check Box -->
                         <div class="input-g">
                             <div class="check-box form-check-m">
+                                <input type="checkbox" name="" id="ثndorsement">
+                                <label class="check" for="ثndorsement"></label>
+                                <label class="check-anchor" for="ثndorsement">
+                                    إقرار وتعهد بصحة البيانات المدخلة و أي تلاعب سوف يعرضك للمساءلة 
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Check Box -->
+                        <div class="input-g">
+                            <div class="check-box form-check-m">
                                 <input type="checkbox" name="" id="conditions">
                                 <label class="check" for="conditions"></label>
                                 <label class="check-anchor" for="conditions">
-                                    موافق على 
+                                    إقرار بالموافقة على 
                                     <a href="termes-conditions.html">الشروط والأحكام</a>
                                 </label>
                             </div>
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="main-btn transparent md mt-4 mb-3">إنشاء حساب</button>
+                        <div class="form-btns mt-4">
+                            <button type="submit" class="main-btn transparent md">إنشاء حساب</button>
+                        </div>
 
-                        <!-- Have Account -->
-                        <a href="login.html" class="not-account-link">
-                            يوجد لديك حساب ,
-                            <span class="not-link">قم بتسجيل الدخول</span>
-                        </a>
                     </form>
 
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Login Section -->
+    <!-- End Form Section -->
 
 
     <!-- Start Footer -->

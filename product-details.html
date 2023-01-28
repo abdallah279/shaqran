@@ -49,10 +49,22 @@
         
                     </div>
         
-                    <a href="#" class="head-lang">
-                        <span class="lang">AR</span>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </a>
+                    <div class="dropdown">
+                        <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="lang">AR</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <!-- DropDown -->
+                        <ul class="dropdown-menu drop-lang">
+                            <li>
+                                <a href="#" class="lang-item">AR</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item">En</a>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -66,7 +78,7 @@
                         <img src="assets/imgs/logo.png" alt="" class="logo">
                     </a>
         
-                    <form action="" class="search">
+                    <form action="search.html" class="search search-form">
                         <div class="search-select-container">
                             <select name="" id="" class="select-search">
                                 <option value="">منتجات</option>
@@ -107,7 +119,7 @@
                     </div>
 
                     <div class="links-icons">
-                        <a href="#" class="link">
+                        <a href="user-account.html" class="link">
                             <img src="assets/imgs/icons/user-n.png" alt="">
                         </a>
                         <a href="#" class="link">
@@ -139,8 +151,24 @@
         <div class="container">
             <div class="navbar-content">
 
+                <!-- Icons Mobile -->
+                <div class="mobile-buttons">
+                    <button type="button" class="mobile-btn side-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button type="button" class="mobile-btn search-open">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
                 <!-- Navbar Links -->
                 <div class="links">
+                    <a href="index.html" class="logo">
+                        <img src="assets/imgs/logo.png" alt="">
+                    </a>
+                    <img src="assets/imgs/icons/close.png" alt="" class="close">
                     <a href="index.html" class="link">الرئيسية</a>
                     <a href="stors.html" class="link">المتاجر</a>
                     <a href="ads.html" class="link">الإعلانات</a>
@@ -169,7 +197,7 @@
             <div class="carousel-information card-style card-padding mb-4">
                 <div class="row gy-5">
 
-                    <div class="col-lg-7">
+                    <div class="col-xl-7 col-lg-6">
 
                         <!-- Carousel Big -->
                         <div class="product-carousel owl-carousel owl-theme" id="big">
@@ -199,7 +227,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-xl-5 col-lg-6">
                         <div class="product-content">
                             <!-- Type -->
                             <span class="type-p red lg">
@@ -394,13 +422,13 @@
             </div>
             <!-- End description Section -->
 
-            <div class="row gy-5 mb-4">
-                
+            <div class="row gy-4 mb-4">
+
                 <!-- Rating -->
                 <div class="col-lg-6">
                     <div class="description card-style height-full">
                         <div class="main-card-title">التقييمات</div>
-                        <div class="card-content">
+                        <div class="card-content pb-3">
 
                             <div class="rating-items">
 
@@ -454,7 +482,7 @@
 
                             </div>
 
-                            <a href="ratings.html" class="main-btn transparent mx-auto">عرض المزيد</a>
+                            <a href="ratings.html" class="main-btn transparent mx-auto mt-1">عرض المزيد</a>
                         </div>
                     </div>
                 </div>
@@ -725,7 +753,7 @@
     <!-- Start Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row footer-cards g-5 gy-5">
+            <div class="row footer-cards gy-4">
 
                 <!-- Footer Logo And Social -->
                 <div class="col-lg-3 col-md-6 col-12">
@@ -761,7 +789,7 @@
                 </div>
 
                 <!-- Footer Links -->
-                <div class="col-lg-3 col-md-4 col-6">
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="foot-content">
                         <h3 class="footer-head">روابط سريعة</h3>
                         <ul class="footer-links">
@@ -775,7 +803,7 @@
                 </div>
 
                 <!-- Footer Links -->
-                <div class="col-lg-3 col-md-2 col-6">
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="foot-content">
                         <h3 class="footer-head">روابط سريعة</h3>
                         <ul class="footer-links">
@@ -789,7 +817,7 @@
                 </div>
 
                 <!-- Footer Contact -->
-                <div class="col-lg-3 col-md-2 col-6">
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="foot-content">
                         <h3 class="footer-head">روابط سريعة</h3>
                         <ul class="footer-links">
@@ -821,6 +849,8 @@
     </div>
     <!-- End Copy Right -->
 
+    <div class="overlay-m"></div>
+
 
 
     <!-- Bootstrap 5 -->
@@ -850,6 +880,7 @@
                     nav: false,
                     dots: false,
                     autoplay: true,
+                    margin: 8,
                     autoplayTimeout: 5000,
                     autoplaySpeed: 1500,
                     smartSpeed: 1500,
@@ -866,7 +897,7 @@
                 .addClass("current");
             })
                 .owlCarousel({
-                items: 4,
+                items: 2,
                 rtl: true,
                 dots: false,
                 nav: false,
@@ -874,7 +905,22 @@
                 smartSpeed: 500,
                 // slideSpeed: 500,
                 slideBy: 4,
-                responsiveRefreshRate: 100
+                responsiveRefreshRate: 100,
+
+                responsive:{
+                    1200: {
+                        items: 4,
+                    },
+                    992: {
+                        items: 3,
+                    },
+                    768: {
+                        items: 4,
+                    },
+                    375: {
+                        items: 3,
+                    },
+                }
             })
             .on("changed.owl.carousel", syncPosition2);
 
@@ -948,6 +994,14 @@
         $('.heart-btn').on('click', function(){
             $(this).toggleClass('active');
         });
+    </script>
+
+    <script>
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            $('.store-med').addClass('vert');
+        } else {
+            $('.store-med').removeClass('vert');
+        }
     </script>
 
     <!-- Main Js -->

@@ -54,10 +54,20 @@
                 border: 1px solid transparent;
                 outline: 3px solid transparent;
 
+                @media screen and (max-width:$screen-xs) {
+                    @include circle(35px);
+                }
+
                 img{
                     max-width: 18px;
                     max-height: 18px;
                     transition: $main-transition;
+                    
+                    @media screen and (max-width:$screen-xs) {
+                        max-width: 14px;
+                        max-height: 14px;
+                    }
+    
                 }
 
                 &:hover{

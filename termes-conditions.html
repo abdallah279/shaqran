@@ -46,10 +46,22 @@
         
                     </div>
         
-                    <a href="#" class="head-lang">
-                        <span class="lang">AR</span>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </a>
+                    <div class="dropdown">
+                        <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="lang">AR</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <!-- DropDown -->
+                        <ul class="dropdown-menu drop-lang">
+                            <li>
+                                <a href="#" class="lang-item">AR</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item">En</a>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -63,7 +75,7 @@
                         <img src="assets/imgs/logo.png" alt="" class="logo">
                     </a>
         
-                    <form action="" class="search">
+                    <form action="search.html" class="search search-form">
                         <div class="search-select-container">
                             <select name="" id="" class="select-search">
                                 <option value="">منتجات</option>
@@ -103,7 +115,7 @@
                     </div>
 
                     <div class="links-icons">
-                        <a href="#" class="link">
+                        <a href="user-account.html" class="link">
                             <img src="assets/imgs/icons/user-n.png" alt="">
                         </a>
                         <a href="#" class="link">
@@ -135,8 +147,24 @@
         <div class="container">
             <div class="navbar-content">
 
+                <!-- Icons Mobile -->
+                <div class="mobile-buttons">
+                    <button type="button" class="mobile-btn side-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button type="button" class="mobile-btn search-open">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
                 <!-- Navbar Links -->
                 <div class="links">
+                    <a href="index.html" class="logo">
+                        <img src="assets/imgs/logo.png" alt="">
+                    </a>
+                    <img src="assets/imgs/icons/close.png" alt="" class="close">
                     <a href="index.html" class="link">الرئيسية</a>
                     <a href="stors.html" class="link">المتاجر</a>
                     <a href="ads.html" class="link">الإعلانات</a>
@@ -201,7 +229,7 @@
     <!-- Start Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row footer-cards g-5 gy-5">
+            <div class="row footer-cards gy-4">
 
                 <!-- Footer Logo And Social -->
                 <div class="col-lg-3 col-md-6 col-12">
@@ -237,7 +265,7 @@
                 </div>
 
                 <!-- Footer Links -->
-                <div class="col-lg-3 col-md-4 col-6">
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="foot-content">
                         <h3 class="footer-head">روابط سريعة</h3>
                         <ul class="footer-links">
@@ -251,7 +279,7 @@
                 </div>
 
                 <!-- Footer Links -->
-                <div class="col-lg-3 col-md-2 col-6">
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="foot-content">
                         <h3 class="footer-head">روابط سريعة</h3>
                         <ul class="footer-links">
@@ -265,7 +293,7 @@
                 </div>
 
                 <!-- Footer Contact -->
-                <div class="col-lg-3 col-md-2 col-6">
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="foot-content">
                         <h3 class="footer-head">روابط سريعة</h3>
                         <ul class="footer-links">
@@ -296,6 +324,8 @@
         </div>
     </div>
     <!-- End Copy Right -->
+
+    <div class="overlay-m"></div>
 
 
 

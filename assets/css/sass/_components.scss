@@ -35,19 +35,30 @@
   display: flex;
   align-items: center;
   position: relative;
-  height: 42px;
   margin: 0;
 
   .search-select-container{
     width: 130px;
-    height: 100%;
+    height: 42px;
     position: relative;
+
+    @media screen and (max-width:$screen-xs) {
+      width: 110px;
+    }
   }
 
   .search-input{
       width: 280px;
-      height: 100%;
+      height: 42px;
       border: 1px solid $border-color;
+      
+      @media screen and (max-width:$screen-sm) {
+        width: 220px;
+      }
+      
+      @media screen and (max-width:$screen-xs) {
+        width: 180px;
+      }
 
       #{$ltr} & {
         border-radius: 0 45px 45px 0;
@@ -105,15 +116,39 @@
   }
 }
 
+.overlay-m{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: .6);
+  display: none;
+  z-index: 888;
+}
+
 // Main Title
 .main-title{
   margin-bottom: 30px;
+
+  @media screen and (max-width:$screen-xs) {
+      margin-bottom: 20px;
+  }
 
   .main-tit-text{
     font-size: 25px;
     color: $black;
     margin-bottom: 15px;
     font-family: fontDemi;
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width:$screen-xs) {
+        font-size: 20px;
+    }
 
     &.lg{
       font-size: 22px;
@@ -147,6 +182,10 @@
     gap: 5px;
     color: $blue2;
     transition: $main-transition;
+
+    @media screen and (max-width:$screen-xs) {
+        font-size: 14px;
+    }
 
     &:hover{
       color: $blue;
@@ -193,19 +232,39 @@
   }
 }
 
+// Page Title
+.page-title{
+  @include between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 45px;
+
+  .title{
+    font-size: 20px;
+    color: $light2;
+    font-family: fontDemi;
+  }
+}
+
 // Center Title
 .center-title{
   text-align: center;
   font-size: 20px;
   font-family: fontDemi;
-  color: $light2;
-  margin-bottom: 40px;
+  color: $light5;
+  margin-bottom: 35px;
 }
 
 // section-heading
 .section-heading{
   margin-bottom: 25px;
   @include between;
+
+  @media screen and (max-width:$screen-xs) {
+    flex-direction: column-reverse;
+    align-items: unset;
+    gap: 10px;
+  }
 }
 
 // Transform Betwwen Cards
@@ -225,6 +284,18 @@
 .filter-search{
   width: 350px;
 
+  @media screen and (max-width:$screen-md) {
+    width: 280px;
+  }
+
+  @media screen and (max-width:$screen-sm) {
+    width: 220px;
+  }
+
+  @media screen and (max-width:$screen-xs) {
+    width: 100%;
+  }
+
   &.input-g{
     margin-bottom: 0;
   }
@@ -237,6 +308,30 @@
     background-color: transparent;
     @include dir-right(8px !important);
   }
+}
+
+// open-side-icon
+.open-side-icon{
+    @include center;
+    background-color: $blue2;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $main-transition;
+
+    @media screen and (min-width:$screen-lg) {
+      display: none;
+    }
+
+    img{
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover{
+      transform: translateY(-4px);
+    }
 }
 
 // Drop Down
@@ -358,27 +453,37 @@
 }
 
 // Dots Slider
-// .owl-dots{
-//   @include center;
-//   gap: 10px;
-//   position: absolute !important;
-//   bottom: 20px;
-//   left: 0;
-//   width: 100%;
-//   z-index: 3;
+.owl-dots{
+  @include center;
+  gap: 10px;
+  position: absolute !important;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
 
-//   .owl-dot{
-//       width: 18px;
-//       height: 8px;
-//       border-radius: 10px;
-//       opacity: .5;
+  .owl-dot{
+      width: 18px;
+      height: 8px;
+      border-radius: 10px;
+      opacity: .5;
 
-//       &.active{
-//           width: 35px;
-//           opacity: 1;
-//       }
-//   }
-// }
+      @media screen and (max-width:$screen-md) {
+          height: 7px;
+          width: 15px;
+      }
+
+      &.active{
+          width: 35px;
+          opacity: 1;
+
+          @media screen and (max-width:$screen-md) {
+              width: 30px;
+          }
+      }
+  }
+  
+}
 
 // Nav Slider
 .owl-nav{
@@ -397,6 +502,10 @@
       background-color: $blue2 !important;
       // border-color: $blue2 !important;
     }
+
+    @media screen and (max-width: $screen-lg) {
+      display: none;
+    }
   }
 
   .owl-prev{
@@ -411,21 +520,43 @@
 
 // Tabs
 .nav{
-  justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 30px !important;
+
+  @media screen and (max-width:$screen-sm) {
+    gap: 8px;
+  }
+
+  &.nav-mb{
+    margin-bottom: 0 !important;
+  }
 
   &.nav-pills {
 
     .nav-link{
-      width: 140px;
+      min-width: 120px;
       background-color: $light4;
       color: $light;
-      font-size: 15px;
+      font-size: 14px;
       border-radius: 5px;
       font-family: fontMed;
-      padding: 12px 4px;
+      padding: 10px 15px;
       transition: $main-transition;
+      @include center;
+      cursor: pointer;
+
+      @media screen and (max-width:$screen-sm) {
+        min-width: auto;
+      }
+
+      @media screen and (max-width:$screen-sm) {
+        font-size: 13px;
+        padding: 10px 10px;
+      }
+
+      &.sm{
+        min-width: 120px;
+      }
 
       &.active, &:hover{
         background-color: $blue2;
@@ -435,6 +566,45 @@
 
   }
 
+}
+
+/********************* Tabs *********************/
+.tabs-container-m{
+  @include center;
+  gap: 35px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width:$screen-sm) {
+    gap: 10px;
+  }
+
+  .tab-m{
+    min-width: 240px;
+    min-height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid $dark;
+    color: $dark;
+    @include center;
+    cursor: pointer;
+
+    @media screen and (max-width:$screen-sm) {
+      min-width: 160px;
+      min-height: 46px;
+      font-size: 15px;
+    }
+
+    @media screen and (max-width:$screen-xxs) {
+      min-width: 140px;
+      min-height: 46px;
+      font-size: 15px;
+    }
+    
+    &.active-tab{
+      background-color: $dark;
+      color: $white;
+    }
+  }
 }
 
 // iti__selected-flag
@@ -450,6 +620,10 @@
     transition: all 0.3s ease;
     border: 1px solid #D5D5D5;
     background-color: transparent !important;
+
+    @media screen and (max-width:$screen-xs) {
+      min-height: 44px;
+    }
 
     .iti__selected-dial-code{
       margin: 8px;
@@ -557,14 +731,26 @@
       height: 36px;
     }
 
+    &.sm2{
+      width: 126px;
+      font-size: 15px;
+      height: 40px;
+    }
+
     &.md{
       width: 170px;
+      height: 50px;
+
+      @media screen and (max-width:$screen-xs) {
+        width: 155px;
+        height: 48px;
+      }
     }
 
     &.lg{
       width: 180px;
       font-size: 18px;
-      height: 56px;
+      height: 54px;
       border-radius: 8px;
 
       @media screen and (max-width:$screen-sm) {
@@ -574,9 +760,9 @@
 
     &.xl{
       width: 250px;
-      height: 52px;
-      font-size: 17px;
-      border-radius: 10px;
+      height: 54px;
+      font-size: 18px;
+      border-radius: 8px;
 
       @media screen and (max-width:$screen-sm) {
         width: 200px;
@@ -607,6 +793,15 @@
   cursor: pointer;
   transition: $main-transition;
 
+  &.blue{
+    background-color: $blue2;
+    color: $white;
+    cursor: auto;
+    width: 43px;
+    height: 43px;
+    font-size: 17px;
+  }
+
   &:hover, &.active{
     background-color: $blue2;
     color: $white;
@@ -625,7 +820,7 @@
 
 // Classes
 .c-blue{
-  color: $blue;
+  color: $blue2 !important;
 }
 
 .c-ligth{
@@ -656,16 +851,24 @@
   padding: 48px 0;
 
   @media screen and (max-width:$screen-xs) {
-    padding: 35px 0;
+    padding: 38px 0;
   }
 }
 
 .main-pt{
   padding-top: 48px;
+
+  @media screen and (max-width:$screen-xs) {
+    padding-top: 38px;
+  }
 }
 
 .main-pb{
   padding-bottom: 48px;
+  
+  @media screen and (max-width:$screen-xs) {
+    padding-bottom: 38px;
+  }
 }
 
 .sec-padding{
@@ -680,15 +883,27 @@
 .flex-card{
   display: flex;
   gap: 25px;
+
+  @media screen and (max-width:$screen-lg) {
+    flex-direction: column;
+  }
 }
 
 .flex-1{
-  flex: 1;
+  width: 366px;
+  @media screen and (max-width:$screen-lg) {
+    width: 100%;
+  }
+
 }
 
 .flex-3{
-  flex: 2.6;
+  width: calc(100% - 366px);
   overflow: hidden;
+
+  @media screen and (max-width:$screen-lg) {
+    width: 100%;
+  }
 }
 
 .bg-light{
@@ -700,6 +915,7 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  transition: $main-transition;
 
   a.anchor{
     position: absolute;
@@ -712,6 +928,10 @@
 
 .card-padding{
   padding: 23px;
+
+  @media screen and (max-width:$screen-sm) {
+    padding: 20px 15px;
+  }
 }
 
 .main-card-title{
@@ -838,18 +1058,35 @@
 .form-style{
   border: 1px solid $border-color;
   padding: 60px 40px;
+  
+  @media screen and (max-width:$screen-sm) {
+    padding: 40px 20px;
+  }
+
+  @media screen and (max-width:$screen-xs) {
+    padding: 30px 15px;
+  }
+
 }
 
 // Form Title
 .form-heading{
   margin-bottom: 46px;
 
+  @media screen and (max-width:$screen-xs) {
+    margin-bottom: 30px;
+  }
+
   .form-title{
-    font-size: 20px;
+    font-size: 19px;
     font-family: fontDemi;
     margin-bottom: 15px;
     color: $light2;
     text-align: center;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 17px;
+    }
   }
 
   .form-text{
@@ -859,7 +1096,20 @@
     text-align: center;
     width: 440px;
     margin: auto;
+
+    @media screen and (max-width:$screen-sm) {
+      width: auto;
+    }
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 13px;
+    }
   }
+}
+
+.form-btns{
+  display: flex;
+  gap: 10px;
 }
 
 
@@ -876,12 +1126,13 @@
 
 // Inputs
 .input-g{
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  display: block;
 
   .main-label{
     margin-bottom: 10px;
     font-size: 16px;
-    // font-family: fontDemi;
+    font-family: fontDemi;
     color: $dark;
     display: flex;
     align-items: center;
@@ -889,6 +1140,16 @@
 
     .label-hint{
       color: $dark;
+      font-family: fontMed;
+      font-size: 15px;
+    }
+
+    @media screen and (max-width:$screen-sm) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width:$screen-xs) {
+      font-family: fontMed;
       font-size: 15px;
     }
   }
@@ -908,6 +1169,10 @@
       transition: $main-transition;
       border: 1px solid $border-color;
 
+      @media screen and (max-width:$screen-xs) {
+        min-height: 44px;
+      }
+
       &.photo-input{
         display: flex;
         align-items: center;
@@ -920,6 +1185,10 @@
         font-size: 13px;
         color: $placholder-color;
         transition: $main-transition; 
+
+        @media screen and (max-width:$screen-xs) {
+          font-size: 12px;
+        }
       }
 
       &:focus{
@@ -943,6 +1212,14 @@
       &.text-area-lg{
         height: 298px;
         padding: 12px;
+
+        @media screen and (max-width:$screen-lg) {
+          height: 200px;
+        }
+
+        @media screen and (max-width:$screen-xs) {
+          height: 160px;
+        }
       }
 
       &.text-area-sm{
@@ -956,9 +1233,14 @@
       top: 50%;
       transform: translateY(-50%);
       @include dir-right(14px);
-      color: $light;
-      font-size: 15px;
+      color: $icon-color;
+      font-size: 14px;
       cursor: pointer;
+      pointer-events: none;
+
+      &.blue{
+        color: $blue2;
+      }
     }
   }
 }
@@ -1056,7 +1338,7 @@
 // Select Two For Filter
 .select-filter {
   ~ .select2-container--filter-m {
-    width: 85px !important;
+    width: 80px !important;
 
     .select2-selection--single {
       height: auto;
@@ -1079,7 +1361,7 @@
         transform: translateY(-50%);
         height: auto;
         border: 0;
-        @include dir-right(20px);
+        @include dir-right(12px);
 
         &::after {
           content: "\f107";
@@ -1151,6 +1433,10 @@
       font-size: 14px;
       color: $dark;
       border-color: $border-color;
+
+      @media (max-width: $screen-xs) {
+        height: 44px;
+      }
 
       
       .select2-selection__rendered {
@@ -1426,10 +1712,21 @@
     display: flex;
     align-items: center;
     gap: 3px;
+    line-height: 1;
 
     .radio-img{
       @include circle(25px);
       object-fit: cover;
+    }
+
+    &.ca-auto{
+      cursor: auto;
+    }
+
+    &.ca-blue{
+      color: $blue2;
+      gap: 8px;
+      // font-size: 16px !important;
     }
   }
 
@@ -1468,20 +1765,38 @@
   .user-text{
     font-size: 16px;
     color: $black;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 14px;
+    }
   }
 }
 
 .user-img{
   position: relative;
   @include circle(100px);
-  // border: 2px solid rgba($color: #000000, $alpha: .3);
-  backdrop-filter: blur(10px);
+  
+  @media screen and (max-width:$screen-xs) {
+    @include circle(90px);
+  }
 
   .profile-img{
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 50%;
+    position: relative;
+    
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 6px solid rgba($color: #fff, $alpha: .4);
+      border-radius: 50%;
+    }
     
     img{
       width: 100%;
@@ -1607,6 +1922,11 @@
     font-weight: 300;
     appearance: textfield;
     transition: $main-transition;
+
+    @media screen and (max-width:$screen-xs) {
+      width: 50px;
+      height: 50px;
+    }
 
     &:focus{
       background-color: $white3;
@@ -1845,39 +2165,113 @@
   box-shadow: $main-shadow;
   padding: 15px;
   border-radius: 6px;
-  width: 180px;
-  inset: 20px 112% auto auto;
+  min-width: 180px;
+  #{$ltr} & {
+    inset: 20px auto auto 112%;
+  }
+  #{$rtl} & {
+    inset: 20px 112% auto auto;
+  }
   transform: translate3d(0px, 0px, 0px);
   border: none;
+
+  @media (max-width: $screen-sm) {
+    #{$ltr} & {
+      inset: 50px auto auto 40px;
+    }
+    #{$rtl} & {
+      inset: 50px 40px auto auto;
+    }
+  }
 
   &.show{
     opacity: 1;
     pointer-events: auto;
-    inset: 0px 112% auto auto !important;
+    #{$ltr} & {
+      inset: 0px auto auto 112% !important;
+    }
+    #{$rtl} & {
+      inset: 0px 112% auto auto !important;
+    }
     transform: translate3d(0px, 0px, 0px) !important;
+
+    @media (max-width: $screen-sm) {
+      #{$ltr} & {
+        inset: 30px auto auto 40px !important;
+      }
+      #{$rtl} & {
+        inset: 30px 40px auto auto !important;
+      }
+    }
+  }
+
+  &.drop-lang{
+    min-width: 120px;
+    
+    #{$ltr} & {
+      inset: 50px 0% auto auto;
+    }
+    #{$rtl} & {
+      inset: 50px auto auto 0%;
+    }
+
+    .lang-item{
+      display: block;
+      padding: 3px 0;
+      font-size: 16px;
+      color: $blue2;
+      transition: $main-transition;
+      
+      &:hover{
+        color: $light;
+      }
+    }
+
+    &.show{
+      #{$ltr} & {
+        inset: 28px 0% auto auto !important;
+      }
+      #{$rtl} & {
+        inset: 28px auto auto 0% !important;
+      }
+    }
   }
 }
 
-.dropend .dropdown-toggle::after{
-  display: none;
+.dropdown-toggle{
+  background-color: transparent;
+}
+
+.dropdown-toggle::after{
+  display: none !important;
 }
 
 
 /********************* pagenation *********************/
 .product-pagenation{
   @include between;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 35px;
 
   .pagenation-text{
     font-size: 19px;
     font-family: fontDemi;
     color: $black;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 17px;
+    }
     
     .numbers{
       font-size: 18px;
       color: $light;
       @include dir-margin-left(15px);
       font-family: fontMed;
+
+      @media screen and (max-width:$screen-xs) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -1894,6 +2288,11 @@
       padding: .225rem .75rem;
       border: 1px solid transparent;
       transition: $main-transition;
+      
+      @media screen and (max-width:$screen-xs) {
+        font-size: 17px;
+        padding: .185rem .50rem;
+      }
 
       i{
         font-size: 15px;

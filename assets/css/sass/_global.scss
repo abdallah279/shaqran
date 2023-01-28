@@ -102,10 +102,10 @@ form
     // margin: 0 auto;
     #{$ltr} & {
         text-align: left;
-      }
-      #{$rtl} & {
-          text-align: right;
-      }
+    }
+    #{$rtl} & {
+        text-align: right;
+    }
 }
 
 a {
