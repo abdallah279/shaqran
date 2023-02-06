@@ -55,7 +55,7 @@
                 outline: 3px solid transparent;
 
                 @media screen and (max-width:$screen-xs) {
-                    @include circle(35px);
+                    @include circle(38px);
                 }
 
                 img{
@@ -64,8 +64,8 @@
                     transition: $main-transition;
                     
                     @media screen and (max-width:$screen-xs) {
-                        max-width: 14px;
-                        max-height: 14px;
+                        max-width: 15px;
+                        max-height: 15px;
                     }
     
                 }

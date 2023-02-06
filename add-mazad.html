@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
     <!-- intlTelInput -->
     <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
+    <!-- Flat Picker -->
+    <link rel="stylesheet" href="./assets/plugins/FlatPicker/flatpickr.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -124,7 +128,7 @@
                         <a href="#" class="link">
                             <img src="assets/imgs/icons/follow.png" alt="">
                         </a>
-                        <a href="#" class="link">
+                        <a href="favorite.html" class="link">
                             <img src="assets/imgs/icons/heart.png" alt="">
                         </a>
                         <a href="shopping-cart.html" class="link">
@@ -165,17 +169,17 @@
                         <img src="assets/imgs/logo.png" alt="">
                     </a>
                     <img src="assets/imgs/icons/close.png" alt="" class="close">
-                    <a href="index.html" class="link">الرئيسية</a>
-                    <a href="stors.html" class="link">المتاجر</a>
-                    <a href="ads.html" class="link">الإعلانات</a>
-                    <a href="mazadat.html" class="link">المزادات</a>
-                    <a href="about.html" class="link">من نحن</a>
-                    <a href="contact-us.html" class="link">تواصل معنا</a>
-                    <a href="complaints-suggestions.html" class="link">الشكاوي والاقتراحات</a>
+                    <a href="index.html" class="link" title="الرئيسية">الرئيسية</a>
+                    <a href="stors.html" class="link" title="المتاجر">المتاجر</a>
+                    <a href="ads.html" class="link" title="الإعلانات">الإعلانات</a>
+                    <a href="mazadat.html" class="link" title="المزادات">المزادات</a>
+                    <a href="about.html" class="link" title="من نحن">من نحن</a>
+                    <a href="contact-us.html" class="link" title="تواصل معنا">تواصل معنا</a>
+                    <a href="complaints-suggestions.html" class="link" title="الشكاوي والاقتراحات">الشكاوي والاقتراحات</a>
                 </div>
 
                 <!-- Navbar Buttons -->
-                <div <div class="buttons-m">
+                <div class="buttons-m">
                     <a href="add-ads.html" class="main-btn sm transparent">أضف اعلان</a>
                     <a href="add-mazad.html" class="main-btn sm up">أضف مزاد</a>
                 </div>
@@ -184,99 +188,20 @@
     </nav>
     <!-- End Navbar -->
 
-    <!-- Start Form Section -->
+    <!-- Start Login Section -->
     <div class="account-section main-padding">
         <div class="container">
-
-            <!-- Page Title -->
-            <div class="page-title">
-                <h3 class="title">حسابي</h3>
-
-                <div class="buttons-m">
-                    <a href="platform-commission.html" class="main-btn sm2 blue up">عمولة المنصة</a>
-                    <a href="open-store.html" class="main-btn sm2 transparent">افتح متجرك</a>
-                </div>
-            </div>
-
             <div class="row">
 
-                <!-- SideBar -->
-                <div class="col-xl-3">
-                    <div class="side-bar">
+                <!-- Main Content -->
+                <div class="col-lg-8 col-xl-6 mx-auto">
 
-                        <!-- Side Link -->
-                        <div class="side-links mb-5">
+                    <!-- Start Add Mazat -->
+                    <form action="mazad-detailes.html" class="form-style">
 
-                            <a href="user-account.html" class="side-link active">
-                                الملف الشخصي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                طلباتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                إعلاناتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                مزايداتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                محفظتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                فواتيري
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                تقييماتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                محادثاتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                            <a href="#" class="side-link">
-                                عناويني
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <div class="col-lg-8 col-xl-6 ">
-
-                    <form action="" class="form-style">
-
-                        <!-- Photo -->
-                        <div class="input-g">
-                            <div class="user-photo-con">
-                                <div class="user-img">
-                                    <div class="profile-img">
-                                        <img src="assets/imgs/stor1.png" class="img" alt="">
-                                    </div>
-                                    <input type="file" id="profileImg" class="hidden-input img-upload-input profile">
-                                    <label for="profileImg" class="user-camera">
-                                        <img src="assets/imgs/icons/icons8-camera-24.png" alt="">
-                                    </label>
-                                </div>
-
-                                <span class="user-text">الصورة الشخصية</span>
-                            </div>
+                        <!-- Form Heading -->
+                        <div class="form-heading">
+                            <h3 class="form-title">اضافة مزاد</h3>
                         </div>
 
                         <!-- Name -->
@@ -290,26 +215,154 @@
                             </div>
                         </div>
 
-                        <!-- Phone -->
+                        <!-- main Cat -->
                         <div class="input-g">
-                            <!-- <a href="#"></a> -->
                             <label class="main-label">
-                                رقم الجوال
+                                القسم الرئيسي
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="number" id="telephone" class="input-me phone" placeholder="أدخل رقم الجوال">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر القسم الرئيسي</option>
+                                    <option value="">السعودية</option>
+                                    <option value="">مصر</option>
+                                </select>
                             </div>
                         </div>
 
-                        <!-- Email -->
+                        <!-- Secound Cat -->
                         <div class="input-g">
                             <label class="main-label">
-                                البريد الإلكتروني
+                                القسم الفرعي
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="email" class="input-me" placeholder="ادخل البريد الإلكتروني">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر القسم الفرعي</option>
+                                    <option value="">السعودية</option>
+                                    <option value="">مصر</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Car Type -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                نوع السيارة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل نوع السيارة">
+                            </div>
+                        </div>
+
+                        <!-- Car Model -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                موديل السيارة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل موديل السيارة">
+                            </div>
+                        </div>
+
+                        <!-- Made Year -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                سنة الصنع
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل سنة الصنع">
+                            </div>
+                        </div>
+
+                        <!-- Made Year -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                عداد المسافات
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل عداد المسافات">
+                                <span class="main-icon blue">كم</span>
+                            </div>
+                        </div>
+
+                        <!-- Photo -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                صورة فحص المركبة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="file" name="" id="idPhoto" accept="image/*" class="hidden-input img-upload-input">
+                                <label for="idPhoto" class="input-me photo-input">
+                                    ارفق صورة فحص المركبة
+                                </label>
+                                <i class="fa-regular fa-file main-icon"></i>
+                            </div>
+                            <div class="photo-input-new"></div>
+                        </div>
+
+                        <!-- Start Date -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                تاريخ بداية المزاد
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="date" class="input-me date" placeholder="ادخل تاريخ بداية المزاد">
+                                <i class="fa-regular fa-calendar main-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Start Time -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                وقت بداية المزاد
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input ">
+                                <input type="time" class="input-me time" placeholder="ادخل وقت بداية المزاد">
+                                <i class="fa-regular fa-clock main-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- End Date -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                تاريخ نهاية المزاد
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="date" class="input-me date" placeholder="ادخل تاريخ نهاية المزاد">
+                                <i class="fa-regular fa-calendar main-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- End Time -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                وقت نهاية المزاد
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input ">
+                                <input type="time" class="input-me time" placeholder="ادخل وقت نهاية المزاد">
+                                <i class="fa-regular fa-clock main-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Made Year -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                قيمة بدء المزاد
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل قيمة بدء المزاد">
+                                <span class="main-icon blue">ر.س</span>
                             </div>
                         </div>
 
@@ -350,305 +403,108 @@
                                 العنوان
                                 <span class="label-hint">*</span>
                             </label>
-                            <div class="main-input">
-                                <input type="text" class="input-me" placeholder="ادخل العنوان">
+                            <div class="main-input" data-bs-target="#mapModal" data-bs-toggle="modal">
+                                <input type="text" name="address" class="input-me" id="inputMap" placeholder="ادخل العنوان">
                                 <i class="fa-solid fa-location-dot main-icon"></i>
                             </div>
                         </div>
 
-                        <!-- Cat -->
+                        <!-- Country -->
                         <div class="input-g">
                             <label class="main-label">
-                                الأقسام
+                                الدول التي يظهر بها
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <select name="" id="" class="select">
-                                    <option value="" selected disabled>اختر الأقسام</option>
-                                    <option value="">الأقسام</option>
-                                    <option value="">الأقسام</option>
-                                    <option value="">الأقسام</option>
+                                <select name="" id="" class="select-multi" multiple="multiple" data-placeholder="اختر الدولة">
+                                    <option value="0">السعودية</option>
+                                    <option value="1">مصر</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Number -->
+                        <!-- City -->
                         <div class="input-g">
                             <label class="main-label">
-                                رقم السجل التجاري / رمز وثيقة العمل الحر
+                                المدن التي يظهر بها
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل رقم السجل التجاري / رمز وثيقة العمل الحر">
-                            </div>
-                        </div>
-
-                        <!-- Photo -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                صورة السجل التجاري / وثيقة العمل الحر
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="file" name="" id="idPhoto" class="hidden-input img-upload-input">
-                                <label for="idPhoto" class="input-me photo-input">
-                                    ارفق صورة السجل التجاري / وثيقة العمل الحر
-                                </label>
-                                <i class="fa-regular fa-file main-icon"></i>
-                            </div>
-                            <div class="photo-input-new"></div>
-                        </div>
-
-                        <!-- Radio -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                توفر رقم ضريبي
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-
-                                <div class="row">
-        
-                                    <div class="col-sm-3 col-6">
-                                        <div class="radio-box">
-                                            <input type="radio" name="radio1" id="radioUp" class="input-radio">
-                                            <label for="radioUp" class="label-radio"> متوفر</label>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-sm-3 col-6">
-                                        <div class="radio-box">
-                                            <input type="radio" name="radio1" id="radioDown" class="input-radio">
-                                            <label for="radioDown" class="label-radio">غير متوفر</label>
-                                        </div> 
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Number -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                الرقم الضريبي
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل الرقم الضريبي">
-                            </div>
-                        </div>
-
-                        <!-- Photo -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                صورة وثيقة الرقم الضريبي
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="file" name="" id="idPhoto2" class="hidden-input img-upload-input">
-                                <label for="idPhoto2" class="input-me photo-input">
-                                    ارفق صورة وثيقة الرقم الضريبي
-                                </label>
-                                <i class="fa-regular fa-file main-icon"></i>
-                            </div>
-                            <div class="photo-input-new"></div>
-                        </div>
-
-                        <!-- Radio -->
-                        <div class="input-g">
-                            <label class="main-label">
-                               طريقة دفع مستحقات الادارة
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-
-                                <div class="row">
-                                    <div class="col-sm-3 col-6">
-                                        <div class="radio-box">
-                                            <input type="radio" name="radio2" id="radioBak" class="input-radio">
-                                            <label for="radioBak" class="label-radio">باقات</label>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-sm-3 col-6">
-                                        <div class="radio-box">
-                                            <input type="radio" name="radio2" id="radio3om" class="input-radio">
-                                            <label for="radio3om" class="label-radio">عمولة</label>
-                                        </div> 
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Radio -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                خدمة التوصيل الذاتي
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-
-                                <div class="row">
-                                    <div class="col-sm-3 col-6">
-                                        <div class="radio-box">
-                                            <input type="radio" name="radio3" id="radioAvl" class="input-radio">
-                                            <label for="radioAvl" class="label-radio">متوفرة</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-3 col-6">
-                                        <div class="radio-box">
-                                            <input type="radio" name="radio3" id="radioUnAvl" class="input-radio">
-                                            <label for="radioUnAvl" class="label-radio">غير متوفرة</label>
-                                        </div> 
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Number -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                قيمة التوصيل
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل قيمة التوصيل">
-                                <span class="main-icon blue">ر.س</span>
-                            </div>
-                        </div>
-
-                        <!-- Number -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                أقل قيمة للتوصيل المجاني
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل أقل قيمة للتوصيل المجاني">
-                                <span class="main-icon blue">ر.س</span>
-                            </div>
-                        </div>
-
-                        <!-- Company -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                شركات الشحن المتاح التوصيل من خلالها
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <select name="" id="" class="select" multiple>
-                                    <option value="" selected disabled>اختر شركات الشحن المتاح التوصيل من خلالها</option>
-                                    <option value="">شركات الشحن</option>
-                                    <option value="">شركات الشحن</option>
-                                    <option value="">شركات الشحن</option>
+                                <select name="" id="" class="select-multi" multiple="multiple" data-placeholder="اختر المدينة">
+                                    <option value="0">الرياض</option>
+                                    <option value="1">جدة</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Bank Name -->
+                        <!-- main Cat -->
                         <div class="input-g">
                             <label class="main-label">
-                                إسم البنك
+                                نوع المزاد
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="text" class="input-me" placeholder="ادخل إسم البنك">
+                                <select name="" id="" class="select type-mazad">
+                                    <option value="" selected disabled>اختر نوع المزاد</option>
+                                    <option value="" title="img">صورة </option>
+                                    <option value="" title="video">فيديو</option>
+                                    <option value="" title="live">live</option>
+                                </select>
                             </div>
                         </div>
 
-                        <!-- Name -->
-                        <div class="input-g">
+                        <!-- Photo -->
+                        <div class="input-g img-video">
                             <label class="main-label">
-                                إسم صاحب الحساب
+                                صورة / فيديو المزاد
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="text" class="input-me" placeholder="ادخل إسم صاحب الحساب">
+                                <input type="file" name="" accept="image/*, video/*" id="inp-img-vid" class="hidden-input">
+                                <label for="inp-img-vid" class="input-me photo-input">
+                                    ارفق صورة / فيديو المزاد
+                                </label>
+                                <i class="fa-regular fa-file main-icon"></i>
                             </div>
+                            <div class="photo-con"></div>
                         </div>
 
-                        <!-- Number -->
+                        <!-- description -->
                         <div class="input-g">
                             <label class="main-label">
-                                رقم الحساب البنكي
+                                وصف المزاد
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل رقم الحساب البنكي">
-                            </div>
-                        </div>
-
-                        <!-- Number -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                رقم الايبان
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="number" class="input-me" placeholder="ادخل رقم الايبان">
-                            </div>
-                        </div>
-
-                        <!-- Password -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                كلمة المرور
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
-                            </div>
-                        </div>
-
-                        <!-- Confirm Password -->
-                        <div class="input-g">
-                            <label class="main-label">
-                                تأكيد كلمة المرور
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
+                                <textarea name="" id="" class="input-me text-area" placeholder="ادخل وصف المزاد"></textarea>
                             </div>
                         </div>
 
                         <!-- Check Box -->
                         <div class="input-g">
                             <div class="check-box form-check-m">
-                                <input type="checkbox" name="" id="ثndorsement">
-                                <label class="check" for="ثndorsement"></label>
-                                <label class="check-anchor" for="ثndorsement">
-                                    إقرار وتعهد بصحة البيانات المدخلة و أي تلاعب سوف يعرضك للمساءلة 
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Check Box -->
-                        <div class="input-g">
-                            <div class="check-box form-check-m">
-                                <input type="checkbox" name="" id="conditions">
-                                <label class="check" for="conditions"></label>
-                                <label class="check-anchor" for="conditions">
-                                    إقرار بالموافقة على 
-                                    <a href="termes-conditions.html">الشروط والأحكام</a>
+                                <input type="checkbox" name="" id="mndorsement">
+                                <label class="check" for="mndorsement"></label>
+                                <label class="check-anchor" for="mndorsement">
+                                    سوف تعرض للمساءلة القانونية في حالة عدم صحة البيانات
                                 </label>
                             </div>
                         </div>
 
                         <!-- Submit Button -->
                         <div class="form-btns mt-4">
-                            <button type="submit" class="main-btn transparent md">إنشاء حساب</button>
+                            <button type="submit" class="main-btn transparent md">أضف المزاد</button>
                         </div>
 
                     </form>
+                    <!-- End Open Store -->
 
                 </div>
+
             </div>
         </div>
     </div>
-    <!-- End Form Section -->
+    <!-- End Login Section -->
 
 
     <!-- Start Footer -->
@@ -754,6 +610,23 @@
 
 
 
+    <!-- Start Map Modal -->
+    <div class="modal fade modal-map" id="mapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="map" style="width:100%;height:400px;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn transparent confirm-btn" data-bs-dismiss="modal">تأكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Jquery -->
@@ -762,6 +635,12 @@
     <script src="./assets/plugins/select2/select2.js"></script>
     <!-- intlTelInput -->
     <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
+    <!-- Flat Picker -->
+    <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- Map -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?&libraries=places&key=AIzaSyBNLoYGrbnQI_GMqHt6m0PSN9yA7Zvq7gA"></script>
 
     <!-- Upload Img -->
     <script>
@@ -820,6 +699,7 @@
                         
                         // Append The Img To Main Div
                         imgHidden.append(img);
+                        console.log(input.files[0])
                     }
                     reader.readAsDataURL(input.files[0]);
                 }
@@ -827,17 +707,147 @@
         });
     </script>
 
-    <!-- intlTelInput -->
+
+    <!-- Flat Picker -->
     <script>
-        var input = document.querySelector("#telephone");
-        window.intlTelInput(input,({
-            autoPlaceholder:"ادخل",
-            initialCountry:'sa',
-            separateDialCode:true,
-        }));
+        flatpickr(".date", {
+            disableMobile: "true",
+            // mode: "multiple",
+            dateFormat: "Y-m-d"
+        });
+
+        flatpickr(".time", {
+            disableMobile: "true",
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+    </script>
+
+    <!-- Mazad Type -->
+    <script>
+        $('.img-video').css('display', 'none')
+        $('.type-mazad').on('select2:select', function (e) {
+            var data = e.params.data;
+            if(data.title == 'img' || data.title == 'video'){
+                $('.img-video').fadeIn()
+            } else{
+                $('.img-video').fadeOut()
+            }
+        });
+    </script>
+
+    <!-- Img Or Video -->
+    <script>
+        $("#inp-img-vid").change(function() {
+            imgPreview(this);
+        });
+        function imgPreview(input) {
+            var file = input.files[0];
+            var mixedfile = file['type'].split("/");
+            var filetype = mixedfile[0];
+            if(filetype == "image"){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $('.photo-con').empty();
+                    let img = `
+                        <div class='hidden-img'>
+                            <img src='${e.target.result}' />
+                            <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
+                            <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                        </div>
+                    `
+                    $('.photo-con').append(img);
+                    $('.fancybox').fancybox({});
+                    $('.remove-img').on('click', function(e){
+                        e.target.closest('.hidden-img').remove();
+                    });
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else if(filetype == "video"){
+                $('.photo-con').empty();
+                let srcVideo = URL.createObjectURL(input.files[0]);
+                let video = `
+                    <div class='hidden-img'>
+                        <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
+                        <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
+                        <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                    </div>
+                `
+                $('.photo-con').append(video);
+                $('.fancybox').fancybox({});
+                $('.remove-img').on('click', function(e){
+                    e.target.closest('.hidden-img').remove();
+                });
+            }else{
+                alert("Invalid file type");
+            }
+        }
+    </script>
+
+
+    <!-- Initialize And Add The Map -->
+    <script>
+        function initMap() {
+            var location = { lat: 24.746189966314272, lng: 46.87979429238138 };
+
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: location,
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                draggable: true,
+                title: "اسحب العلامة"
+            });
+
+            let infowindow = [];
+            google.maps.event.addListener(marker, 'dragend', function (evt) {
+
+                const geocoder = new google.maps.Geocoder();
+
+                function geoLatLng(){
+                    geocoder.geocode({location: evt.latLng}).then((res) =>{
+                        let theCountry = res.results[0].formatted_address;
+
+                        let newInfoWindow = new google.maps.InfoWindow({
+                            content: `${theCountry}`
+                        });
+
+                        infowindow.push(newInfoWindow);
+                        for(let i =0; i< infowindow.length; i++){
+                            infowindow[i].close();
+                            infowindow[infowindow.length - 1].open(map, marker);
+                        }
+
+                        let confirmBtn = document.querySelector('.confirm-btn');
+                        confirmBtn.addEventListener('click', ()=>{
+                            document.getElementById('inputMap').value = `${theCountry}`;
+                        });
+                    });
+                }
+
+                geoLatLng();
+            });
+        }
+
+        initMap();
 
     </script>
+
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
+
+
+    <!-- Select Multiple -->
+    <script>
+        $(".select-multi").select2({
+            dir: isRtl ? "rtl" : "ltr",
+            placeholder: $(this).attr('data-placeholder'),
+            closeOnSelect: false,
+        });
+    </script>
 </body>
 </html>

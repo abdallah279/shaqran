@@ -126,7 +126,7 @@
                         <a href="#" class="link">
                             <img src="assets/imgs/icons/follow.png" alt="">
                         </a>
-                        <a href="#" class="link">
+                        <a href="favorite.html" class="link">
                             <img src="assets/imgs/icons/heart.png" alt="">
                         </a>
                         <a href="shopping-cart.html" class="link">
@@ -167,13 +167,13 @@
                         <img src="assets/imgs/logo.png" alt="">
                     </a>
                     <img src="assets/imgs/icons/close.png" alt="" class="close">
-                    <a href="index.html" class="link">الرئيسية</a>
-                    <a href="stors.html" class="link">المتاجر</a>
-                    <a href="ads.html" class="link">الإعلانات</a>
-                    <a href="mazadat.html" class="link">المزادات</a>
-                    <a href="about.html" class="link">من نحن</a>
-                    <a href="contact-us.html" class="link">تواصل معنا</a>
-                    <a href="complaints-suggestions.html" class="link">الشكاوي والاقتراحات</a>
+                    <a href="index.html" class="link" title="الرئيسية">الرئيسية</a>
+                    <a href="stors.html" class="link" title="المتاجر">المتاجر</a>
+                    <a href="ads.html" class="link" title="الإعلانات">الإعلانات</a>
+                    <a href="mazadat.html" class="link" title="المزادات">المزادات</a>
+                    <a href="about.html" class="link" title="من نحن">من نحن</a>
+                    <a href="contact-us.html" class="link" title="تواصل معنا">تواصل معنا</a>
+                    <a href="complaints-suggestions.html" class="link" title="الشكاوي والاقتراحات">الشكاوي والاقتراحات</a>
                 </div>
 
                 <!-- Navbar Buttons -->
@@ -276,7 +276,7 @@
 
             <!-- Open Side Button -->
             <div class="open-side-icon mb-4">
-                <img src="assets/imgs/icons/bulleted-list.png" alt="">
+                <img src="assets/imgs/icons/filter.png" alt="">
             </div>
 
             <!-- SideBar -->
@@ -285,32 +285,32 @@
                 <div class="filter-side">
 
                     <!-- Accordion -->
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion tabs-show products" id="accordionProduct">
 
                         <!-- Item -->
                         <div class="accordion-item">
-
+    
                             <!-- Header -->
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h2 class="accordion-header" id="headingOneProduct">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneProduct" aria-expanded="true" aria-controls="collapseOne">
                                 الأقسام
                             </button>
                           </h2>
-
+    
                           <!-- Content -->
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div id="collapseOneProduct" class="accordion-collapse collapse show" aria-labelledby="headingOneProduct" data-bs-parent="#accordionProduct">
                             <div class="accordion-body">
-
+    
                                 <!-- Link -->
                                 <div class="dropend">
                                     <button type="button" class="link active dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         ملابس
                                         <i class="fa-solid fa-angle-left"></i>
                                     </button>
-
+    
                                     <!-- DropDown -->
                                     <ul class="dropdown-menu check-boxs close">
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="all" class="check-all" data-check="close">
                                             <label class="check" for="all"></label>
@@ -318,7 +318,7 @@
                                                 الكل
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="mens">
                                             <label class="check" for="mens"></label>
@@ -326,7 +326,7 @@
                                                 رجالى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="femals">
                                             <label class="check" for="femals"></label>
@@ -334,7 +334,7 @@
                                                 نسائى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="child">
                                             <label class="check" for="child"></label>
@@ -342,20 +342,20 @@
                                                 أطفال
                                             </label>
                                         </div>
-
+    
                                     </ul>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="dropend">
                                     <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         عطور
                                         <i class="fa-solid fa-angle-left"></i>
                                     </button>
-
+    
                                     <!-- DropDown -->
                                     <ul class="dropdown-menu check-boxs perfumes">
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="all8" class="check-all" data-check="perfumes">
                                             <label class="check" for="all8"></label>
@@ -363,7 +363,7 @@
                                                 الكل
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="mens8">
                                             <label class="check" for="mens8"></label>
@@ -371,7 +371,7 @@
                                                 رجالى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="femals8">
                                             <label class="check" for="femals8"></label>
@@ -379,7 +379,7 @@
                                                 نسائى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="child8">
                                             <label class="check" for="child8"></label>
@@ -387,20 +387,20 @@
                                                 أطفال
                                             </label>
                                         </div>
-
+    
                                     </ul>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="dropend">
                                     <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         اكسسوارات
                                         <i class="fa-solid fa-angle-left"></i>
                                     </button>
-
+    
                                     <!-- DropDown -->
                                     <ul class="dropdown-menu check-boxs accessories">
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="all2" class="check-all" data-check="accessories">
                                             <label class="check" for="all2"></label>
@@ -408,7 +408,7 @@
                                                 الكل
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="mens2">
                                             <label class="check" for="mens2"></label>
@@ -416,7 +416,7 @@
                                                 رجالى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="femals2">
                                             <label class="check" for="femals2"></label>
@@ -424,7 +424,7 @@
                                                 نسائى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="child2">
                                             <label class="check" for="child2"></label>
@@ -432,20 +432,20 @@
                                                 أطفال
                                             </label>
                                         </div>
-
+    
                                     </ul>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="dropend">
                                     <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         ميك اب
                                         <i class="fa-solid fa-angle-left"></i>
                                     </button>
-
+    
                                     <!-- DropDown -->
                                     <ul class="dropdown-menu check-boxs makeup">
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="all3" class="check-all" data-check="makeup">
                                             <label class="check" for="all3"></label>
@@ -453,7 +453,7 @@
                                                 الكل
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="mens3">
                                             <label class="check" for="mens3"></label>
@@ -461,7 +461,7 @@
                                                 رجالى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="femals3">
                                             <label class="check" for="femals3"></label>
@@ -469,7 +469,7 @@
                                                 نسائى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="child3">
                                             <label class="check" for="child3"></label>
@@ -477,20 +477,20 @@
                                                 أطفال
                                             </label>
                                         </div>
-
+    
                                     </ul>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="dropend">
                                     <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         ساعات
                                         <i class="fa-solid fa-angle-left"></i>
                                     </button>
-
+    
                                     <!-- DropDown -->
                                     <ul class="dropdown-menu check-boxs hours">
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="all4" class="check-all" data-check="hours">
                                             <label class="check" for="all4"></label>
@@ -498,7 +498,7 @@
                                                 الكل
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="mens4">
                                             <label class="check" for="mens4"></label>
@@ -506,7 +506,7 @@
                                                 رجالى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="femals4">
                                             <label class="check" for="femals4"></label>
@@ -514,7 +514,7 @@
                                                 نسائى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="child4">
                                             <label class="check" for="child4"></label>
@@ -522,20 +522,20 @@
                                                 أطفال
                                             </label>
                                         </div>
-
+    
                                     </ul>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="dropend">
                                     <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         أحذية
                                         <i class="fa-solid fa-angle-left"></i>
                                     </button>
-
+    
                                     <!-- DropDown -->
                                     <ul class="dropdown-menu check-boxs shoes">
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="all5" class="check-all" data-check="shoes">
                                             <label class="check" for="all5"></label>
@@ -543,7 +543,7 @@
                                                 الكل
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="mens5">
                                             <label class="check" for="mens5"></label>
@@ -551,7 +551,7 @@
                                                 رجالى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="femals5">
                                             <label class="check" for="femals5"></label>
@@ -559,7 +559,7 @@
                                                 نسائى
                                             </label>
                                         </div>
-
+    
                                         <div class="check-box">
                                             <input type="checkbox" name="" id="child5">
                                             <label class="check" for="child5"></label>
@@ -567,29 +567,29 @@
                                                 أطفال
                                             </label>
                                         </div>
-
+    
                                     </ul>
                                 </div>
-
+    
                             </div>
                           </div>
-
+    
                         </div>
-
+    
                         <!-- Item -->
                         <div class="accordion-item">
-
+    
                             <!-- Header -->
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h2 class="accordion-header" id="headingTwoProduct">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoProduct" aria-expanded="false" aria-controls="collapseTwo">
                                     السعر
                                 </button>
                             </h2>
-
+    
                             <!-- Content -->
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div id="collapseTwoProduct" class="accordion-collapse collapse" aria-labelledby="headingTwoProduct" data-bs-parent="#accordionProduct">
                                 <div class="accordion-body check-boxs country">
-
+    
                                 <!-- Link -->
                                 <div class="check-box">
                                     <input type="checkbox" name="" id="allcunt" class="check-all" data-check="country">
@@ -598,7 +598,7 @@
                                         الكل
                                     </label>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="check-box">
                                     <input type="checkbox" name="" id="allcunt2">
@@ -607,7 +607,7 @@
                                         أقل من  30 ر.س
                                     </label>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="check-box">
                                     <input type="checkbox" name="" id="allcunt3">
@@ -616,7 +616,7 @@
                                         50 ر.س - 100 ر.س
                                     </label>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="check-box">
                                     <input type="checkbox" name="" id="allcunt4">
@@ -625,7 +625,7 @@
                                         أعلى من  100 ر.س
                                     </label>
                                 </div>
-
+    
                                 <!-- Link -->
                                 <div class="check-box">
                                     <input type="checkbox" name="" id="allcunt5">
@@ -634,60 +634,60 @@
                                         العروض
                                     </label>
                                 </div>
-
+    
                                 </div>
                             </div>
-
+    
                         </div>
-
+    
                         <!-- Item -->
                         <div class="accordion-item">
-
+    
                             <!-- Header -->
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            <h2 class="accordion-header" id="headingFourProduct">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourProduct" aria-expanded="false" aria-controls="collapseThree">
                                     التقييم
                                 </button>
                             </h2>
-
+    
                             <!-- Content -->
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div id="collapseFourProduct" class="accordion-collapse collapse" aria-labelledby="headingFourProduct" data-bs-parent="#accordionProduct">
                                 
                                 <div class="accordion-body">
-
+    
                                         <!-- Link -->
                                         <div class="radio-box">
                                             <input type="radio" name="radio1" id="radioUp" class="input-radio">
                                             <label for="radioUp" class="label-radio"> الأعلى</label>
                                         </div>
-
+    
                                         <!-- Link -->
                                         <div class="radio-box">
                                             <input type="radio" name="radio1" id="radioDown" class="input-radio">
                                             <label for="radioDown" class="label-radio">  الأقل</label>
                                         </div> 
-
+    
                                 </div>
-
+    
                             </div>
-
+    
                         </div>
-
+    
                         <!-- Item -->
                         <div class="accordion-item">
-
+    
                             <!-- Header -->
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h2 class="accordion-header" id="headingThreeProduct">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct" aria-expanded="false" aria-controls="collapseThree">
                                     الماركة
                                 </button>
                             </h2>
-
+    
                             <!-- Content -->
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div id="collapseThreeProduct" class="accordion-collapse collapse" aria-labelledby="headingThreeProduct" data-bs-parent="#accordionProduct">
                                 
                                 <div class="accordion-body check-boxs city">
-
+    
                                     <!-- Link -->
                                     <div class="check-box">
                                         <input type="checkbox" name="" id="allcity" class="check-all" data-check="city">
@@ -696,7 +696,7 @@
                                             الكل
                                         </label>
                                     </div>
-
+    
                                     <!-- Link -->
                                     <div class="check-box">
                                         <input type="checkbox" name="" id="allcity2">
@@ -705,7 +705,7 @@
                                             شي ان
                                         </label>
                                     </div>
-
+    
                                     <!-- Link -->
                                     <div class="check-box">
                                         <input type="checkbox" name="" id="allcity3">
@@ -714,7 +714,7 @@
                                             ديور
                                         </label>
                                     </div>
-
+    
                                     <!-- Link -->
                                     <div class="check-box">
                                         <input type="checkbox" name="" id="allcity4">
@@ -723,7 +723,7 @@
                                             جوتشي
                                         </label>
                                     </div>
-
+    
                                     <!-- Link -->
                                     <div class="check-box">
                                         <input type="checkbox" name="" id="allcity5">
@@ -732,15 +732,15 @@
                                             فيرزاتشي
                                         </label>
                                     </div>
-
+    
                                 </div>
-
+    
                             </div>
                         </div>
-
+    
                         
-
-                      </div>
+    
+                    </div>
                 </div>
 
                 <div class="filter-cards">
@@ -752,7 +752,7 @@
                             <div class="filter-search input-g">
                                 <div class="main-input">
                                     <input type="text" placeholder="ابحث عن ما تريد" class="input-me">
-                                    <button type="submit" class="main-icon">
+                                    <button type="submit" class="main-icon search-ic">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
                                 </div>

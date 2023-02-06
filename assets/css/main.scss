@@ -189,11 +189,9 @@
 // Start cards-container
 .cards-container{
     @include grid(234px, 20px);
-    transition: all .6s cubic-bezier(0.68, -0.30, 0.265, 2.1);
+    // padding: 5px;
+    // transition: all .6s cubic-bezier(0.68, -0.30, 0.265, 2.1);
 
-    @media screen and (max-width:$screen-md) {
-        padding: 5px;
-    }
 
 
     .card-m{
@@ -202,7 +200,7 @@
 
         .card-head{
             border-radius: 8px;
-            height: 240px;
+            height: 230px;
             overflow: hidden;
             transition: $main-transition;
             position: relative;
@@ -273,6 +271,11 @@
 
                     @media screen and (max-width:$screen-xs) {
                         height: auto !important;
+                        font-size: 16px;
+                    }
+
+                    @media screen and (max-width:$screen-xxs) {
+                        font-size: 15px;
                     }
                 }
     
@@ -362,19 +365,6 @@
                     }
                 }
 
-                .price{
-                    font-size: 16px;
-                    color: $blue2;
-                    font-family: fontDemi;
-                    line-height: 1.7;
-                }
-
-                .old-price{
-                    font-size: 16px;
-                    color: $light;
-                    text-decoration: line-through;
-                    line-height: 1.7;
-                }
             }
 
             .main-btn{
@@ -831,25 +821,6 @@
                 flex-direction: column;
                 gap: 10px;
             }
-
-            .stor-item{
-                display: flex;
-                align-items: center;
-                gap: 6px;
-
-                .text{
-                    font-size: 14px;
-                    color: $light;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-
-                img{
-                    max-width: 20px;
-                    max-height: 20px;
-                }
-            }
         }
 
         .desc{
@@ -939,6 +910,26 @@
 
 }
 
+// stor Item
+.stor-item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .text{
+        font-size: 14px;
+        color: $light;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+}
+
 // Start Product Detailes
 .product-carousel{
 
@@ -946,15 +937,20 @@
         border-radius: 10px;
     }
 
-    .pro-slide-img{
-        width: 100%;
-        height: 570px;
-        object-fit: cover;
-        border-radius: 10px;
+}
 
-        @media screen and (max-width:$screen-lg) {
-            height: 400px;
-        }
+.pro-slide-img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    &.lg{
+        height: 734px;
+    }
+
+    @media screen and (max-width:$screen-lg) {
+        height: 400px;
     }
 }
 
@@ -1034,16 +1030,16 @@
 
     .product-items{
         .product-item{
-            margin-bottom: 25px;
+            margin-bottom: 18px;
 
             .product-item-top{
-                font-size: 17px;
+                font-size: 16px;
                 color: #777777;
                 margin-bottom: 8px;
             }
 
             .product-item-bottom{
-                font-size: 16px;
+                font-size: 15px;
                 color: $black;
             }
         }
@@ -1169,7 +1165,7 @@
 
         .img{
             width: 155px;
-            height: 115px;
+            height: 110px;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
@@ -1178,6 +1174,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: $main-transition;
             }
         }
 
@@ -1193,6 +1190,16 @@
                     font-size: 15px;
                     font-family: fontDemi;
                     width: 230px;
+
+                    &.lg{
+                        font-size: 16px;
+                        font-family: fontDemi;
+                    }
+                }
+
+                .pro-icon{
+                    color: $blue2;
+                    font-size: 16px;
                 }
             }
 
@@ -1235,6 +1242,12 @@
         color: $light5;
         width: 350px;
         line-height: 1.7;
+    }
+
+    &:hover{
+        .buy-img{
+            transform: rotate(-3deg) scale(1.1);
+        }
     }
 }
 
@@ -1304,7 +1317,7 @@
     .side-link{
         padding: 13px 10px;
         @include between;
-        font-size: $side-color;
+        color: $side-color;
         font-size: 15px;
         position: relative;
         transition: $main-transition;
@@ -1356,5 +1369,331 @@
         &.center{
             justify-content: center;
         }
+    }
+}
+
+// package-input
+.package-input{
+    display: none;
+    &:checked + .package{
+        background-color: $white2;
+        border-color: $white2
+    }
+}
+
+// package
+.package{
+    transition: $main-transition;
+    cursor: pointer;
+    .package-head{
+        @include between;
+        margin-bottom: 18px;
+
+        .title-m{
+            font-size: 19px;
+            font-family: fontDemi;
+            color: $light2;
+        }
+    }
+
+    .package-content{
+        .package-span{
+            font-size: 14px;
+            color: $light5;
+        }
+
+        .desc{
+            margin-top: 8px;
+        }
+    }
+}
+
+// order-item
+.img-order-con{
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    @include center;
+    border: 1px solid $light4;
+    flex-shrink: 0;
+
+    .order-img{
+        width: 68px;
+        height: 36px;
+    }
+
+    &.lg{
+        width: 145px;
+        height: 120px;
+        border-width: 2px;
+
+        .order-img{
+            width: 75px;
+            height: 42px;
+        }
+    }
+}
+
+.order-item{
+    padding: 7px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    .left-sec{
+        padding: 0px 22px;
+        width: 100%;
+
+        .left-item{
+            @include between;
+            padding: 12px 0;
+            border-bottom: 1px solid $light4;
+
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+
+    &:hover{
+        box-shadow: $nav-shadow;
+        border-color: transparent;
+    }
+}
+
+// order-vert
+.order-vert{
+    .img-order-con{
+        margin: 0 auto 18px;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .order-footer{
+        text-align: center;
+        padding: 16px 0 20px;
+    }
+}
+
+// Print Modal
+.logo-black{
+    display: block;
+    width: 200px;
+    height: 78px;
+    object-fit: contain;
+    margin: 10px auto 20px;
+}
+
+.invoice-item{
+    border-bottom: 1px solid $border-color;
+
+    &:last-of-type{
+        border-bottom: 0;
+    }
+
+    .text-item{
+        font-size: 16px;
+        color: $light;
+        display: flex;
+        gap: 5px;
+    }
+}
+
+.code-img{
+    width: 80px;
+    height: 80px;
+    margin: 10px auto 0;
+    display: block;
+}
+
+@media print {
+    body * {
+      visibility: hidden !important;
+    }
+    .print-doctor,
+    .print-doctor *:not(.head-btns *) {
+      visibility: visible !important;
+      color: black;
+    }
+    .print-doctor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+}
+
+
+// invoice-img
+.invoice-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+
+// profile-content
+.profile-content{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .profile-photo{
+        @include circle(74px);
+        flex-shrink: 0;
+        border: 4px solid $white3;
+    }
+
+    .user-info{
+        .user-name{
+            font-size: 17px;
+            font-family: fontDemi;
+            margin-bottom: 10px;
+            color: $black;
+        }
+    }
+}
+
+// mazad-inv-item
+.mazad-inv-item{
+    padding: 14px 25px;
+
+    &:nth-child(even){
+        background-color: $white3;
+    }
+
+    .mazad-inner-item{
+        @include between;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-family: fontDemi;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        .first-maz{
+            color: $black;
+        }
+
+        .sec-maz{
+            color: $blue2;
+        }
+    }
+}
+
+// chat-container
+.chat-img{
+    // position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &::after{
+        content: '';
+        @include overlay(rgba(0,0,0, .2));
+        z-index: 1;
+    }
+}
+.chat-container{
+    position: absolute;
+    bottom: 10px;
+    @include dir-left(50%);
+    #{$ltr} & {
+        transform: translateX(-50%);
+    }
+    #{$rtl} & {
+        transform: translateX(50%);
+    }
+    width: calc(100% - 25px);
+    z-index: 4;
+    height: 280px;
+    padding-bottom: 70px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 25px;
+        background-color: $blue2;
+    }
+
+    .chat-box{
+        padding: 10px 14px;
+        border: 1px solid $white;
+        background-color: rgba($color: #000000, $alpha: .2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+
+        .chat-img{
+            @include circle(44px);
+            border: 3px solid $white;
+        }
+
+        .chat-text{
+            font-size: 15px;
+            color: $white;
+        }
+    }
+
+}
+.chat-form{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    z-index: 10;
+
+    .chat-input{
+        width: 100%;
+        height: 50px;
+        padding: 12px;
+        border-radius: 4px;
+        transition: $main-transition;
+        border: 1px solid transparent;
+
+        &::placeholder{
+            color: $light5;
+            font-size: 13px;
+            transition: $main-transition;
+        }
+
+        &:focus{
+            border-color: $blue2;
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+
+    .chat-btn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include dir-right(5px);
+        width: 90px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 4px;
     }
 }

@@ -187,12 +187,19 @@
     <!-- End Navbar -->
 
 
-    <!-- Shopping Cart -->
+    <!--  Main Content  -->
     <div class="bg-light main-padding">
 
         <div class="container">
 
-            <h2 class="center-title">تأكيد الطلب</h2>
+            <!-- Page Title -->
+            <div class="page-title">
+                <h3 class="title">تفاصيل الطلب</h3>
+                <button type="button" class="main-btn transparent" data-bs-target="#invoiceModal" data-bs-toggle="modal">
+                    <img src="assets/imgs/icons/bills.png" alt="bills" class="btn-ic">
+                    عرض الفاتورة
+                </button>
+            </div>
 
             <!-- Store Products -->
             <div class="flex-card mb-5">
@@ -261,8 +268,35 @@
                 <!-- Left Section -->
                 <div class="flex-3">
 
+                    <!-- Steps -->
+                    <div class="card-style p-4 mb-3">
+                        <ul class="steps">
+
+                            <li class="step-item current-item">
+                                <span class="progress-count"></span>
+                                <span class="progress-label">جديد</span>
+                            </li>
+
+                            <li class="step-item ">
+                                <span class="progress-count"></span>
+                                <span class="progress-label">قيد التنفيذ</span>
+                            </li>
+
+                            <li class="step-item">
+                                <span class="progress-count"></span>
+                                <span class="progress-label">قيد التوصيل</span>
+                            </li>
+
+                            <li class="step-item">
+                                <span class="progress-count"></span>
+                                <span class="progress-label">منتهي</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
                     <!-- Product Detailes -->
-                    <div class="card-style px-4 mb-4">
+                    <div class="card-style px-4">
 
                         <div class="product-buy-items">
 
@@ -306,7 +340,62 @@
 
                                             <button type="button" class="buy-btn blue">
                                                 <i class="fa-regular fa-heart ic"></i>
-                                                أضف للمفضلة
+                                                أضف للسلة
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="pro-buy-down">
+                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                                </p>
+
+                            </div>
+
+                            <!-- Item -->
+                            <div class="pro-buy-item py-4">
+
+                                <div class="pro-buy-top">
+
+                                    <div class="img">
+    
+                                        <!-- Star -->
+                                        <span class="star">
+                                            4.5
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+    
+                                        <!-- Type -->
+                                        <span class="type-p red">
+                                            <span class="transparent"></span>
+                                            <span class="text">20%</span>
+                                        </span>
+    
+                                        <img src="assets/imgs/product2.png" alt="" class="buy-img">
+                                    </div>
+
+                                    <div class="pro-buy-content">
+
+                                        <div class="pro-buy-head">
+                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                            <!-- Number -->
+                                            <span class="sm-btn blue">2</span>
+                                        </div>
+
+                                        <div class="pr-old">
+                                            <span class="old-price">200 ر.س</span>
+                                            <span class="price">150 ر.س</span>
+                                        </div>
+
+                                        <!-- Buttons -->
+                                        <div class="buy-buttons">
+
+                                            <button type="button" class="buy-btn blue">
+                                                <i class="fa-regular fa-heart ic"></i>
+                                                أضف للسلة
                                             </button>
 
                                         </div>
@@ -361,343 +450,7 @@
 
                                             <button type="button" class="buy-btn blue">
                                                 <i class="fa-regular fa-heart ic"></i>
-                                                أضف للمفضلة
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="pro-buy-down">
-                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                                </p>
-
-                            </div>
-
-                            <!-- Item -->
-                            <div class="pro-buy-item py-4">
-
-                                <div class="pro-buy-top">
-
-                                    <div class="img">
-    
-                                        <!-- Star -->
-                                        <span class="star">
-                                            4.5
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-    
-                                        <!-- Type -->
-                                        <span class="type-p red">
-                                            <span class="transparent"></span>
-                                            <span class="text">20%</span>
-                                        </span>
-    
-                                        <img src="assets/imgs/product1.png" alt="" class="buy-img">
-                                    </div>
-
-                                    <div class="pro-buy-content">
-
-                                        <div class="pro-buy-head">
-                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
-                                            <!-- Number -->
-                                            <span class="sm-btn blue">2</span>
-                                        </div>
-
-                                        <div class="pr-old">
-                                            <span class="old-price">200 ر.س</span>
-                                            <span class="price">150 ر.س</span>
-                                        </div>
-
-                                        <!-- Buttons -->
-                                        <div class="buy-buttons">
-
-                                            <button type="button" class="buy-btn blue">
-                                                <i class="fa-regular fa-heart ic"></i>
-                                                أضف للمفضلة
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="pro-buy-down">
-                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-            
-                    <!-- Radio -->
-                    <div class="row gy-5">
-                
-                        <!-- Radio Boxs -->
-                        <div class="col-lg-6">
-                            <div class="description card-style height-full">
-                                <div class="main-card-title">طريقة التوصيل</div>
-                                <div class="card-content card-padding">
-
-                                    <div class="radio-box">
-                                       <div class="radio-head">
-                                           <div class="top">
-                                                <span class="label-radio ca-auto">التاجر</span>
-                                                150 ر.س
-                                           </div>
-                                           <div class="bottom">
-                                                خلال 10 أيام
-                                            </div>
-                                       </div>
-                                   </div>
-
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!-- Radio Boxs -->
-                        <div class="col-lg-6">
-                            <div class="description card-style height-full">
-                                <div class="main-card-title">طريقة الدفع</div>
-                                <div class="card-content card-padding">
-
-                                    <div class="radio-box">
-                                        <span class="label-radio ca-auto ca-blue">محفظة</span>
-                                    </div> 
-
-                                </div>
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Store Products -->
-            <div class="flex-card mb-5">
-                <div class="flex-1">
-
-                    <div class="card-style pt-4 px-3 mb-3">
-
-                        <div class="stor-content vert">
-
-                            <img src="assets/imgs/stor2.png" alt="" class="store-img">
-                            <div class="stor-info">
-        
-                                <div class="store-head">
-                                    <h5 class="stor-title">off white</h5>
-                                    <span class="stor-star">
-                                        <i class="fa-solid fa-star"></i>
-                                        4.5
-                                    </span>
-                                </div>
-        
-                                <div class="stor-items">
-            
-                                    <div class="stor-item">
-                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                    </div>
-        
-                                    <div class="stor-item">
-                                        <img src="assets/imgs/icons/number-card.png" alt="">
-                                        <span class="text">0000000000000</span>
-                                    </div>
-        
-                                    <div class="stor-item">
-                                        <img src="assets/imgs/icons/truck-card.png" alt="">
-                                        <span class="text">30 ر.س</span>
-                                    </div>
-        
-                                </div>
-        
-                                <div class="desc">التوصيل مجاني في حالة شرائك منتجات ب</div>
-                                <div class="price">200 ر.س</div>
-        
-                            </div>
-        
-                            <div class="store-buttons">
-    
-                                <button type="button" class="store-btn blue">
-                                    <i class="fa-solid fa-wifi ic"></i>
-                                    متابعة المتجر
-                                </button>
-    
-                                <button type="button" class="store-btn red">
-                                    <i class="fa-regular fa-flag ic"></i>
-                                    الإبلاغ عن هذا المتجر
-                                </button>
-    
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="flex-3">
-
-                    <div class="card-style px-4 mb-4">
-
-                        <div class="product-buy-items">
-
-                            <!-- Item -->
-                            <div class="pro-buy-item py-4">
-
-                                <div class="pro-buy-top">
-
-                                    <div class="img">
-    
-                                        <!-- Star -->
-                                        <span class="star">
-                                            4.5
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-    
-                                        <!-- Type -->
-                                        <span class="type-p red">
-                                            <span class="transparent"></span>
-                                            <span class="text">20%</span>
-                                        </span>
-    
-                                        <img src="assets/imgs/product1.png" alt="" class="buy-img">
-                                    </div>
-
-                                    <div class="pro-buy-content">
-
-                                        <div class="pro-buy-head">
-                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
-                                            <!-- Number -->
-                                            <span class="sm-btn blue">2</span>
-                                        </div>
-
-                                        <div class="pr-old">
-                                            <span class="old-price">200 ر.س</span>
-                                            <span class="price">150 ر.س</span>
-                                        </div>
-
-                                        <!-- Buttons -->
-                                        <div class="buy-buttons">
-
-                                            <button type="button" class="buy-btn blue">
-                                                <i class="fa-regular fa-heart ic"></i>
-                                                أضف للمفضلة
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="pro-buy-down">
-                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                                </p>
-
-                            </div>
-
-                            <!-- Item -->
-                            <div class="pro-buy-item py-4">
-
-                                <div class="pro-buy-top">
-
-                                    <div class="img">
-    
-                                        <!-- Star -->
-                                        <span class="star">
-                                            4.5
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-    
-                                        <!-- Type -->
-                                        <span class="type-p red">
-                                            <span class="transparent"></span>
-                                            <span class="text">20%</span>
-                                        </span>
-    
-                                        <img src="assets/imgs/product1.png" alt="" class="buy-img">
-                                    </div>
-
-                                    <div class="pro-buy-content">
-
-                                        <div class="pro-buy-head">
-                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
-                                            <!-- Number -->
-                                            <span class="sm-btn blue">2</span>
-                                        </div>
-
-                                        <div class="pr-old">
-                                            <span class="old-price">200 ر.س</span>
-                                            <span class="price">150 ر.س</span>
-                                        </div>
-
-                                        <!-- Buttons -->
-                                        <div class="buy-buttons">
-
-                                            <button type="button" class="buy-btn blue">
-                                                <i class="fa-regular fa-heart ic"></i>
-                                                أضف للمفضلة
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="pro-buy-down">
-                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                                </p>
-
-                            </div>
-
-                            <!-- Item -->
-                            <div class="pro-buy-item py-4">
-
-                                <div class="pro-buy-top">
-
-                                    <div class="img">
-    
-                                        <!-- Star -->
-                                        <span class="star">
-                                            4.5
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-    
-                                        <!-- Type -->
-                                        <span class="type-p red">
-                                            <span class="transparent"></span>
-                                            <span class="text">20%</span>
-                                        </span>
-    
-                                        <img src="assets/imgs/product1.png" alt="" class="buy-img">
-                                    </div>
-
-                                    <div class="pro-buy-content">
-
-                                        <div class="pro-buy-head">
-                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
-                                            <!-- Number -->
-                                            <span class="sm-btn blue">2</span>
-                                        </div>
-
-                                        <div class="pr-old">
-                                            <span class="old-price">200 ر.س</span>
-                                            <span class="price">150 ر.س</span>
-                                        </div>
-
-                                        <!-- Buttons -->
-                                        <div class="buy-buttons">
-
-                                            <button type="button" class="buy-btn blue">
-                                                <i class="fa-regular fa-heart ic"></i>
-                                                أضف للمفضلة
+                                                أضف للسلة
                                             </button>
 
                                         </div>
@@ -713,84 +466,13 @@
                             </div>
                         </div>
 
-                    </div>
-            
-                    <div class="row gy-5">
-                
-                        <!-- Radio Boxs -->
-                        <div class="col-lg-6">
-                            <div class="description card-style height-full">
-                                <div class="main-card-title">طريقة التوصيل</div>
-                                <div class="card-content card-padding">
-
-                                    <div class="radio-box">
-                                        <div class="radio-head">
-                                            <div class="top">
-                                                 <span class="label-radio ca-auto">سمسار</span>
-                                                 150 ر.س
-                                            </div>
-                                            <div class="bottom">
-                                                 خلال 10 أيام
-                                             </div>
-                                        </div>
-                                    </div> 
-
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!-- Radio Boxs -->
-                        <div class="col-lg-6">
-                            <div class="description card-style height-full">
-                                <div class="main-card-title">طريقة الدفع</div>
-                                <div class="card-content card-padding">
-
-                                    <div class="radio-box radio-imgs">
-                                        <span class="label-radio ca-auto ca-blue">
-                                            <img src="assets/imgs/buy7.png" alt="" class="radio-img">
-                                            محفظة
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-        
                     </div>
                 </div>
+
             </div>
 
             <!-- Address And Order summary -->
             <div class="row gy-5">
-
-                <!-- Address Box -->
-                <div class="col-lg-6">
-
-                    <div class="description card-style mb-3">
-                        <div class="main-card-title">
-                            عنوان التوصيل
-                        </div>
-                        <div class="card-content card-padding">
-
-                            <div class="radio-boxs row gy-4">
-
-                                <div class="radio-box">
-                                   <div class="radio-head">
-                                       <div class="top">
-                                            <span class="label-radio ca-auto">المنزل</span>
-                                       </div>
-                                       <div class="bottom">
-                                            السعودية, الرياض, حي الياسمين
-                                        </div>
-                                   </div>
-                               </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
 
                 <!-- Order summary -->
                 <div class="col-lg-6">
@@ -831,19 +513,60 @@
                     </div>
                 </div>
 
+                <!-- Address Box -->
+                <div class="col-lg-6">
+
+                    <div class="description card-style mb-3">
+                        <div class="main-card-title">طريقة الدفع</div>
+                        <div class="card-content card-padding">
+
+                            <div class="radio-box radio-imgs">
+                                <span class="label-radio ca-auto ca-blue">
+                                    <img src="assets/imgs/buy7.png" alt="" class="radio-img">
+                                    محفظة
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="description card-style">
+                        <div class="main-card-title">
+                            عنوان التوصيل
+                        </div>
+                        <div class="card-content card-padding">
+
+                            <div class="radio-boxs row gy-4">
+
+                                <div class="radio-box">
+                                   <div class="radio-head">
+                                       <div class="top">
+                                            <span class="label-radio ca-auto">المنزل</span>
+                                       </div>
+                                       <div class="bottom">
+                                            السعودية, الرياض, حي الياسمين
+                                        </div>
+                                   </div>
+                               </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
     </div>
 
-
     <!-- Buttons -->
     <div class="cart-buttons-con bg-white sec-padding">
         <div class="container">
             <div class="buttons-m lg">
-                <a href="complete-payment.html" class="main-btn blue lg up">إتمام الدفع</a>
-                <a href="shopping-cart.html" class="main-btn transparent-red lg">رجوع</a>
+                <a href="#" class="main-btn transparent-red lg" data-bs-target="#cancelModal" data-bs-toggle="modal">إلغاء الطلب</a>
             </div>
         </div>
     </div>
@@ -952,6 +675,235 @@
 
     <div class="overlay-m"></div>
 
+
+
+    <!-- Start cancel Modal -->
+    <div class="modal fade" id="cancelModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h1 class="modal-title" id="exampleModalToggleLabel">سبب الإلغاء</h1>
+            </div>
+
+            <form action="user-account.html" class="w-100">
+
+                <div class="modal-body">
+                    <div class="input-g w-100 mb-0">
+                        <label class="main-label">
+                            ادخل سبب الإلغاء
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <textarea class="input-me text-area-sm" name="" id="" placeholder="أضف ملاحظة على طلبك"></textarea>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="modal-footer">
+                  <button class="main-btn transparent" data-bs-dismiss="modal">إرسال</button>
+                </div>
+
+            </form>
+
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Start invoice Modal -->
+    <div class="modal fade " id="invoiceModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content print">
+
+            <div class="modal-body">
+
+                <div class="content w-100">
+                    <div class="head-btns">
+                        <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+        
+                        <button type="button" class="print-modal">
+                            <img src="assets/imgs/icons/print.png" alt="print-icon" class="print-icon">
+                        </button>
+                    </div>
+    
+                    <img src="assets/imgs/logo_black.png" alt="logo" title="logo-black" class="logo-black">
+
+                    <div class="invoice-items">
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>رقم الفاتورة:</span>
+                                        <span>567</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>رقم الطلب:</span>
+                                        <span>567</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>تاريخ ارسال الطلب:</span>
+                                        <span>25/9/2023</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>وقت ارسال الطلب:</span>
+                                        <span>10pm</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>تفاصيل الطلب:</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>اسم المنتج:</span>
+                                        <span>كنزة صوف</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>سعر المنتج</span>
+                                        <span>150 ر.س</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>اسم المنتج:</span>
+                                        <span>كنزة صوف</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>سعر المنتج</span>
+                                        <span>150 ر.س</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>تفاصيل المتجر</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>اسم المتجر:</span>
+                                        <span>اسم المتجر</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>رقم السجل التجاري</span>
+                                        <span>1505060</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>عدد المنتجات:</span>
+                                        <span>2</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>طريقة الدفع:</span>
+                                        <span>إلكتروني</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>سعر المنتجات:</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>شركة الشحن</span>
+                                        <span>اكسبريس</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>رسوم التوصيل</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>قيمة الخصم</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>السعر الإجمالي:</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <img src="assets/imgs/code.png" alt="code" title="Qr Code" class="code-img">
+                </div>
+            </div>
+
+            <!-- <div class="modal-footer">
+              <button class="main-btn transparent" data-bs-dismiss="modal">إرسال</button>
+            </div> -->
+
+          </div>
+        </div>
+    </div>
 
 
     <!-- Bootstrap 5 -->

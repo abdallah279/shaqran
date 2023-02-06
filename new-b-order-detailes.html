@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
     <!-- Select 2 -->
     <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
-    <!-- intlTelInput -->
-    <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -84,6 +85,7 @@
                                 <option value="">مزادات</option>
         
                             </select>
+                            <!-- <i class="fa-solid fa-angle-down"></i> -->
                         </div>
         
                         <div class="search">
@@ -124,7 +126,7 @@
                         <a href="#" class="link">
                             <img src="assets/imgs/icons/follow.png" alt="">
                         </a>
-                        <a href="#" class="link">
+                        <a href="favorite.html" class="link">
                             <img src="assets/imgs/icons/heart.png" alt="">
                         </a>
                         <a href="shopping-cart.html" class="link">
@@ -165,17 +167,17 @@
                         <img src="assets/imgs/logo.png" alt="">
                     </a>
                     <img src="assets/imgs/icons/close.png" alt="" class="close">
-                    <a href="index.html" class="link">الرئيسية</a>
-                    <a href="stors.html" class="link">المتاجر</a>
-                    <a href="ads.html" class="link">الإعلانات</a>
-                    <a href="mazadat.html" class="link">المزادات</a>
-                    <a href="about.html" class="link">من نحن</a>
-                    <a href="contact-us.html" class="link">تواصل معنا</a>
-                    <a href="complaints-suggestions.html" class="link">الشكاوي والاقتراحات</a>
+                    <a href="index.html" class="link" title="الرئيسية">الرئيسية</a>
+                    <a href="stors.html" class="link" title="المتاجر">المتاجر</a>
+                    <a href="ads.html" class="link" title="الإعلانات">الإعلانات</a>
+                    <a href="mazadat.html" class="link" title="المزادات">المزادات</a>
+                    <a href="about.html" class="link" title="من نحن">من نحن</a>
+                    <a href="contact-us.html" class="link" title="تواصل معنا">تواصل معنا</a>
+                    <a href="complaints-suggestions.html" class="link" title="الشكاوي والاقتراحات">الشكاوي والاقتراحات</a>
                 </div>
 
                 <!-- Navbar Buttons -->
-                <div <div class="buttons-m">
+                <div class="buttons-m">
                     <a href="add-ads.html" class="main-btn sm transparent">أضف اعلان</a>
                     <a href="add-mazad.html" class="main-btn sm up">أضف مزاد</a>
                 </div>
@@ -184,70 +186,153 @@
     </nav>
     <!-- End Navbar -->
 
-    <!-- Start Login Section -->
-    <div class="account-section main-padding">
+
+    <!--  Main Content  -->
+    <div class="bg-light main-padding">
+
         <div class="container">
 
+            <!-- Page Title -->
             <div class="page-title">
-                <h3 class="title">حسابي</h3>
-
-                <div class="buttons-m">
-                    <a href="platform-commission.html" class="main-btn sm2 blue up">عمولة المنصة</a>
-                    <a href="open-store.html" class="main-btn sm2 transparent">افتح متجرك</a>
-                </div>
+                <h3 class="title">المتاجر المطلوب منها</h3>
             </div>
-            <div class="row">
 
-                <!-- SideBar -->
-                <div class="col-xl-3">
-                    <div class="side-bar">
+            <!-- Store Products -->
+            <div class="flex-card mb-4">
 
-                        <!-- Side Link -->
-                        <div class="side-links">
+                <!-- Right Section -->
+                <div class="flex-1">
 
-                            <a href="user-account.html" class="side-link active">
-                                الملف الشخصي
-                                <i class="fa-solid fa-angle-left"></i>
+                    <div class="card-style pt-4 px-3 mb-3">
+
+                        <div class="order-vert">
+                            <div class="img-order-con lg">
+                                <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
+                            </div>
+
+                            <div class="items">
+                                <div class="main-item">
+                                    <span class="main-item-first">رقم الطلب:</span>
+                                    <span class="main-item-secound">1232</span>
+                                </div>
+
+                                <div class="main-item">
+                                    <span class="main-item-first">سعر الطلب:</span>
+                                    <span class="price">150 ر.س</span>
+                                </div>
+
+                                <span class="main-item-first">منذ 13 min</span>
+                            </div>
+
+                            <div class="order-footer">
+                                <span class="light-span">جديد</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Left Section -->
+                <div class="flex-3">
+
+                    <!-- Product Detailes -->
+                    <div class="card-style px-4">
+
+                        <div class="product-buy-items">
+
+                            <!-- Item -->
+                            <a href="new-b-store-detailes.html" class="pro-buy-item py-4 d-block">
+
+                                <div class="pro-buy-top">
+
+                                    <div class="img">
+    
+                                        <!-- Star -->
+                                        <span class="star">
+                                            4.5
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+    
+                                        <img src="assets/imgs/stor1.png" alt="" class="buy-img">
+                                    </div>
+
+                                    <div class="pro-buy-content">
+
+                                        <div class="pro-buy-head">
+                                            <h5 class="title lg">off white</h5>
+                                            <!-- Number -->
+                                            <i class="fa-solid fa-angle-left pro-icon"></i>
+                                        </div>
+
+                                        <div class="items-m">
+                                            <div class="stor-item mb-2">
+                                                <img src="assets/imgs/icons/map-card.png" alt="">
+                                                <span class="text">السعودية , الرياض, حي الياس</span>
+                                            </div>
+                
+                                            <div class="stor-item mb-2">
+                                                <img src="assets/imgs/icons/number-card.png" alt="">
+                                                <span class="text">0000000000000</span>
+                                            </div>
+                
+                                            <div class="stor-item">
+                                                <img src="assets/imgs/icons/truck-card.png" alt="">
+                                                <span class="text">30 ر.س</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </a>
 
-                            <a href="#" class="side-link">
-                                طلباتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                            <!-- Item -->
+                            <a href="new-b-store-detailes.html" class="pro-buy-item py-4 d-block">
 
-                            <a href="#" class="side-link">
-                                إعلاناتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                                <div class="pro-buy-top">
 
-                            <a href="#" class="side-link">
-                                مزايداتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                                    <div class="img">
+    
+                                        <!-- Star -->
+                                        <span class="star">
+                                            4.5
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+    
+                                        <img src="assets/imgs/stor2.png" alt="" class="buy-img">
+                                    </div>
 
-                            <a href="#" class="side-link">
-                                محفظتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                                    <div class="pro-buy-content">
 
-                            <a href="#" class="side-link">
-                                فواتيري
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                                        <div class="pro-buy-head">
+                                            <h5 class="title lg">off white</h5>
+                                            <!-- Number -->
+                                            <i class="fa-solid fa-angle-left pro-icon"></i>
+                                        </div>
 
-                            <a href="#" class="side-link">
-                                تقييماتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                                        <div class="items-m">
+                                            <div class="stor-item mb-2">
+                                                <img src="assets/imgs/icons/map-card.png" alt="">
+                                                <span class="text">السعودية , الرياض, حي الياس</span>
+                                            </div>
+                
+                                            <div class="stor-item mb-2">
+                                                <img src="assets/imgs/icons/number-card.png" alt="">
+                                                <span class="text">0000000000000</span>
+                                            </div>
+                
+                                            <div class="stor-item">
+                                                <img src="assets/imgs/icons/truck-card.png" alt="">
+                                                <span class="text">30 ر.س</span>
+                                            </div>
+                                        </div>
 
-                            <a href="#" class="side-link">
-                                محادثاتي
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
+                                    </div>
 
-                            <a href="#" class="side-link">
-                                عناويني
-                                <i class="fa-solid fa-angle-left"></i>
+                                </div>
+
                             </a>
 
                         </div>
@@ -255,56 +340,98 @@
                     </div>
                 </div>
 
-                <!-- Form -->
-                <div class="col-lg-8 col-xl-6 ">
+            </div>
 
-                    <form action="user-account.html" class="form-style">
+            <!-- Address And Order summary -->
+            <div class="row gy-5">
 
-                        <!-- Password -->
-                        <div class="input-g">
-                            <label class="main-label">
-                               كلمة المرور الحالية
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
+                <!-- Order summary -->
+                <div class="col-lg-6">
+                    <div class="card-style">
+                        <div class="main-card-title">ملخص الطلب</div>
+                        <div class="card-content">
+
+                            <div class="summary-items">
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة المنتجات</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة التوصيل</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة الضريبة المضافة</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة الخصم</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item total">
+                                    <span class="first">الإجمالي</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
                             </div>
-                        </div>
 
-                        <!-- Password -->
-                        <div class="input-g">
-                            <label class="main-label">
-                               كلمة المرور الجديدة
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address Box -->
+                <div class="col-lg-6">
+
+                    <div class="description card-style mb-3">
+                        <div class="main-card-title">طريقة الدفع</div>
+                        <div class="card-content card-padding">
+
+                            <div class="radio-box radio-imgs">
+                                <span class="label-radio ca-auto ca-blue">
+                                    <img src="assets/imgs/buy7.png" alt="" class="radio-img">
+                                    محفظة
+                                </span>
                             </div>
-                        </div>
 
-                        <!-- Password -->
-                        <div class="input-g">
-                            <label class="main-label">
-                              تأكيد  كلمة المرور الجديدة
-                                <span class="label-hint">*</span>
-                            </label>
-                            <div class="main-input">
-                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور">
+                        </div>
+                    </div>
+
+                    <div class="description card-style">
+                        <div class="main-card-title">
+                            عنوان التوصيل
+                        </div>
+                        <div class="card-content card-padding">
+
+                            <div class="radio-boxs row gy-4">
+
+                                <div class="radio-box">
+                                   <div class="radio-head">
+                                       <div class="top">
+                                            <span class="label-radio ca-auto">المنزل</span>
+                                       </div>
+                                       <div class="bottom">
+                                            السعودية, الرياض, حي الياسمين
+                                        </div>
+                                   </div>
+                               </div>
+
                             </div>
-                        </div>
 
-                        <!-- Submit Button -->
-                        <div class="form-btns mt-4">
-                            <button type="submit" class="main-btn transparent md">حفظ التغييرات</button>
                         </div>
-
-                    </form>
+                    </div>
 
                 </div>
+
             </div>
+
         </div>
+
     </div>
-    <!-- End Login Section -->
 
 
     <!-- Start Footer -->
