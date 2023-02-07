@@ -128,18 +128,13 @@ $( 'input[type="checkbox"]' ).click( function () {
 })
 
 // Filter
-let filterSelect = document.querySelector('.select-filter');
-if(filterSelect){
-
-  filterSelect.onchange = function(){
-    if(filterSelect.options[filterSelect.selectedIndex].getAttribute('data-filter') == 'linear'){
-        $('.cards-container').addClass('verticale');
+$('.select-filter').on('change', function(){
+  if(this.options[this.selectedIndex].getAttribute('data-filter') == 'linear'){
+      $(this).parents('.filter-container').find('.cards-container').addClass('verticale');
     } else{
-        $('.cards-container').removeClass('verticale');
-    }
+      $(this).parents('.filter-container').find('.cards-container').removeClass('verticale');
   }
-
-}
+});
 
 // Input Number
 $(document).ready(function() {

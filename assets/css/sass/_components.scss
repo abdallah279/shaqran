@@ -845,9 +845,16 @@
     }
 
     &.sm2{
-      width: 126px;
+      // width: 126px;
       font-size: 15px;
       height: 40px;
+    }
+
+    &.sm3{
+      width: 105px;
+      font-size: 15px;
+      height: 40px;
+      border-radius: 10px;
     }
 
     &.md{
@@ -906,17 +913,44 @@
   border-radius: 5px;
   border: 1px solid $blue2;
   color: $blue2;
-  font-size: 16px;
+  font-size: 15px;
   @include center;
   background-color: transparent;
   outline: none;
   cursor: pointer;
   transition: $main-transition;
 
+  .sm-btn-img{
+    max-width: 18px;
+    max-height: 18px;
+  }
+
   &.blue{
     background-color: $blue2;
     color: $white;
     cursor: auto;
+  }
+
+  &.red{
+    border-color: $red;
+    color: $red;
+    // cursor: auto;
+
+    &:hover, &.active{
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  &.light{
+    border-color: transparent;
+    cursor: auto;
+    background-color: $white2;
+
+    &:hover, &.active{
+      background-color: $white2;
+      color: $blue2;
+    }
   }
 
   &:hover, &.active{
@@ -940,6 +974,10 @@
   color: $blue2 !important;
 }
 
+.c-black{
+  color: $black;
+}
+
 .c-ligth{
   color: $light;
 }
@@ -949,12 +987,15 @@
 }
 
 .mazad-value{
-  padding: 10px;
+  padding: 0 12px;
   background-color: $white2;
   border-radius: 4px;
   font-size: 15px;
   color: $blue2;
   font-family: fontDemi;
+  display: flex;
+  align-items: center;
+  height: 48px;
 }
 
 .red-text{
@@ -985,6 +1026,19 @@
 
 .fs-17{
   font-size: 17px;
+}
+
+.fs-22{
+  font-size: 26px;
+}
+
+.ff-d{
+  font-family: fontDemi;
+}
+
+
+.main-border{
+  border: 1px solid $border-color;
 }
 
 .main-padding{
@@ -1085,10 +1139,26 @@
   margin-bottom: 0;
 }
 
+.main-form-title{
+  font-size: 18px;
+  color: $light5;
+  border-bottom: 1px solid $border-color;
+  padding: 20px;
+}
+
 .desc{
   font-size: 14px;
   color: $light;
   line-height: 1.9;
+
+  &.sm{
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+.show-text{
+  display: none;
 }
 
 .price{
@@ -1122,6 +1192,25 @@
 
   i{
     color: $gold;
+  }
+}
+
+.white-type{
+  position: absolute;
+  top: 12px;
+  @include dir-left(10px);
+  background-color: $white;
+  font-size: 12px;
+  padding: 2px 12px;
+  border-radius: 3px;
+  color: $blue2;
+  z-index: 3;
+  
+  &.lg{
+    @include dir-left(24px);
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 4px;
   }
 }
 
@@ -1240,6 +1329,35 @@
 
 }
 
+.form-img{
+  display: block;
+  width: 390px;
+  height: 340px;
+  margin: 0 auto 40px;
+
+  @media screen and (max-width: $screen-sm) {
+    width: 330px;
+    height: 300px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    width: calc(100% - 30px);
+    height: 280px;
+  }
+
+  @media screen and (max-width: $screen-xxs) {
+    width: calc(100% - 30px);
+    height: 200px;
+  }
+}
+
+.card-dir{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: calc(100% - 65px);
+}
+
 .main-items{
   @include between;
   flex-wrap: wrap;
@@ -1273,8 +1391,8 @@
   &.lg{
     display: inline-block;
     @include center;
-    width: 130px;
-    height: 40px;
+    width: 140px;
+    height: 44px;
     padding: 8px 15px;
     font-size: 15px;
   }
@@ -1899,6 +2017,7 @@
     cursor: pointer;
     transition: $main-transition;
     position: relative;
+    flex-shrink: 0;
   
     &:hover{
       background-color: $white2;
@@ -1945,24 +2064,25 @@
       }
     }
   
-    .check-anchor{
-      cursor: pointer;
-      color: $black;
-      font-size: 15px;
+  }
   
-      a{
-        color: $blue2;
-        text-decoration: underline;
-        transition: $main-transition;
-  
-        &:hover{
-          // text-decoration: none;
-          color: $blue;
-        }
+  .check-anchor{
+    cursor: pointer;
+    color: $black;
+    font-size: 15px;
+    line-height: 1.6;
+
+    a{
+      color: $blue2;
+      text-decoration: underline;
+      transition: $main-transition;
+
+      &:hover{
+        // text-decoration: none;
+        color: $blue;
       }
     }
   }
-
 
 
 }
@@ -2064,6 +2184,44 @@
     transition: $main-transition;
     @include center;
     font-family: fontDemi;
+  }
+}
+
+
+// switch-con
+.switch-con{
+  line-height: 0;
+  .switch{
+    width: 52px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    background-color: $white;
+    border-radius: 25px;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 8%);
+    transition: $main-transition;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include dir-left(4px);
+      @include circle(22px);
+      background-color: $gold2;
+      transition: $main-transition;
+    }
+  }
+
+
+  input:checked + .switch::after{
+    #{$ltr} & {
+      transform: translateX(100%) translateY(-50%);
+    }
+    #{$rtl} & {
+      transform: translateX(-100%) translateY(-50%);
+    }
+    background-color: $red;
   }
 }
 

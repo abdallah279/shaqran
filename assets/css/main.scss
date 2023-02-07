@@ -703,7 +703,7 @@
 // Start Rating Items
 .rating-items{
 
-    height: 425px;
+    max-height: 425px;
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -745,6 +745,7 @@
             .rate-name{
                 font-size: 15px;
                 color: $black;
+                font-family: fontDemi;
             }
 
             .rate-date{
@@ -758,6 +759,21 @@
         font-size: 13px;
         line-height: 1.7;
         color: $light;
+    }
+
+    .requests-done{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+         img{
+            max-height: 16px;
+         }
+
+         .text{
+            font-size: 16px;
+            color: $black;
+            font-family: fontDemi;
+         }
     }
 }
 
@@ -778,6 +794,16 @@
         border-radius: 10px;
         object-fit: cover;
         border: 4px solid $white3;
+
+        @media screen and (max-width:$screen-sm) {
+            width: 100px;
+            height: 90px;
+        }
+
+        @media screen and (max-width:$screen-xs) {
+            width: 90px;
+            height: 80px;
+        }
     }
 
     .stor-info{
@@ -803,7 +829,7 @@
                 align-items: center;
                 gap: 3px;
                 color: $blue2;
-                font-size: 15px;
+                font-size: 16px;
 
                 i{
                     color: $gold2;
@@ -926,7 +952,7 @@
 
     img{
         max-width: 20px;
-        max-height: 20px;
+        max-height: 16px;
     }
 }
 
@@ -944,6 +970,10 @@
     height: 550px;
     object-fit: cover;
     border-radius: 10px;
+
+    &.md{
+        height: 695px;
+    }
 
     &.lg{
         height: 734px;
@@ -1026,6 +1056,9 @@
         font-size: 18px;
         margin-bottom: 15px;
         color: $black;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
     .product-items{
@@ -1041,6 +1074,10 @@
             .product-item-bottom{
                 font-size: 15px;
                 color: $black;
+            }
+
+            .pr-ic{
+                max-height: 15px
             }
         }
     }
@@ -1563,6 +1600,24 @@
             font-family: fontDemi;
             margin-bottom: 10px;
             color: $black;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .user-star{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 12px;
+                background-color: $white3;
+                padding: 6px;
+                border-radius: 3px;
+                color: #202020;
+
+                i{
+                    color: $gold;
+                }
+            }
         }
     }
 }
@@ -1608,6 +1663,7 @@
         z-index: 1;
     }
 }
+
 .chat-container{
     position: absolute;
     bottom: 10px;
@@ -1647,6 +1703,7 @@
         .chat-img{
             @include circle(44px);
             border: 3px solid $white;
+            flex-shrink: 0;
         }
 
         .chat-text{
@@ -1656,6 +1713,7 @@
     }
 
 }
+
 .chat-form{
     position: absolute;
     bottom: 10px;
@@ -1695,5 +1753,171 @@
         height: 40px;
         font-size: 14px;
         border-radius: 4px;
+    }
+}
+
+// not-item
+.not-item{
+    border: 1px solid $border-color;
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: $main-transition;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+        padding: 18px 15px;
+    }
+
+    @media screen and (max-width: $screen-xs) {
+        padding: 15px 12px;
+    }
+    
+    .not-text{
+        color: $black;
+        font-size: 17px;
+        font-family: fontDemi;
+        transition: $main-transition;
+    
+        @media screen and (max-width: $screen-sm) {
+            font-size: 16px;
+        }
+    
+        @media screen and (max-width: $screen-xs) {
+            font-size: 15px;
+        }
+    }
+
+    &:hover{
+        background-color: $white2;
+
+        .not-text{
+            color: $blue2;
+        }
+    }
+}
+
+// contact
+.contact-title{
+    font-size: 20px;
+    color: $black;
+    font-family: fontDemi;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media screen and (max-width:$screen-xs) {
+       font-size: 18px;
+    }
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+
+    @media screen and (max-width:$screen-xs) {
+        gap: 10px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .img{
+        width: 47px;
+        height: 47px;
+        border-radius: 5px;
+        background-color: $white2;
+        @include center;
+        flex-shrink: 0;
+        
+        @media screen and (max-width:$screen-xs) {
+            width: 42px;
+            height: 42px;
+        }
+
+        img{
+            max-width: 24px;
+            max-height: 24px;
+        }
+    }
+
+    .text{
+        font-size: 17px;
+        color: $black;
+        
+        @media screen and (max-width:$screen-xs) {
+            font-size: 16px;
+        }
+    }
+}
+
+// wallet
+.wallet-price{
+    @include center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: fontDemi;
+    margin-bottom: 25px;
+
+    .title{
+        font-size: 36px;
+        color: $black;
+
+        @media screen and (max-width:$screen-sm) {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width:$screen-xs) {
+            font-size: 26px;
+        }
+
+        @media screen and (max-width:$screen-xxs) {
+            font-size: 22px;
+        }
+    }
+
+    .currency{
+        font-size: 18px;
+        color: $light5;
+
+        @media screen and (max-width:$screen-xs) {
+            font-size: 16px;
+        }
+    }
+}
+
+// rating-content
+.rating-content{
+    @include center;
+    flex-direction: column;
+    gap: 12px;
+
+    .rating-head{
+        font-size: 42px;
+        color: $black;
+        font-family: fontDemi;
+    }
+
+    .icons{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 26px;
+        color: $icon-color;
+
+        .color{
+            color: $gold;
+        }
+    }
+
+    .rating-text{
+        font-size: 20px;
+        color: $light5;
     }
 }

@@ -120,10 +120,10 @@
                         <a href="user-account.html" class="link">
                             <img src="assets/imgs/icons/user-n.png" alt="">
                         </a>
-                        <a href="#" class="link">
+                        <a href="notifications.html" class="link">
                             <img src="assets/imgs/icons/not-n.png" alt="">
                         </a>
-                        <a href="#" class="link">
+                        <a href="follow-up.html" class="link">
                             <img src="assets/imgs/icons/follow.png" alt="">
                         </a>
                         <a href="favorite.html" class="link">
@@ -219,7 +219,7 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
 
-                            <a href="#" class="side-link tabs-m">
+                            <a href="#" class="side-link tabs-m" data-show="adv">
                                 إعلاناتي
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
@@ -229,7 +229,7 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
 
-                            <a href="#" class="side-link tabs-m">
+                            <a href="#" class="side-link tabs-m" data-show="wallet">
                                 محفظتي
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
@@ -239,7 +239,7 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
 
-                            <a href="#" class="side-link tabs-m">
+                            <a href="#" class="side-link tabs-m" data-show="rating">
                                 تقييماتي
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
@@ -778,6 +778,481 @@
                                 </div>
                             </div>
     
+                        </div>
+
+                        <!-- Accordion -->
+                        <div class="accordion tabs-show adv" id="accordionAdv">
+
+                            <!-- Item -->
+                            <div class="accordion-item">
+        
+                                <!-- Header -->
+                              <h2 class="accordion-header" id="headingOneAdv">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneAdv" aria-expanded="true" aria-controls="collapseOne">
+                                    الأقسام
+                                </button>
+                              </h2>
+        
+                              <!-- Content -->
+                              <div id="collapseOneAdv" class="accordion-collapse collapse show" aria-labelledby="headingOneAdv" data-bs-parent="#accordionAdv">
+                                <div class="accordion-body">
+        
+                                    <!-- Link -->
+                                    <div class="dropend">
+                                        <button type="button" class="link active dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            عقارات
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+        
+                                        <!-- DropDown -->
+                                        <ul class="dropdown-menu check-boxs close2">
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="allAdv" class="check-all" data-check="close2">
+                                                <label class="check" for="allAdv"></label>
+                                                <label class="check-text" for="allAdv">
+                                                    الكل
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="mensAdv">
+                                                <label class="check" for="mensAdv"></label>
+                                                <label class="check-text" for="mensAdv">
+                                                   شقق
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="femalsAdv">
+                                                <label class="check" for="femalsAdv"></label>
+                                                <label class="check-text" for="femalsAdv">
+                                                    فلل
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="childAdv">
+                                                <label class="check" for="childAdv"></label>
+                                                <label class="check-text" for="childAdv">
+                                                    عماير
+                                                </label>
+                                            </div>
+        
+                                        </ul>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="dropend">
+                                        <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            أثاث
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+        
+                                        <!-- DropDown -->
+                                        <ul class="dropdown-menu check-boxs perfumesAdv">
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="all8Adv" class="check-all" data-check="perfumesAdv">
+                                                <label class="check" for="all8Adv"></label>
+                                                <label class="check-text" for="all8Adv">
+                                                    الكل
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="mens8Adv">
+                                                <label class="check" for="mens8Adv"></label>
+                                                <label class="check-text" for="mens8Adv">
+                                                    رجالى
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="femals8Adv">
+                                                <label class="check" for="femals8Adv"></label>
+                                                <label class="check-text" for="femals8Adv">
+                                                    نسائى
+                                                </label>
+                                            </div>
+        
+                                        </ul>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="dropend">
+                                        <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            سيارات
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+        
+                                        <!-- DropDown -->
+                                        <ul class="dropdown-menu check-boxs accessoriesAdv">
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="all2Adv" class="check-all" data-check="accessoriesAdv">
+                                                <label class="check" for="all2Adv"></label>
+                                                <label class="check-text" for="all2Adv">
+                                                    الكل
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="mens2Adv">
+                                                <label class="check" for="mens2Adv"></label>
+                                                <label class="check-text" for="mens2Adv">
+                                                    رجالى
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="femals2Adv">
+                                                <label class="check" for="femals2Adv"></label>
+                                                <label class="check-text" for="femals2Adv">
+                                                    نسائى
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="child2Adv">
+                                                <label class="check" for="child2Adv"></label>
+                                                <label class="check-text" for="child2Adv">
+                                                    أطفال
+                                                </label>
+                                            </div>
+        
+                                        </ul>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="dropend">
+                                        <button type="button" class="link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            إلكترونيات
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+        
+                                        <!-- DropDown -->
+                                        <ul class="dropdown-menu check-boxs makeupAdv">
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="all3Adv" class="check-all" data-check="makeupAdv">
+                                                <label class="check" for="all3Adv"></label>
+                                                <label class="check-text" for="all3Adv">
+                                                    الكل
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="mens3Adv">
+                                                <label class="check" for="mens3Adv"></label>
+                                                <label class="check-text" for="mens3Adv">
+                                                    رجالى
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="femals3Adv">
+                                                <label class="check" for="femals3Adv"></label>
+                                                <label class="check-text" for="femals3Adv">
+                                                    نسائى
+                                                </label>
+                                            </div>
+        
+                                            <div class="check-box">
+                                                <input type="checkbox" name="" id="child3Adv">
+                                                <label class="check" for="child3Adv"></label>
+                                                <label class="check-text" for="child3Adv">
+                                                    أطفال
+                                                </label>
+                                            </div>
+        
+                                        </ul>
+                                    </div>
+        
+                                </div>
+                              </div>
+        
+                            </div>
+        
+                            <!-- Item -->
+                            <div class="accordion-item">
+        
+                                <!-- Header -->
+                                <h2 class="accordion-header" id="headingTwoAdv">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoAdv" aria-expanded="false" aria-controls="collapseTwo">
+                                        الغرض
+                                    </button>
+                                </h2>
+        
+                                <!-- Content -->
+                                <div id="collapseTwoAdv" class="accordion-collapse collapse" aria-labelledby="headingTwoAdv" data-bs-parent="#accordionAdv">
+                                    <div class="accordion-body check-boxs countryAdv-p">
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcuntAdv-p" class="check-all" data-check="countryAdv-p">
+                                        <label class="check" for="allcuntAdv-p"></label>
+                                        <label class="check-text" for="allcuntAdv-p">
+                                            الكل
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt2Adv-p">
+                                        <label class="check" for="allcunt2Adv-p"></label>
+                                        <label class="check-text" for="allcunt2Adv-p">
+                                            سكني
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt3Adv-p">
+                                        <label class="check" for="allcunt3Adv-p"></label>
+                                        <label class="check-text" for="allcunt3Adv-p">
+                                            تجاري
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt4Adv-p">
+                                        <label class="check" for="allcunt4Adv-p"></label>
+                                        <label class="check-text" for="allcunt4Adv-p">
+                                            فندقي
+                                        </label>
+                                    </div>
+        
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+                            <!-- Item -->
+                            <div class="accordion-item">
+        
+                                <!-- Header -->
+                                <h2 class="accordion-header" id="headingFourAdv">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourAdv" aria-expanded="false" aria-controls="collapseThree">
+                                        النوع
+                                    </button>
+                                </h2>
+        
+                                <!-- Content -->
+                                <div id="collapseFourAdv" class="accordion-collapse collapse" aria-labelledby="headingFourAdv" data-bs-parent="#accordionAdv">
+                                    
+                                    <div class="accordion-body check-boxs countryAdv-p2">
+        
+                                        <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcuntAdv-p2" class="check-all" data-check="countryAdv-p2">
+                                        <label class="check" for="allcuntAdv-p2"></label>
+                                        <label class="check-text" for="allcuntAdv-p2">
+                                            الكل
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt2Adv-p2">
+                                        <label class="check" for="allcunt2Adv-p2"></label>
+                                        <label class="check-text" for="allcunt2Adv-p2">
+                                            شراء
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt3Adv-p2">
+                                        <label class="check" for="allcunt3Adv-p2"></label>
+                                        <label class="check-text" for="allcunt3Adv-p2">
+                                            بيع
+                                        </label>
+                                    </div>
+        
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+        
+                            <!-- Item -->
+                            <div class="accordion-item">
+        
+                                <!-- Header -->
+                                <h2 class="accordion-header" id="headingThreeAdv">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeAdv" aria-expanded="false" aria-controls="collapseThree">
+                                        الدولة
+                                    </button>
+                                </h2>
+        
+                                <!-- Content -->
+                                <div id="collapseThreeAdv" class="accordion-collapse collapse" aria-labelledby="headingThreeAdv" data-bs-parent="#accordionAdv">
+                                    
+                                    <div class="accordion-body check-boxs cityAdv">
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcityAdv" class="check-all" data-check="cityAdv">
+                                            <label class="check" for="allcityAdv"></label>
+                                            <label class="check-text" for="allcityAdv">
+                                                الكل
+                                            </label>
+                                        </div>
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcity2Adv">
+                                            <label class="check" for="allcity2Adv"></label>
+                                            <label class="check-text" for="allcity2Adv">
+                                                السعودية
+                                            </label>
+                                        </div>
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcity3Adv">
+                                            <label class="check" for="allcity3Adv"></label>
+                                            <label class="check-text" for="allcity3Adv">
+                                                مصر
+                                            </label>
+                                        </div>
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcity4Adv">
+                                            <label class="check" for="allcity4Adv"></label>
+                                            <label class="check-text" for="allcity4Adv">
+                                                الإمارات
+                                            </label>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                            <!-- Item -->
+                            <div class="accordion-item">
+        
+                                <!-- Header -->
+                                <h2 class="accordion-header" id="headingSAdv">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSAdv" aria-expanded="false" aria-controls="collapseThree">
+                                        المدينة
+                                    </button>
+                                </h2>
+        
+                                <!-- Content -->
+                                <div id="collapseSAdv" class="accordion-collapse collapse" aria-labelledby="headingSAdv" data-bs-parent="#accordionAdv">
+                                    
+                                    <div class="accordion-body check-boxs city2Adv">
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcityAdv2" class="check-all" data-check="city2Adv">
+                                            <label class="check" for="allcityAdv2"></label>
+                                            <label class="check-text" for="allcityAdv2">
+                                                الكل
+                                            </label>
+                                        </div>
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcity2Adv2">
+                                            <label class="check" for="allcity2Adv2"></label>
+                                            <label class="check-text" for="allcity2Adv2">
+                                                الرياض
+                                            </label>
+                                        </div>
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcity3Adv2">
+                                            <label class="check" for="allcity3Adv2"></label>
+                                            <label class="check-text" for="allcity3Adv2">
+                                                جدة
+                                            </label>
+                                        </div>
+        
+                                        <!-- Link -->
+                                        <div class="check-box">
+                                            <input type="checkbox" name="" id="allcity4Adv2">
+                                            <label class="check" for="allcity4Adv2"></label>
+                                            <label class="check-text" for="allcity4Adv2">
+                                                خبر
+                                            </label>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                            <!-- Item -->
+                            <div class="accordion-item">
+        
+                                <!-- Header -->
+                                <h2 class="accordion-header" id="headingFiveAdv">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveAdv" aria-expanded="false" aria-controls="collapseTwo">
+                                        السعر
+                                    </button>
+                                </h2>
+        
+                                <!-- Content -->
+                                <div id="collapseFiveAdv" class="accordion-collapse collapse" aria-labelledby="headingFiveAdv" data-bs-parent="#accordionAdv">
+                                    <div class="accordion-body check-boxs countryAdv">
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcuntAdv" class="check-all" data-check="countryAdv">
+                                        <label class="check" for="allcuntAdv"></label>
+                                        <label class="check-text" for="allcuntAdv">
+                                            الكل
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt2Adv">
+                                        <label class="check" for="allcunt2Adv"></label>
+                                        <label class="check-text" for="allcunt2Adv">
+                                            أقل من  30 ر.س
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt3Adv">
+                                        <label class="check" for="allcunt3Adv"></label>
+                                        <label class="check-text" for="allcunt3Adv">
+                                            50 ر.س - 100 ر.س
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt4Adv">
+                                        <label class="check" for="allcunt4Adv"></label>
+                                        <label class="check-text" for="allcunt4Adv">
+                                            أعلى من  100 ر.س
+                                        </label>
+                                    </div>
+        
+                                    <!-- Link -->
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt5Adv">
+                                        <label class="check" for="allcunt5Adv"></label>
+                                        <label class="check-text" for="allcunt5Adv">
+                                            العروض
+                                        </label>
+                                    </div>
+        
+                                    </div>
+                                </div>
+        
+                            </div>
+        
                         </div>
                     </div>
 
@@ -2367,13 +2842,324 @@
     
                             </div>
                             <!-- End Orders -->
+
+
+                            <!-- Start wallet -->
+                            <div class="form-style tabs-show wallet">
+                                <img src="assets/imgs/E-Wallet-amico.png" alt="" class="form-img">
+
+                                <div class="wallet-price">
+                                    <h3 class="title">2600</h3>
+                                    <span class="currency">ر.س</span>
+                                </div>
+
+                                <button type="button" class="main-btn transparent md mx-auto">شحن رصيد</button>
+
+                            </div>
+                            <!-- End wallet -->
+
+
+                            <!-- Start Ratings -->
+                            <div class="tabs-show rating">
+
+                                <div class="main-border p-5 mb-4">
+                                    <div class="rating-content">
+                                        
+                                        <div class="rating-head">4.8</div>
+
+                                        <div class="icons">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star color"></i>
+                                            <i class="fa-solid fa-star color"></i>
+                                            <i class="fa-solid fa-star color"></i>
+                                            <i class="fa-solid fa-star color"></i>
+                                        </div>
+
+                                        <div class="rating-text">(654) تقييما</div>
+
+                                    </div>
+                                </div>
+
+                                <div class="main-border">
+                                    <h2 class="main-form-title">تقييمات العملاء</h2>
+                                    <div class="form-content">
+                                        <div class="rate-item card-padding">
+                                            <div class="rate-head">
+                                                <img src="assets/imgs/user1.png" alt="rate-img" class="rate-img">
+                                                <div class="user-info">
+                                                    <span class="rate-name">عبدالله أحمد</span>
+                                                    <span class="rate-date">25/9/2021</span>
+                                                </div>
+                                            </div>
+            
+                                            <div class="rate-icons">
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+        
+                                            <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                                                حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                                                أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا 
+                                                النص أو العديد هذا النص هو مثال لنص يمكن أن 
+                                            </p>
+                                        </div>
+        
+                                        <div class="rate-item card-padding">
+                                            <div class="rate-head">
+                                                <img src="assets/imgs/user2.png" alt="rate-img" class="rate-img">
+                                                <div class="user-info">
+                                                    <span class="rate-name">محمد السيد</span>
+                                                    <span class="rate-date">25/9/2021</span>
+                                                </div>
+                                            </div>
+            
+                                            <div class="rate-icons">
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+        
+                                            <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                                                حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                                                أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا 
+                                                النص أو العديد هذا النص هو مثال لنص يمكن أن 
+                                            </p>
+                                        </div>
+
+                                        <div class="rate-item card-padding">
+                                            <div class="rate-head">
+                                                <img src="assets/imgs/user1.png" alt="rate-img" class="rate-img">
+                                                <div class="user-info">
+                                                    <span class="rate-name">عبدالله أحمد</span>
+                                                    <span class="rate-date">25/9/2021</span>
+                                                </div>
+                                            </div>
+            
+                                            <div class="rate-icons">
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+        
+                                            <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                                                حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                                                أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا 
+                                                النص أو العديد هذا النص هو مثال لنص يمكن أن 
+                                            </p>
+                                        </div>
+        
+                                        <div class="rate-item card-padding">
+                                            <div class="rate-head">
+                                                <img src="assets/imgs/user2.png" alt="rate-img" class="rate-img">
+                                                <div class="user-info">
+                                                    <span class="rate-name">محمد السيد</span>
+                                                    <span class="rate-date">25/9/2021</span>
+                                                </div>
+                                            </div>
+            
+                                            <div class="rate-icons">
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+        
+                                            <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                                                حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                                                أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا 
+                                                النص أو العديد هذا النص هو مثال لنص يمكن أن 
+                                            </p>
+                                        </div>
+                
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- End Ratings -->
+
+
+                            <div class="form-style tabs-show invoice">
+                                <img src="assets/imgs/logo_black.png" alt="logo" title="logo-black" class="logo-black">
+    
+                                <div class="invoice-items">
+    
+                                    <div class="invoice-item py-3">
+                                        <div class="row gy-3">
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>رقم الفاتورة:</span>
+                                                    <span>567</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>رقم الطلب:</span>
+                                                    <span>567</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>تاريخ ارسال الطلب:</span>
+                                                    <span>25/9/2023</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>وقت ارسال الطلب:</span>
+                                                    <span>10pm</span>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+    
+                                    <div class="invoice-item py-3">
+                                        <div class="row gy-3">
+                    
+                                            <div class="col-12">
+                                                <div class="text-item">
+                                                    <span>تفاصيل الطلب:</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>اسم المنتج:</span>
+                                                    <span>كنزة صوف</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>سعر المنتج</span>
+                                                    <span>150 ر.س</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>اسم المنتج:</span>
+                                                    <span>كنزة صوف</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>سعر المنتج</span>
+                                                    <span>150 ر.س</span>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+    
+                                    <div class="invoice-item py-3">
+                                        <div class="row gy-3">
+                    
+                                            <div class="col-12">
+                                                <div class="text-item">
+                                                    <span>تفاصيل المتجر</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-12">
+                                                <div class="text-item">
+                                                    <span>اسم المتجر:</span>
+                                                    <span>اسم المتجر</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-12">
+                                                <div class="text-item">
+                                                    <span>رقم السجل التجاري</span>
+                                                    <span>1505060</span>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+    
+                                    <div class="invoice-item py-3">
+                                        <div class="row gy-3">
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>عدد المنتجات:</span>
+                                                    <span>2</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>طريقة الدفع:</span>
+                                                    <span>إلكتروني</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>سعر المنتجات:</span>
+                                                    <span>160 ر.س</span>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>شركة الشحن</span>
+                                                    <span>اكسبريس</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>رسوم التوصيل</span>
+                                                    <span>160 ر.س</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>قيمة الخصم</span>
+                                                    <span>160 ر.س</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-sm-6">
+                                                <div class="text-item">
+                                                    <span>السعر الإجمالي:</span>
+                                                    <span>160 ر.س</span>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <img src="assets/imgs/code.png" alt="code" title="Qr Code" class="code-img">
+                            </div>
+                            
+
+
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-xl-12">
                             <!-- Start Mazadat Secion -->
-                            <div class="tabs-show mazadat">
+                            <div class="tabs-show filter-container mazadat">
    
                                 <!-- Tabs -->
                                 <div class="nav nav-pills mb-3">
@@ -3124,6 +3910,483 @@
         
                             </div>
                             <!-- End Mazadat Secion -->
+
+                            <div class="tabs-show filter-container adv">
+                                <!-- Tabs -->
+                                <div class="nav nav-pills mb-3">
+                                    <div class="nav-link sm active">العادية</div>
+                                    <div class="nav-link sm">المروجة</div>
+                                </div>
+
+                                <!-- Section Filter -->
+                                <div class="section-heading">
+
+                                     <!-- Search -->
+                                    <form action="" class="mb-2">
+
+                                        <div class="filter-search input-g">
+                                            <div class="main-input">
+                                                <input type="text" placeholder="ابحث عن ما تريد" class="input-me">
+                                                <button type="submit" class="main-icon search-ic">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="filter-select">
+                                        <label class="label-filter">
+                                            طريقة العرض
+                                        </label>
+                                        <select class="select-filter">
+                                            <option value="" data-filter="grid">شبكة</option>
+                                            <option value="" data-filter="linear">طولي</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <!-- adv Crads-Container -->
+                                <div class="cards-container">
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">بيع</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">تأجير</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+            
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">بيع</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">تأجير</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">تأجير</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
