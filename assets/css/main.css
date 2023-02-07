@@ -1046,6 +1046,11 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   height: 40px;
   border-radius: 10px;
 }
+.main-btn.xsm {
+  width: 80px;
+  font-size: 13px;
+  height: 32px;
+}
 .main-btn.md {
   width: 170px;
   height: 50px;
@@ -5218,21 +5223,21 @@ html[lang=ar] .chat-form .chat-btn {
   }
 }
 
-.contact-item {
+.contact-us-item {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-bottom: 18px;
 }
 @media screen and (max-width: 425px) {
-  .contact-item {
+  .contact-us-item {
     gap: 10px;
   }
 }
-.contact-item:last-child {
+.contact-us-item:last-child {
   margin-bottom: 0;
 }
-.contact-item .img {
+.contact-us-item .img {
   width: 47px;
   height: 47px;
   border-radius: 5px;
@@ -5243,21 +5248,21 @@ html[lang=ar] .chat-form .chat-btn {
   flex-shrink: 0;
 }
 @media screen and (max-width: 425px) {
-  .contact-item .img {
+  .contact-us-item .img {
     width: 42px;
     height: 42px;
   }
 }
-.contact-item .img img {
+.contact-us-item .img img {
   max-width: 24px;
   max-height: 24px;
 }
-.contact-item .text {
+.contact-us-item .text {
   font-size: 17px;
   color: #202020;
 }
 @media screen and (max-width: 425px) {
-  .contact-item .text {
+  .contact-us-item .text {
     font-size: 16px;
   }
 }
@@ -5325,4 +5330,70 @@ html[lang=ar] .chat-form .chat-btn {
 .rating-content .rating-text {
   font-size: 20px;
   color: #6c757d;
+}
+
+.conversation-item {
+  border-bottom: 2px solid #E7E7E7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+  gap: 8px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.conversation-item:last-child {
+  border-bottom: none;
+}
+.conversation-item .conversation-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.conversation-item .conversation-right .conversation-img {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+}
+.conversation-item .conversation-right .conversation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.conversation-item .conversation-right .conversation-info .conversation-name {
+  font-size: 15px;
+  color: #202020;
+  font-family: fontDemi;
+}
+.conversation-item .conversation-right .conversation-info .conversation-text {
+  font-size: 14px;
+  color: #707070;
+}
+.conversation-item .conversation-left .conversation-date {
+  font-size: 15px;
+  color: #6c757d;
+}
+
+.address-item {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.address-item:last-child {
+  margin-bottom: 0;
+}
+.address-item .address-name {
+  font-size: 16px;
+  font-family: fontDemi;
+  margin-bottom: 14px;
+}
+.address-item .address-left {
+  display: flex;
+  gap: 8px;
 }/*# sourceMappingURL=main.css.map */
