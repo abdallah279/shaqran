@@ -4893,6 +4893,33 @@ html[lang=ar] .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn 
 
 .side-bar {
   width: calc(100% - 50px);
+  transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
+}
+@media screen and (max-width: 992px) {
+  .side-bar {
+    position: fixed;
+    top: 0;
+    width: 290px;
+    padding: 20px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9992;
+  }
+  html[lang=en] .side-bar {
+    left: 0;
+  }
+  html[lang=ar] .side-bar {
+    right: 0;
+  }
+  html[lang=en] .side-bar {
+    transform: translateX(-150%);
+  }
+  html[lang=ar] .side-bar {
+    transform: translateX(150%);
+  }
+  .side-bar.open {
+    transform: translateX(0) !important;
+  }
 }
 
 .side-links {

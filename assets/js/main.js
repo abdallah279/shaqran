@@ -33,10 +33,17 @@ $(".open-side-icon").on('click', function(){
   $('.overlay-m').fadeIn(500);
 })
 
+// User Account SideBar
+$('.side-bar-open').on('click', function(){
+  $('.side-bar').addClass('open');
+  $('.overlay-m').fadeIn(500);
+})
+
 $('.overlay-m').on('click', function(){
   $('.search-form').removeClass('active');
   $('.links').removeClass('active');
   $(".side-filter-cards").removeClass('open-side');
+  $('.side-bar').removeClass('open');
   $(this).fadeOut(500);
 });
 
