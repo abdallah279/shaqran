@@ -451,7 +451,7 @@
                 <!-- هيعمل راوت على صفحه مزاداتى -->
                 <div class="col-lg-6">
                     <div class="description card-style height-full">
-                        <a href="user-account.html" class="anchor"></a>
+                        <a href="user-account.html" class="anchor" data-pass="adv"></a>
                         <div class="main-card-title">بيانات المعلن </div>
                         <div class="card-content card-padding">
 
@@ -1613,6 +1613,13 @@
             noCalendar: true,
             dateFormat: "H:i",
         });
+    </script>
+
+    <script>
+        $('[data-pass]').on('click', function(){
+            let item = $(this).attr('data-pass')
+            sessionStorage.setItem("activeTab", JSON.stringify(item));
+        })
     </script>
 
     <!-- Main Js -->

@@ -181,7 +181,10 @@
                 <!-- Navbar Buttons -->
                 <div class="buttons-m">
                     <a href="login.html" class="main-btn sm transparent">تسجيل دخول</a>
-                    <a href="open-stor.html" class="main-btn sm up">افتح متجرك</a>
+                    <a href="user-account.html" class="main-btn sm up" data-pass="open-store">افتح متجرك</a>
+
+                    <!-- <a href="add-ads.html" class="main-btn sm transparent">أضف اعلان</a>
+                    <a href="add-mazad.html" class="main-btn sm up">أضف مزاد</a> -->
                 </div>
             </div>
         </div>
@@ -2765,6 +2768,13 @@
     <!-- fancybox -->
     <script>
         $('.fancybox').fancybox({});
+    </script>
+
+    <script>
+        $('[data-pass]').on('click', function(){
+            let item = $(this).attr('data-pass')
+            sessionStorage.setItem("activeTab", JSON.stringify(item));
+        })
     </script>
 
     <!-- Main Js -->

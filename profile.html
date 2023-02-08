@@ -1413,6 +1413,7 @@
                         <div class="card-content card-dir card-padding">
                             <form action="">
                                 <div class="rating-star align-items-start"></div>
+                                <input type="hidden" class="rate-value">
 
                                 <div class="input-g">
                                     <label class="main-label">أضف تعليقك</label>
@@ -1558,6 +1559,13 @@
             starColorFull:'#FFB300',
             starsSize: 4,
             stars: 5,
+        });
+
+        $('.js-wc-star-rating').on('click', function(){
+            let rateValue = $(this).find('.js-wc-rating-value').html();
+            let rateInput = $(this).next('.rate-value');
+
+            rateInput.attr('value', rateValue);
         });
 
     </script>

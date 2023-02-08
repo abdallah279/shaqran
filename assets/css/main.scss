@@ -1329,6 +1329,16 @@
     .done-img{
         width: 205px;
         height: 105px;
+        
+        @media screen and (max-width: $screen-xs) {
+            width: 175px;
+            height: 86px;
+        }
+        
+        @media screen and (max-width: $screen-xxs) {
+            width: 165px;
+            height: 80px;
+        }
     }
 
     .done-text{
@@ -1340,7 +1350,7 @@
 
 // side-Bar
 .side-bar{
-    width: calc(100% - 60px);
+    width: calc(100% - 50px);
 }
 
 .side-links{
@@ -1997,4 +2007,110 @@
         display: flex;
         gap: 8px;
     }
+}
+
+// invoices-table
+.invoices{
+    overflow-x: auto;
+    
+    &::-webkit-scrollbar {
+        height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 25px;
+        background-color: $blue2;
+    }
+}
+
+.invoices-table{
+    width: 100%;
+    white-space: nowrap;
+
+    thead{
+        border-bottom: 1px solid $border-color;
+        
+        th{
+            padding: 30px 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            color: $light5;
+            font-weight: 500;
+            
+            @media screen and (max-width: $screen-xs) {
+                font-size: 16px;
+                padding: 20px 10px 15px;
+            }
+        }
+    }
+
+    tbody{
+
+        tr{
+            border-bottom: 1px solid $light3;
+
+            td{
+                font-size: 17px;
+                color: #262626;
+                padding: 20px 10px;
+                text-align: center;
+                vertical-align: middle;
+                // font-family: fontDemi;
+
+                @media screen and (max-width: $screen-xs) {
+                    font-size: 15px;
+                    padding: 16px 10px;
+                }
+            }
+        }
+    }
+}
+
+.store-containter{
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 22px;
+}
+
+// stor-modal
+.stor-modal{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    .img-s{
+        width: 85px;
+        height: 65px;
+        border-radius: 8px;
+        object-fit: cover;
+        border: 3px solid $white3;
+        flex-shrink: 0;
+    }
+
+    .left{
+        .name{
+            font-size: 17px;
+            font-family: fontDemi;
+            margin-bottom: 7px;
+
+            @media screen and (max-width:$screen-xs) {
+                font-size: 15px;
+            }
+        }
+
+        .js-wc-star-rating{
+            i{
+              font-size: 20px !important;
+            }
+        }
+    }
+}
+
+
+// product-m-containter
+.product-m-containter{
+    border: 1px solid $light3;
+    border-radius: 6px;
 }

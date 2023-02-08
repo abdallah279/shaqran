@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
     <!-- Select 2 -->
     <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -559,6 +561,19 @@
 
     </div>
 
+    <!-- Buttons -->
+    <div class="cart-buttons-con bg-white sec-padding">
+        <div class="container">
+            <div class="buttons-m lg">
+                <a href="#" class="main-btn transparent-red lg" data-bs-target="#cancelModal" data-bs-toggle="modal">إلغاء الطلب</a>
+                <a href="#" class="main-btn blue up lg" data-bs-target="#addRatingModal" data-bs-toggle="modal">أضف تقييمك</a>
+                <a href="#" class="main-btn transparent lg" data-bs-target="#returnOrderModal" data-bs-toggle="modal">طلب ارجاع</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light sec-padding"></div>
+
 
     <!-- Start Footer -->
     <footer class="footer">
@@ -662,6 +677,41 @@
     <div class="overlay-m"></div>
 
 
+    <!-- Start cancel Modal -->
+    <div class="modal fade" id="cancelModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h1 class="modal-title" id="exampleModalToggleLabel">سبب الإلغاء</h1>
+            </div>
+
+            <form action="user-account.html" class="w-100">
+
+                <div class="modal-body">
+                    <div class="input-g w-100 mb-0">
+                        <label class="main-label">
+                            ادخل سبب الإلغاء
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <textarea class="input-me text-area-sm" name="" id="" placeholder="أضف ملاحظة على طلبك"></textarea>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="modal-footer">
+                  <button class="main-btn transparent" data-bs-dismiss="modal">إرسال</button>
+                </div>
+
+            </form>
+
+          </div>
+        </div>
+    </div>
 
     <!-- Start invoice Modal -->
     <div class="modal fade " id="invoiceModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -851,6 +901,243 @@
     </div>
     
 
+    <!-- Start addRatingModal Modal -->
+    <div class="modal fade" id="addRatingModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered lg">
+          <div class="modal-content">
+            <form action="" class="w-100">
+
+                <div class="modal-header">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h1 class="modal-title" id="exampleModalToggleLabel">أضف تقييمك</h1>
+                </div>
+
+                <div class="modal-body">
+                    <div class="content w-100">
+
+                        <div class="store-containter">
+                            <div class="stor-modal">
+                                <img src="assets/imgs/stor1.png" class="img-s" alt="stor img">
+
+                                <div class="left">
+                                    <h5 class="name">off white</h5>
+                                    <div class="rating-star align-items-start mb-0"></div>
+                                    <input type="hidden" class="rate-value">
+                                </div>
+                            </div>
+    
+                            <div class="input-g">
+                                <label for="" class="main-label">أضف تعليقك</label>
+                                <div class="main-input">
+                                    <textarea name="" id="" class="input-me text-area-sm2" placeholder="أضف تعليقك"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-m-containter p-4 pb-0">
+
+                            <div class="product-i">
+
+                                <div class="stor-modal">
+                                    <img src="assets/imgs/product1.png" class="img-s" alt="stor img">
+    
+                                    <div class="left">
+                                        <h5 class="name">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                        <div class="rating-star align-items-start mb-0"></div>
+                                        <input type="hidden" class="rate-value">
+                                    </div>
+                                </div>
+        
+                                <div class="input-g">
+                                    <label for="" class="main-label">أضف تعليقك</label>
+                                    <div class="main-input">
+                                        <textarea name="" id="" class="input-me text-area-sm2" placeholder="أضف تعليقك"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-i">
+
+                                <div class="stor-modal">
+                                    <img src="assets/imgs/product2.png" class="img-s" alt="stor img">
+    
+                                    <div class="left">
+                                        <h5 class="name">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                        <div class="rating-star align-items-start mb-0"></div>
+                                        <input type="hidden" class="rate-value" >
+                                    </div>
+                                </div>
+        
+                                <div class="input-g">
+                                    <label for="" class="main-label">أضف تعليقك</label>
+                                    <div class="main-input">
+                                        <textarea name="" id="" class="input-me text-area-sm2" placeholder="أضف تعليقك"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="main-btn transparent" data-bs-dismiss="modal">إرسال</button>
+                </div>
+
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Start returnOrderModal Modal -->
+    <div class="modal fade" id="returnOrderModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered lg">
+          <div class="modal-content">
+            <form action="" class="w-100">
+
+                <div class="modal-header">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h1 class="modal-title" id="exampleModalToggleLabel">طلب إرجاع</h1>
+                </div>
+
+                <div class="modal-body">
+                    <div class="content w-100">
+
+                        <div class="product-buy-items">
+
+                            <!-- Item -->
+                            <div class="pro-buy-item py-3">
+
+                                <div class="pro-buy-top">
+
+                                    <div class="img">
+                                        <img src="assets/imgs/product1.png" alt="" class="buy-img">
+                                    </div>
+
+                                    <div class="pro-buy-content">
+
+                                        <div class="pro-buy-head">
+                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                            <!-- Number -->
+                                            <div class="number-input">
+                                                <span class="plus btn-num">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                                <input type="text" value="1"/>
+                                                <span class="minus btn-num">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="pr-old">
+                                            <span class="old-price">200 ر.س</span>
+                                            <span class="price">150 ر.س</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+                            <div class="pro-buy-item py-3">
+
+                                <div class="pro-buy-top">
+
+                                    <div class="img">
+                                        <img src="assets/imgs/product2.png" alt="" class="buy-img">
+                                    </div>
+
+                                    <div class="pro-buy-content">
+
+                                        <div class="pro-buy-head">
+                                            <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                            <!-- Number -->
+                                            <div class="number-input">
+                                                <span class="plus btn-num">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                                <input type="text" value="1"/>
+                                                <span class="minus btn-num">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="pr-old">
+                                            <span class="old-price">200 ر.س</span>
+                                            <span class="price">150 ر.س</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="product-m-containter p-4">
+
+                            <div class="input-g">
+                                <label for="" class="main-label">سبب  الإرجاع</label>
+                                <div class="main-input">
+                                    <textarea name="" id="" class="input-me text-area-sm2" placeholder="ادخل سبب  الإرجاع"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="input-g img-video">
+                                <label class="main-label">
+                                    صورة الفاتورة
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="file" name="" accept="image/*" id="inp-img-vid" class="hidden-input">
+                                    <label for="inp-img-vid" class="input-me photo-input">
+                                        ارفق صورة الفاتورة
+                                    </label>
+                                    <i class="fa-solid fa-arrow-up-from-bracket main-icon"></i>
+                                </div>
+                                <div class="photo-con"></div>
+                            </div>
+
+                            <div class="input-g">
+                                <label class="main-label">
+                                    عنوان الإستلام
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="text" name="address" class="input-me" id="inputMap" placeholder="ادخل عنوان الإستلام">
+                                    <i class="fa-solid fa-location-dot main-icon"></i>
+                                </div>
+                            </div>
+
+                            <div id="map" style="width:100%;height:300px;overflow: hidden;"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="main-btn transparent" data-bs-dismiss="modal">إرسال</button>
+                </div>
+
+            </form>
+          </div>
+        </div>
+    </div>
+
 
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -858,6 +1145,140 @@
     <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- Select 2 -->
     <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- Rating -->
+    <script src="assets/plugins/star-rating-font-awesome/jquery.star-rating.js"></script>
+    <!-- Map -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?&libraries=places&key=AIzaSyBNLoYGrbnQI_GMqHt6m0PSN9yA7Zvq7gA"></script>
+
+
+    <!-- Initialize And Add The Map -->
+    <script>
+        function initMap() {
+            var location = { lat: 24.746189966314272, lng: 46.87979429238138 };
+
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: location,
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                draggable: true,
+                title: "اسحب العلامة",
+
+            });
+
+            let infowindow = [];
+            google.maps.event.addListener(marker, 'dragend', function (evt) {
+
+                const geocoder = new google.maps.Geocoder();
+
+                function geoLatLng(){
+                    geocoder.geocode({location: evt.latLng}).then((res) =>{
+                        let theCountry = res.results[0].formatted_address;
+
+                        let newInfoWindow = new google.maps.InfoWindow({
+                            content: `${theCountry}`
+                        });
+
+                        infowindow.push(newInfoWindow);
+                        for(let i =0; i< infowindow.length; i++){
+                            infowindow[i].close();
+                            infowindow[infowindow.length - 1].open(map, marker);
+                        }
+
+                        document.getElementById('inputMap').value = `${theCountry}`;
+                    });
+                }
+
+                geoLatLng();
+            });
+        }
+
+        initMap();
+
+    </script>
+
+
+     <!-- Rating -->
+     <script>
+        $('.rating-star').starRating({
+            starIconEmpty:'fa-solid fa-star',
+            starIconFull:'fa-solid fa-star',
+            starColorEmpty:'#E3E3E3',
+            starColorFull:'#FFB300',
+            starsSize: 4,
+            stars: 5,
+        });
+
+        $('.js-wc-star-rating').on('click', function(){
+            let rateValue = $(this).find('.js-wc-rating-value').html();
+            let rateInput = $(this).next('.rate-value');
+
+            rateInput.attr('value', rateValue);
+        });
+
+    </script>
+
+    <!-- Show Map -->
+    <script>
+        $("#map").slideUp();
+        $('#inputMap').on('click', function(){
+            $("#map").slideToggle();
+        })
+    </script>
+
+
+    <!-- Img Or Video -->
+    <script>
+        $("#inp-img-vid").change(function() {
+            imgPreview(this);
+        });
+        function imgPreview(input) {
+            var file = input.files[0];
+            var mixedfile = file['type'].split("/");
+            var filetype = mixedfile[0];
+            if(filetype == "image"){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $('.photo-con').empty();
+                    let img = `
+                        <div class='hidden-img'>
+                            <img src='${e.target.result}' />
+                            <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
+                            <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                        </div>
+                    `
+                    $('.photo-con').append(img);
+                    $('.fancybox').fancybox({});
+                    $('.remove-img').on('click', function(e){
+                        e.target.closest('.hidden-img').remove();
+                    });
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else if(filetype == "video"){
+                $('.photo-con').empty();
+                let srcVideo = URL.createObjectURL(input.files[0]);
+                let video = `
+                    <div class='hidden-img'>
+                        <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
+                        <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
+                        <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                    </div>
+                `
+                $('.photo-con').append(video);
+                $('.fancybox').fancybox({});
+                $('.remove-img').on('click', function(e){
+                    e.target.closest('.hidden-img').remove();
+                });
+            }else{
+                alert("Invalid file type");
+            }
+        }
+    </script>
 
     <script>
         $('.print-modal').on('click', function(){

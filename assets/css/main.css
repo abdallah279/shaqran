@@ -1183,6 +1183,11 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   align-items: center;
   height: 48px;
 }
+@media screen and (max-width: 425px) {
+  .mazad-value {
+    height: 44px;
+  }
+}
 
 .red-text {
   color: #EB2222;
@@ -1787,6 +1792,10 @@ html[lang=ar] .live-p {
 }
 .input-g .main-input .input-me.text-area-sm {
   height: 90px;
+  padding: 12px;
+}
+.input-g .main-input .input-me.text-area-sm2 {
+  height: 70px;
   padding: 12px;
 }
 .input-g .main-input .main-icon {
@@ -2639,10 +2648,13 @@ html[lang=ar] .remove-img {
 .modal-dialog {
   min-width: 560px;
 }
+.modal-dialog.lg {
+  min-width: 620px;
+}
 @media (max-width: 768px) {
   .modal-dialog {
     margin: auto;
-    min-width: calc(100% - 20px);
+    min-width: calc(100% - 20px) !important;
   }
 }
 .modal-dialog .close-model-btn {
@@ -4752,6 +4764,18 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   width: 205px;
   height: 105px;
 }
+@media screen and (max-width: 425px) {
+  .done-section .done-img {
+    width: 175px;
+    height: 86px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .done-section .done-img {
+    width: 165px;
+    height: 80px;
+  }
+}
 .done-section .done-text {
   font-size: 20px;
   color: #6c757d;
@@ -4759,7 +4783,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 
 .side-bar {
-  width: calc(100% - 60px);
+  width: calc(100% - 50px);
 }
 
 .side-links {
@@ -5396,4 +5420,94 @@ html[lang=ar] .chat-form .chat-btn {
 .address-item .address-left {
   display: flex;
   gap: 8px;
+}
+
+.invoices {
+  overflow-x: auto;
+}
+.invoices::-webkit-scrollbar {
+  height: 4px;
+}
+.invoices::-webkit-scrollbar-track {
+  background: transparent;
+}
+.invoices::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #1D71B8;
+}
+
+.invoices-table {
+  width: 100%;
+  white-space: nowrap;
+}
+.invoices-table thead {
+  border-bottom: 1px solid #D5D5D5;
+}
+.invoices-table thead th {
+  padding: 30px 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #6c757d;
+  font-weight: 500;
+}
+@media screen and (max-width: 425px) {
+  .invoices-table thead th {
+    font-size: 16px;
+    padding: 20px 10px 15px;
+  }
+}
+.invoices-table tbody tr {
+  border-bottom: 1px solid #E7E7E7;
+}
+.invoices-table tbody tr td {
+  font-size: 17px;
+  color: #262626;
+  padding: 20px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+@media screen and (max-width: 425px) {
+  .invoices-table tbody tr td {
+    font-size: 15px;
+    padding: 16px 10px;
+  }
+}
+
+.store-containter {
+  border-bottom: 1px solid #D5D5D5;
+  margin-bottom: 22px;
+}
+
+.stor-modal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.stor-modal .img-s {
+  width: 85px;
+  height: 65px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #FAFAFA;
+  flex-shrink: 0;
+}
+.stor-modal .left .name {
+  font-size: 17px;
+  font-family: fontDemi;
+  margin-bottom: 7px;
+}
+@media screen and (max-width: 425px) {
+  .stor-modal .left .name {
+    font-size: 15px;
+  }
+}
+.stor-modal .left .js-wc-star-rating i {
+  font-size: 20px !important;
+}
+
+.product-m-containter {
+  border: 1px solid #E7E7E7;
+  border-radius: 6px;
 }/*# sourceMappingURL=main.css.map */

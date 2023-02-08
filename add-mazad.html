@@ -303,7 +303,7 @@
                                 </label>
                                 <i class="fa-regular fa-file main-icon"></i>
                             </div>
-                            <div class="photo-input-new"></div>
+                            <div class="photo-con"></div>
                         </div>
 
                         <!-- Start Date -->
@@ -460,7 +460,7 @@
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="file" name="" accept="image/*, video/*" id="inp-img-vid" class="hidden-input">
+                                <input type="file" name="" accept="image/*, video/*" id="inp-img-vid" class="hidden-input img-upload-input">
                                 <label for="inp-img-vid" class="input-me photo-input">
                                     ارفق صورة / فيديو المزاد
                                 </label>
@@ -642,71 +642,6 @@
     <!-- Map -->
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?&libraries=places&key=AIzaSyBNLoYGrbnQI_GMqHt6m0PSN9yA7Zvq7gA"></script>
 
-    <!-- Upload Img -->
-    <script>
-        let loginInputs = document.querySelectorAll('.img-upload-input');
-
-        loginInputs.forEach((input) =>{
-            if(input.classList.contains('profile')){
-                let img = input.parentElement.querySelector('.profile-img .img');
-                let imageSrc = img.getAttribute('src');
-                input.onchange = function(){
-    
-                    let reader = new FileReader();
-                    if(input.files[0]){
-                        reader.readAsDataURL(input.files[0]);
-                    } else{
-                        img.setAttribute('src', imageSrc);
-                        img.classList.remove('wid');
-                    }
-    
-                    reader.onload = ()=>{
-    
-                        img.setAttribute('src', reader.result);
-                        img.classList.add('wid');
-    
-                    }
-                }
-            } else{
-                let imgContainer = input.closest('.input-g').querySelector('.photo-input-new');
-                // let imageSrc = img.getAttribute('src');
-                input.onchange = function(){
-
-                    imgContainer.innerHTML = ``;
-                    let imgHidden = document.createElement('div');
-                    imgHidden.classList.add('hidden-img');
-
-                    imgContainer.append(imgHidden);
-
-                    // Create Remove Button
-                    let removeBtn = document.createElement('span');
-                    removeBtn.classList.add('remove-img');
-                    removeBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-                
-                    // Append The Button To Main Div
-                    imgHidden.append(removeBtn);
-                
-                    // Remove Parent Div From Page When Click The Button
-                    removeBtn.onclick= function(e){
-                        e.target.closest('.hidden-img').remove();
-                    }
-    
-                    let reader = new FileReader();
-                    reader.onload = ()=>{
-                        // Create Img
-                        let img = document.createElement('img');
-                        img.setAttribute('src', reader.result);
-                        
-                        // Append The Img To Main Div
-                        imgHidden.append(img);
-                        console.log(input.files[0])
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-        });
-    </script>
-
 
     <!-- Flat Picker -->
     <script>
@@ -737,52 +672,92 @@
         });
     </script>
 
-    <!-- Img Or Video -->
+    <!-- Upload Img -->
     <script>
-        $("#inp-img-vid").change(function() {
-            imgPreview(this);
-        });
-        function imgPreview(input) {
-            var file = input.files[0];
-            var mixedfile = file['type'].split("/");
-            var filetype = mixedfile[0];
-            if(filetype == "image"){
-                var reader = new FileReader();
-                reader.onload = function(e){
-                    $('.photo-con').empty();
-                    let img = `
-                        <div class='hidden-img'>
-                            <img src='${e.target.result}' />
-                            <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
-                            <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
-                        </div>
-                    `
-                    $('.photo-con').append(img);
-                    $('.fancybox').fancybox({});
-                    $('.remove-img').on('click', function(e){
-                        e.target.closest('.hidden-img').remove();
-                    });
+        let loginInputs = document.querySelectorAll('.img-upload-input');
+
+        loginInputs.forEach((input) =>{
+            if(input.classList.contains('profile')){
+                let img = input.parentElement.querySelector('.profile-img .img');
+                let imageSrc = img.getAttribute('src');
+                input.onchange = function(){
+    
+                    let reader = new FileReader();
+                    if(input.files[0]){
+                        reader.readAsDataURL(input.files[0]);
+                    } else{
+                        img.setAttribute('src', imageSrc);
+                        img.classList.remove('wid');
+                    }
+    
+                    reader.onload = ()=>{
+    
+                        img.setAttribute('src', reader.result);
+                        img.classList.add('wid');
+    
+                    }
                 }
-                reader.readAsDataURL(input.files[0]);
-            } else if(filetype == "video"){
-                $('.photo-con').empty();
-                let srcVideo = URL.createObjectURL(input.files[0]);
-                let video = `
-                    <div class='hidden-img'>
-                        <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
-                        <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
-                        <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
-                    </div>
-                `
-                $('.photo-con').append(video);
-                $('.fancybox').fancybox({});
-                $('.remove-img').on('click', function(e){
-                    e.target.closest('.hidden-img').remove();
+            } else{
+                $(".img-upload-input").change(function() {
+                    imgPreview(this);
                 });
-            }else{
-                alert("Invalid file type");
+                function imgPreview(input) {
+                    var file = input.files[0];
+                    var mixedfile = file['type'].split("/");
+                    var filetype = mixedfile[0];
+
+                    let photoContainer = $(input).parent('.main-input').next('.photo-con');
+
+
+                    if(filetype == "image"){
+                        var reader = new FileReader();
+                        reader.onload = function(e){
+
+                            photoContainer.empty();
+
+                            let img = `
+                                <div class='hidden-img'>
+                                    <img src='${e.target.result}' />
+                                    <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
+                                    <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                            `;
+
+                            photoContainer.append(img);
+                            $('.fancybox').fancybox({});
+                            $('.remove-img').on('click', function(e){
+                                e.target.closest('.hidden-img').remove();
+                            });
+
+                        }
+                        reader.readAsDataURL(input.files[0]);
+
+                    } else if(filetype == "video"){
+
+                        photoContainer.empty();
+
+                        let srcVideo = URL.createObjectURL(input.files[0]);
+
+                        let video = `
+                            <div class='hidden-img'>
+                                <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
+                                <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
+                                <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        `
+
+                        photoContainer.append(video);
+                        $('.fancybox').fancybox({});
+                        $('.remove-img').on('click', function(e){
+                            e.target.closest('.hidden-img').remove();
+                        });
+
+                    }else{
+                        alert("Invalid file type");
+                    }
+                }
             }
-        }
+        });
     </script>
 
 

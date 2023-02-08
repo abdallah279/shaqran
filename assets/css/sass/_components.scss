@@ -1003,6 +1003,10 @@
   display: flex;
   align-items: center;
   height: 48px;
+
+  @media screen and (max-width:$screen-xs) {
+    height: 44px;
+  }
 }
 
 .red-text{
@@ -1566,6 +1570,11 @@
 
       &.text-area-sm{
         height: 90px;
+        padding: 12px;
+      }
+
+      &.text-area-sm2{
+        height: 70px;
         padding: 12px;
       }
     }
@@ -2453,10 +2462,14 @@
 
 .modal-dialog{
   min-width: 560px;
+
+  &.lg{
+    min-width: 620px;
+  }
   
   @media (max-width:$screen-md) {
     margin: auto;
-    min-width: calc(100% - 20px);
+    min-width: calc(100% - 20px) !important;
   }
 
   .close-model-btn{

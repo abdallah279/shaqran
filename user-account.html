@@ -195,7 +195,7 @@
                 <h3 class="title">حسابي</h3>
 
                 <div class="buttons-m">
-                    <a href="#" class="main-btn sm2 blue up tabs-m">عمولة المنصة</a>
+                    <a href="#" class="main-btn sm2 blue up tabs-m" data-show="platform-commission">عمولة المنصة</a>
                     <a href="#" class="main-btn sm2 transparent tabs-m" data-show="open-store">افتح متجرك</a>
                 </div>
             </div>
@@ -203,7 +203,7 @@
             <div class="row">
 
                 <!-- SideBar -->
-                <div class="col-xl-3">
+                <div class="col-lg-4 col-xl-3">
                     <div class="side-bar">
 
                         <!-- Side Link -->
@@ -234,7 +234,7 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
 
-                            <a href="#" class="side-link tabs-m">
+                            <a href="#" class="side-link tabs-m" data-show="invoices">
                                 فواتيري
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
@@ -1275,7 +1275,7 @@
                                             <div class="profile-img">
                                                 <img src="assets/imgs/team-2.jpg" class="img" alt="">
                                             </div>
-                                            <input type="file" id="profileImg" class="hidden-input img-upload-input profile">
+                                            <input type="file" id="profileImg" accept="image/*" class="hidden-input img-upload-input profile">
                                             <label for="profileImg" class="user-camera">
                                                 <img src="assets/imgs/icons/icons8-camera-24.png" alt="">
                                             </label>
@@ -1505,7 +1505,7 @@
                                             <div class="profile-img">
                                                 <img src="assets/imgs/stor1.png" class="img" alt="">
                                             </div>
-                                            <input type="file" id="profileImg2" class="hidden-input img-upload-input profile">
+                                            <input type="file" id="profileImg2" accept="image/*" class="hidden-input img-upload-input profile">
                                             <label for="profileImg2" class="user-camera">
                                                 <img src="assets/imgs/icons/icons8-camera-24.png" alt="">
                                             </label>
@@ -1618,21 +1618,21 @@
                                         <input type="number" class="input-me" placeholder="ادخل رقم السجل التجاري / رمز وثيقة العمل الحر">
                                     </div>
                                 </div>
-        
+
                                 <!-- Photo -->
-                                <div class="input-g">
+                                <div class="input-g img-video">
                                     <label class="main-label">
                                         صورة السجل التجاري / وثيقة العمل الحر
                                         <span class="label-hint">*</span>
                                     </label>
                                     <div class="main-input">
-                                        <input type="file" name="" id="idPhoto" class="hidden-input img-upload-input">
-                                        <label for="idPhoto" class="input-me photo-input">
+                                        <input type="file" name="" accept="image/*" id="idPhoto1" class="hidden-input img-upload-input">
+                                        <label for="idPhoto1" class="input-me photo-input">
                                             ارفق صورة السجل التجاري / وثيقة العمل الحر
                                         </label>
                                         <i class="fa-regular fa-file main-icon"></i>
                                     </div>
-                                    <div class="photo-input-new"></div>
+                                    <div class="photo-con"></div>
                                 </div>
         
                                 <!-- Radio -->
@@ -1675,19 +1675,19 @@
                                 </div>
         
                                 <!-- Photo -->
-                                <div class="input-g">
+                                <div class="input-g img-video">
                                     <label class="main-label">
                                         صورة وثيقة الرقم الضريبي
                                         <span class="label-hint">*</span>
                                     </label>
                                     <div class="main-input">
-                                        <input type="file" name="" id="idPhoto2" class="hidden-input img-upload-input">
+                                        <input type="file" name="" accept="image/*" id="idPhoto2" class="hidden-input img-upload-input">
                                         <label for="idPhoto2" class="input-me photo-input">
                                             ارفق صورة وثيقة الرقم الضريبي
                                         </label>
                                         <i class="fa-regular fa-file main-icon"></i>
                                     </div>
-                                    <div class="photo-input-new"></div>
+                                    <div class="photo-con"></div>
                                 </div>
         
                                 <!-- Radio -->
@@ -1988,7 +1988,7 @@
                                             <div class="tab-pane fade show active" id="pills-home2" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                 
                                                 <!-- order -->
-                                                <a href="new-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2021,7 +2021,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="new-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2054,7 +2054,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="new-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2087,7 +2087,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="new-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2158,7 +2158,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="delivery-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2224,7 +2224,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="delivery-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2262,7 +2262,7 @@
                                             <div class="tab-pane fade" id="pills-done2" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                 
                                                 <!-- order -->
-                                                <a href="finished-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2295,7 +2295,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="finished-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2328,7 +2328,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="finished-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2361,7 +2361,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="finished-b-order-detailes.html" class="order-item">
+                                                <a href="implement-b-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2565,7 +2565,7 @@
                                             <div class="tab-pane fade" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                 
                                                 <!-- order -->
-                                                <a href="delivery-r-order-detailes.html" class="order-item">
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2598,7 +2598,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="delivery-r-order-detailes.html" class="order-item">
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2631,7 +2631,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="delivery-r-order-detailes.html" class="order-item">
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2664,7 +2664,7 @@
                                                 </a>
                 
                                                 <!-- order -->
-                                                <a href="delivery-r-order-detailes.html" class="order-item">
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2702,7 +2702,7 @@
                                             <div class="tab-pane fade" id="pills-done3" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                 
                                                 <!-- order -->
-                                                <a href="finished-r-order-detailes.html" class="order-item">
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
                                                     <div class="img-order-con">
                                                         <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
@@ -2735,104 +2735,105 @@
                                                 </a>
                 
                                                 <!-- order -->
-                        </div>
-                                            <a href="finished-r-order-detailes.html" class="order-item">
-                                                <div class="img-order-con">
-                                                    <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
-                                                </div>
-                                                <div class="left-sec">
-    
-                                                    <!-- Top -->
-                                                    <div class="left-item">
-        
-                                                        <div class="main-item">
-                                                            <span class="main-item-first">رقم الطلب:</span>
-                                                            <span class="main-item-secound">1232</span>
-                                                        </div>
-        
-                                                        <div class="main-item">
-                                                            <span class="main-item-first">سعر الطلب:</span>
-                                                            <span class="price">150 ر.س</span>
-                                                        </div>
-        
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
+                                                    <div class="img-order-con">
+                                                        <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
                                                     </div>
-    
-                                                    <!-- Bottom -->
-                                                    <div class="left-item">
+                                                    <div class="left-sec">
         
-                                                        <span class="light-span">تم الاستلام</span>
-                                                        <span class="main-item-first">منذ 13 min</span>
-        
-                                                    </div>
-    
-                                                </div>
-                                            </a>
+                                                        <!-- Top -->
+                                                        <div class="left-item">
             
-                                            <!-- order -->
-                                            <a href="finished-r-order-detailes.html" class="order-item">
-                                                <div class="img-order-con">
-                                                    <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
-                                                </div>
-                                                <div class="left-sec">
-    
-                                                    <!-- Top -->
-                                                    <div class="left-item">
-        
-                                                        <div class="main-item">
-                                                            <span class="main-item-first">رقم الطلب:</span>
-                                                            <span class="main-item-secound">1232</span>
-                                                        </div>
-        
-                                                        <div class="main-item">
-                                                            <span class="main-item-first">سعر الطلب:</span>
-                                                            <span class="price">150 ر.س</span>
-                                                        </div>
-        
-                                                    </div>
-    
-                                                    <!-- Bottom -->
-                                                    <div class="left-item">
-        
-                                                        <span class="light-span">تم الاستلام</span>
-                                                        <span class="main-item-first">منذ 13 min</span>
-        
-                                                    </div>
-    
-                                                </div>
-                                            </a>
+                                                            <div class="main-item">
+                                                                <span class="main-item-first">رقم الطلب:</span>
+                                                                <span class="main-item-secound">1232</span>
+                                                            </div>
             
-                                            <!-- order -->
-                                            <a href="finished-r-order-detailes.html" class="order-item">
-                                                <div class="img-order-con">
-                                                    <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
-                                                </div>
-                                                <div class="left-sec">
-    
-                                                    <!-- Top -->
-                                                    <div class="left-item">
-        
-                                                        <div class="main-item">
-                                                            <span class="main-item-first">رقم الطلب:</span>
-                                                            <span class="main-item-secound">1232</span>
+                                                            <div class="main-item">
+                                                                <span class="main-item-first">سعر الطلب:</span>
+                                                                <span class="price">150 ر.س</span>
+                                                            </div>
+            
                                                         </div>
         
-                                                        <div class="main-item">
-                                                            <span class="main-item-first">سعر الطلب:</span>
-                                                            <span class="price">150 ر.س</span>
+                                                        <!-- Bottom -->
+                                                        <div class="left-item">
+            
+                                                            <span class="light-span">تم الاستلام</span>
+                                                            <span class="main-item-first">منذ 13 min</span>
+            
                                                         </div>
         
                                                     </div>
-    
-                                                    <!-- Bottom -->
-                                                    <div class="left-item">
+                                                </a>
+                
+                                                <!-- order -->
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
+                                                    <div class="img-order-con">
+                                                        <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
+                                                    </div>
+                                                    <div class="left-sec">
         
-                                                        <span class="light-span">تم الاستلام</span>
-                                                        <span class="main-item-first">منذ 13 min</span>
+                                                        <!-- Top -->
+                                                        <div class="left-item">
+            
+                                                            <div class="main-item">
+                                                                <span class="main-item-first">رقم الطلب:</span>
+                                                                <span class="main-item-secound">1232</span>
+                                                            </div>
+            
+                                                            <div class="main-item">
+                                                                <span class="main-item-first">سعر الطلب:</span>
+                                                                <span class="price">150 ر.س</span>
+                                                            </div>
+            
+                                                        </div>
+        
+                                                        <!-- Bottom -->
+                                                        <div class="left-item">
+            
+                                                            <span class="light-span">تم الاستلام</span>
+                                                            <span class="main-item-first">منذ 13 min</span>
+            
+                                                        </div>
         
                                                     </div>
-    
-                                                </div>
-                                            </a>
+                                                </a>
+                
+                                                <!-- order -->
+                                                <a href="waiting-r-order-detailes.html" class="order-item">
+                                                    <div class="img-order-con">
+                                                        <img src="assets/imgs/logo.png" class="order-img" title="order-img" alt="order-img">
+                                                    </div>
+                                                    <div class="left-sec">
+        
+                                                        <!-- Top -->
+                                                        <div class="left-item">
+            
+                                                            <div class="main-item">
+                                                                <span class="main-item-first">رقم الطلب:</span>
+                                                                <span class="main-item-secound">1232</span>
+                                                            </div>
+            
+                                                            <div class="main-item">
+                                                                <span class="main-item-first">سعر الطلب:</span>
+                                                                <span class="price">150 ر.س</span>
+                                                            </div>
+            
+                                                        </div>
+        
+                                                        <!-- Bottom -->
+                                                        <div class="left-item">
+            
+                                                            <span class="light-span">تم الاستلام</span>
+                                                            <span class="main-item-first">منذ 13 min</span>
+            
+                                                        </div>
+        
+                                                    </div>
+                                                </a>
+
+                                            </div>
             
                                         </div>
             
@@ -3113,7 +3114,7 @@
                                         </div>
     
                                         <div class="address-left">
-                                            <a href="edit-address.html" class="main-btn xsm blue up">تعديل</a>
+                                            <a href="add-address.html" class="main-btn xsm blue up">تعديل</a>
                                             <button type="button" data-bs-target="#deleteAddressModal" data-bs-toggle="modal" class="main-btn xsm transparent-red">حذف</button>
                                         </div>
                                     </div>
@@ -3130,7 +3131,7 @@
                                         </div>
     
                                         <div class="address-left">
-                                            <a href="edit-address.html" class="main-btn xsm blue up">تعديل</a>
+                                            <a href="add-address.html" class="main-btn xsm blue up">تعديل</a>
                                             <button type="button" data-bs-target="#deleteAddressModal" data-bs-toggle="modal" class="main-btn xsm transparent-red">حذف</button>
                                         </div>
                                     </div>
@@ -3143,7 +3144,8 @@
                             <!-- End address -->
 
 
-                            <div class="form-style tabs-show invoice">
+                            <!-- Start invoice الفاتورة -->
+                            <div class="form-style tabs-show invoice-bill">
                                 <img src="assets/imgs/logo_black.png" alt="logo" title="logo-black" class="logo-black">
     
                                 <div class="invoice-items">
@@ -3307,7 +3309,47 @@
     
                                 <img src="assets/imgs/code.png" alt="code" title="Qr Code" class="code-img">
                             </div>
-                            
+                            <!-- End invoice الفاتورة -->
+
+
+                            <!-- Start platform-commission عمولة المنصة -->
+                            <div class="platform-commission tabs-show">
+
+                                <form action="" class="form-style">
+
+                                    <div class="done-section mb-4">
+                                        <img src="assets/imgs/shgrain.png" alt="" class="done-img">
+                                    </div>
+    
+                                    <!-- Form Heading -->
+                                    <div class="form-heading">
+                                        <h3 class="form-title">عمولة المنصة</h3>
+                                        <p class="form-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد 
+                                            هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو 
+                                        </p>
+                                    </div>
+
+                                    <div class="input-g">
+                                        <label for="" class="main-label">المبلغ الذي تم البيع به</label>
+                                        <div class="main-input">
+                                            <input type="text" class="input-me" placeholder="ادخل المبلغ الذي تم البيع به">
+                                            <span class="main-icon blue">ر.س</span>
+                                        </div>
+                                    </div>
+            
+                                    <div class="input-g">
+                                        <label class="main-label">عمولة المنصة</label>
+                                        <div class="mazad-value">
+                                            <span class="num">150 ر.س</span>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="main-btn md transparent" data-bs-target="#paymentModal2" data-bs-toggle="modal">إتمام الدفع</button>
+
+                                </form>
+
+                            </div>
+                            <!-- End platform-commission عمولة المنصة -->
 
 
                         </div>
@@ -4544,6 +4586,75 @@
 
                                 </div>
                             </div>
+
+                            <!-- Start invoices -->
+                            <div class="invoices tabs-show">
+
+                                <table class="invoices-table main-border">
+                                    <thead>
+                                        <th>رقم الطلب</th>
+                                        <th>تاريخ ارسال الطلب</th>
+                                        <th>وقت ارسال الطلب</th>
+                                        <th>سعر الطلب</th>
+                                        <th>عرض الفاتورة</th>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>1223</td>
+                                            <td>25/9/2022</td>
+                                            <td>10pm</td>
+                                            <td>1600 ر.س</td>
+                                            <td>
+                                                <button class="main-btn sm transparent tabs-m" data-show="invoice-bill">عرض الفاتورة</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1223</td>
+                                            <td>25/9/2022</td>
+                                            <td>10pm</td>
+                                            <td>1600 ر.س</td>
+                                            <td>
+                                                <button class="main-btn sm transparent tabs-m" data-show="invoice-bill">عرض الفاتورة</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1223</td>
+                                            <td>25/9/2022</td>
+                                            <td>10pm</td>
+                                            <td>1600 ر.س</td>
+                                            <td>
+                                                <button class="main-btn sm transparent tabs-m" data-show="invoice-bill">عرض الفاتورة</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1223</td>
+                                            <td>25/9/2022</td>
+                                            <td>10pm</td>
+                                            <td>1600 ر.س</td>
+                                            <td>
+                                                <button class="main-btn sm transparent tabs-m" data-show="invoice-bill">عرض الفاتورة</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>1223</td>
+                                            <td>25/9/2022</td>
+                                            <td>10pm</td>
+                                            <td>1600 ر.س</td>
+                                            <td>
+                                                <button class="main-btn sm transparent tabs-m" data-show="invoice-bill">عرض الفاتورة</button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <!-- End invoices -->
                         </div>
                     </div>
 
@@ -4815,6 +4926,95 @@
     </div>
 
 
+    <!-- Start payment platform commission Modal -->
+    <div class="modal fade" id="paymentModal2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <form action="">
+
+                <div class="modal-header">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h1 class="modal-title" id="exampleModalToggleLabel">طريقة الدفع</h1>
+                </div>
+
+                <div class="modal-body">
+                    <div class="radio-boxs row g-3">
+    
+                        <div class="col-sm-4 col-6">
+                            <div class="radio-box radio-imgs">
+                                <input type="radio" name="radio5" id="visa5" class="input-radio">
+                                <label for="visa5" class="label-radio">
+                                    <img src="assets/imgs/buy2.png" alt="" class="radio-img">
+                                    visa
+                                </label>
+                            </div> 
+                        </div>
+    
+                        <div class="col-sm-4 col-6">
+                            <div class="radio-box radio-imgs">
+                                <input type="radio" name="radio5" id="mada5" class="input-radio">
+                                <label for="mada5" class="label-radio">
+                                    <img src="assets/imgs/buy3.png" alt="" class="radio-img">
+                                    مدى
+                                </label>
+                            </div> 
+                        </div>
+    
+                        <div class="col-sm-4 col-6">
+                            <div class="radio-box radio-imgs">
+                                <input type="radio" name="radio5" id="apple5" class="input-radio">
+                                <label for="apple5" class="label-radio">
+                                    <img src="assets/imgs/buy4.png" alt="" class="radio-img">
+                                    apple pay
+                                </label>
+                            </div> 
+                        </div>
+    
+                        <div class="col-sm-4 col-6">
+                            <div class="radio-box radio-imgs">
+                                <input type="radio" name="radio5" id="stc5" class="input-radio">
+                                <label for="stc5" class="label-radio">
+                                    <img src="assets/imgs/buy5.png" alt="" class="radio-img">
+                                    stc pay
+                                </label>
+                            </div> 
+                        </div>
+    
+                        <div class="col-sm-4 col-6">
+                            <div class="radio-box radio-imgs">
+                                <input type="radio" name="radio5" id="bank5" class="input-radio">
+                                <label for="bank5" class="label-radio">
+                                    <img src="assets/imgs/buy6.png" alt="" class="radio-img">
+                                    تحويل بنكي
+                                </label>
+                            </div> 
+                        </div>
+    
+                        <div class="col-sm-4 col-6">
+                            <div class="radio-box radio-imgs">
+                                <input type="radio" name="radio5" id="wallet5" class="input-radio">
+                                <label for="wallet5" class="label-radio">
+                                    <img src="assets/imgs/buy7.png" alt="" class="radio-img">
+                                    محفظة
+                                </label>
+                            </div> 
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="main-btn transparent" data-bs-target="#doneCommissionModal" data-bs-toggle="modal" data-bs-dismiss="modal">تأكيد</button>
+                </div>
+
+            </form>
+          </div>
+        </div>
+    </div>
+
+
     <!-- Start Done Modal -->
     <div class="modal fade" id="doneModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -4828,6 +5028,25 @@
             <div class="modal-footer">
               <a href="index.html" class="main-btn md transparent">العودة للرئيسية</a>
               <button class="main-btn md up" data-bs-dismiss="modal">متابعة طلباتي</button>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Start Done platform-commission Modal -->
+    <div class="modal fade" id="doneCommissionModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-body">
+                <img src="assets/imgs/logo.png" class="modal-img lg" alt="logo" title="logo"></img>
+                <p class="modal-text"> <span class="color">تهانينا !</span> تم دفع قيمة العمولة بنجاح</p>
+            </div>
+
+            <div class="modal-footer">
+              <a href="index.html" class="main-btn md transparent">العودة للرئيسية</a>
             </div>
 
           </div>
@@ -4894,39 +5113,63 @@
                     }
                 }
             } else{
-                let imgContainer = input.closest('.input-g').querySelector('.photo-input-new');
-                // let imageSrc = img.getAttribute('src');
-                input.onchange = function(){
+                $(".img-upload-input").change(function() {
+                    imgPreview(this);
+                });
+                function imgPreview(input) {
+                    var file = input.files[0];
+                    var mixedfile = file['type'].split("/");
+                    var filetype = mixedfile[0];
 
-                    imgContainer.innerHTML = ``;
-                    let imgHidden = document.createElement('div');
-                    imgHidden.classList.add('hidden-img');
+                    let photoContainer = $(input).parent('.main-input').next('.photo-con');
 
-                    imgContainer.append(imgHidden);
 
-                    // Create Remove Button
-                    let removeBtn = document.createElement('span');
-                    removeBtn.classList.add('remove-img');
-                    removeBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-                
-                    // Append The Button To Main Div
-                    imgHidden.append(removeBtn);
-                
-                    // Remove Parent Div From Page When Click The Button
-                    removeBtn.onclick= function(e){
-                        e.target.closest('.hidden-img').remove();
+                    if(filetype == "image"){
+                        var reader = new FileReader();
+                        reader.onload = function(e){
+
+                            photoContainer.empty();
+
+                            let img = `
+                                <div class='hidden-img'>
+                                    <img src='${e.target.result}' />
+                                    <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
+                                    <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                            `;
+
+                            photoContainer.append(img);
+                            $('.fancybox').fancybox({});
+                            $('.remove-img').on('click', function(e){
+                                e.target.closest('.hidden-img').remove();
+                            });
+
+                        }
+                        reader.readAsDataURL(input.files[0]);
+
+                    } else if(filetype == "video"){
+
+                        photoContainer.empty();
+
+                        let srcVideo = URL.createObjectURL(input.files[0]);
+
+                        let video = `
+                            <div class='hidden-img'>
+                                <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
+                                <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
+                                <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        `
+
+                        photoContainer.append(video);
+                        $('.fancybox').fancybox({});
+                        $('.remove-img').on('click', function(e){
+                            e.target.closest('.hidden-img').remove();
+                        });
+
+                    }else{
+                        alert("Invalid file type");
                     }
-    
-                    let reader = new FileReader();
-                    reader.onload = ()=>{
-                        // Create Img
-                        let img = document.createElement('img');
-                        img.setAttribute('src', reader.result);
-                        
-                        // Append The Img To Main Div
-                        imgHidden.append(img);
-                    }
-                    reader.readAsDataURL(input.files[0]);
                 }
             }
         });
@@ -4961,7 +5204,6 @@
     <script>
         $('.tabs-show').css('display', 'none');
         getProFromLocal();
-        
 
         $('.tabs-m').on('click', function(e){
             e.preventDefault();
@@ -4984,17 +5226,19 @@
 
         // Add activeTab To Local storage
         function addLocal(tab){
-            localStorage.setItem("activeTab", JSON.stringify(tab));
+            sessionStorage.setItem("activeTab", JSON.stringify(tab));
         }
 
         // Get activeTab From Local Storage
         function getProFromLocal(){
-            let data = localStorage.getItem("activeTab");
+            let data = sessionStorage.getItem("activeTab");
 
             // Check if Theres activeTab In Local Storage
             if(data){
                 activeTab = JSON.parse(data);
                 $(`.${activeTab}`).fadeIn();
+                $('.tabs-m').removeClass('active')
+                $(`[data-show=${activeTab}]`).addClass('active');
             } else{
                 $('.user-account').fadeIn(0);
             }

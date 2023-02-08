@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
     <!-- intlTelInput -->
     <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -177,7 +179,7 @@
                 <!-- Navbar Buttons -->
                 <div class="buttons-m">
                     <a href="login.html" class="main-btn sm transparent">تسجيل دخول</a>
-                    <a href="open-stor.html" class="main-btn sm up">افتح متجرك</a>
+                    <a href="user-account.html" class="main-btn sm up" data-pass="open-store">افتح متجرك</a>
                 </div>
             </div>
         </div>
@@ -309,13 +311,13 @@
                                 <span class="label-hint">*</span>
                             </label>
                             <div class="main-input">
-                                <input type="file" name="" id="idPhoto" class="hidden-input img-upload-input">
+                                <input type="file" name="" id="idPhoto" class="hidden-input img-upload-input img-upload-input">
                                 <label for="idPhoto" class="input-me photo-input">
                                     ارفق صورة جواز السفر
                                 </label>
                                 <i class="fa-regular fa-file main-icon"></i>
                             </div>
-                            <div class="photo-input-new"></div>
+                            <div class="photo-con"></div>
                         </div>
 
                         <!-- Password -->
@@ -480,6 +482,8 @@
     <script src="./assets/plugins/select2/select2.js"></script>
     <!-- intlTelInput -->
     <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
 
     <!-- Upload Img -->
     <script>
@@ -507,42 +511,73 @@
                     }
                 }
             } else{
-                let imgContainer = input.closest('.input-g').querySelector('.photo-input-new');
-                // let imageSrc = img.getAttribute('src');
-                input.onchange = function(){
+                $(".img-upload-input").change(function() {
+                    imgPreview(this);
+                });
 
-                    imgContainer.innerHTML = ``;
-                    let imgHidden = document.createElement('div');
-                    imgHidden.classList.add('hidden-img');
+                function imgPreview(input) {
+                    var file = input.files[0];
+                    var mixedfile = file['type'].split("/");
+                    var filetype = mixedfile[0];
 
-                    imgContainer.append(imgHidden);
+                    let photoContainer = $(input).parent('.main-input').next('.photo-con');
 
-                    // Create Remove Button
-                    let removeBtn = document.createElement('span');
-                    removeBtn.classList.add('remove-img');
-                    removeBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-                
-                    // Append The Button To Main Div
-                    imgHidden.append(removeBtn);
-                
-                    // Remove Parent Div From Page When Click The Button
-                    removeBtn.onclick= function(e){
-                        e.target.closest('.hidden-img').remove();
+                    if(filetype == "image"){
+                        var reader = new FileReader();
+                        reader.onload = function(e){
+
+                            photoContainer.empty();
+
+                            let img = `
+                                <div class='hidden-img'>
+                                    <img src='${e.target.result}' />
+                                    <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
+                                    <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                            `;
+
+                            photoContainer.append(img);
+                            $('.fancybox').fancybox({});
+                            $('.remove-img').on('click', function(e){
+                                e.target.closest('.hidden-img').remove();
+                            });
+
+                        }
+                        reader.readAsDataURL(input.files[0]);
+
+                    } else if(filetype == "video"){
+
+                        photoContainer.empty();
+
+                        let srcVideo = URL.createObjectURL(input.files[0]);
+
+                        let video = `
+                            <div class='hidden-img'>
+                                <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
+                                <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
+                                <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        `
+
+                        photoContainer.append(video);
+                        $('.fancybox').fancybox({});
+                        $('.remove-img').on('click', function(e){
+                            e.target.closest('.hidden-img').remove();
+                        });
+
+                    }else{
+                        alert("Invalid file type");
                     }
-    
-                    let reader = new FileReader();
-                    reader.onload = ()=>{
-                        // Create Img
-                        let img = document.createElement('img');
-                        img.setAttribute('src', reader.result);
-                        
-                        // Append The Img To Main Div
-                        imgHidden.append(img);
-                    }
-                    reader.readAsDataURL(input.files[0]);
                 }
             }
         });
+    </script>
+
+    <script>
+        $('[data-pass]').on('click', function(){
+            let item = $(this).attr('data-pass')
+            sessionStorage.setItem("activeTab", JSON.stringify(item));
+        })
     </script>
 
     <!-- intlTelInput -->
