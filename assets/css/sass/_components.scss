@@ -243,6 +243,17 @@
     font-size: 20px;
     color: $light2;
     font-family: fontDemi;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 18px;
+    }
+  }
+
+  .main-btn .sm2{
+    @media screen and (max-width:$screen-sm) {
+      width: 120px;
+      font-size: 14px;
+    }
   }
 }
 
@@ -600,6 +611,18 @@
     text-align: center;
     position: relative;
 
+    @media screen and (max-width:$screen-sm) {
+      min-width: 105px;
+    }
+
+    @media screen and (max-width:$screen-xs) {
+      min-width: 95px;
+    }
+
+    @media screen and (max-width:$screen-xxs) {
+      min-width: 82px;
+    }
+
     & + .step-item:after {
       content: "";
       position: absolute;
@@ -643,6 +666,14 @@
       font-family: fontDemi;
       color: $black;
       margin-top: 8px;
+
+      @media screen and (max-width:$screen-sm) {
+        font-size: 13px;
+      }
+
+      @media screen and (max-width:$screen-xs) {
+        font-size: 12px;
+      }
     }
 
     &.current-item {
@@ -781,10 +812,14 @@
     cursor: pointer;
     transition: $main-transition;
     overflow: hidden;
-
+    
     @media screen and (max-width:$screen-sm) {
       height: 45px;
       font-size: 15px;
+    }
+
+    @media screen and (max-width:$screen-xs) {
+      width: 132px;
     }
 
     &.red{
@@ -882,6 +917,19 @@
 
       @media screen and (max-width:$screen-sm) {
         font-size: 16px;
+        width: 140px;
+        height: 48px;
+      }
+
+      @media screen and (max-width:$screen-xs) {
+        font-size: 15px;
+        width: 130px;
+        height: 47px;
+      }
+
+      @media screen and (max-width:$screen-xxs) {
+        width: 120px;
+        height: 45px;
       }
     }
 

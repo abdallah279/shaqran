@@ -462,6 +462,17 @@ html[lang=en] .main-title .anchor i {
   color: #505050;
   font-family: fontDemi;
 }
+@media screen and (max-width: 425px) {
+  .page-title .title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .page-title .main-btn .sm2 {
+    width: 120px;
+    font-size: 14px;
+  }
+}
 
 .center-title {
   text-align: center;
@@ -806,6 +817,21 @@ html[lang=ar] .dropdown-m-container .dropdown-m {
   text-align: center;
   position: relative;
 }
+@media screen and (max-width: 576px) {
+  .steps .step-item {
+    min-width: 105px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .steps .step-item {
+    min-width: 95px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .steps .step-item {
+    min-width: 82px;
+  }
+}
 .steps .step-item + .step-item:after {
   content: "";
   position: absolute;
@@ -855,6 +881,16 @@ html[lang=ar] .steps .step-item + .step-item:after {
   font-family: fontDemi;
   color: #202020;
   margin-top: 8px;
+}
+@media screen and (max-width: 576px) {
+  .steps .step-item .progress-label {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .steps .step-item .progress-label {
+    font-size: 12px;
+  }
 }
 .steps .step-item.current-item ~ .step-item:after {
   border-color: #F5F5F5;
@@ -989,6 +1025,11 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
     font-size: 15px;
   }
 }
+@media screen and (max-width: 425px) {
+  .main-btn {
+    width: 132px;
+  }
+}
 .main-btn.red {
   background-color: #EB2222;
   color: #fff;
@@ -1070,6 +1111,21 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
 @media screen and (max-width: 576px) {
   .main-btn.lg {
     font-size: 16px;
+    width: 140px;
+    height: 48px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main-btn.lg {
+    font-size: 15px;
+    width: 130px;
+    height: 47px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main-btn.lg {
+    width: 120px;
+    height: 45px;
   }
 }
 .main-btn.xl {
@@ -3749,10 +3805,50 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 @media screen and (max-width: 992px) {
   .side-filter-cards .filter-side {
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 3300;
+    background: #fff;
+    height: 100%;
+    width: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html[lang=en] .side-filter-cards .filter-side {
+    transform: translateX(-150%);
+  }
+  html[lang=ar] .side-filter-cards .filter-side {
     transform: translateX(150%);
-    z-index: 33;
+  }
+  html[lang=en] .side-filter-cards .filter-side {
+    left: 0;
+  }
+  html[lang=ar] .side-filter-cards .filter-side {
+    right: 0;
+  }
+}
+.side-filter-cards .filter-side .accordion {
+  width: 100%;
+  padding: 20px;
+}
+@media screen and (max-width: 992px) {
+  .side-filter-cards .filter-side .accordion {
+    overflow: auto;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .side-filter-cards .filter-side .accordion::-webkit-scrollbar {
+    width: 4px;
+  }
+  .side-filter-cards .filter-side .accordion::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .side-filter-cards .filter-side .accordion::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: #1D71B8;
   }
 }
 .side-filter-cards .filter-cards {
@@ -3765,12 +3861,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   }
 }
 .side-filter-cards.open-side .filter-side {
-  transform: translateX(0);
-  top: unset;
-}
-.side-filter-cards.open-side .filter-cards {
-  padding: 0 32px;
-  transform: translateX(-235px);
+  transform: translateX(0) !important;
 }
 
 .cards-container {
@@ -4481,7 +4572,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 @media screen and (max-width: 992px) {
   .pro-slide-img {
-    height: 400px;
+    height: 400px !important;
   }
 }
 
@@ -4656,6 +4747,8 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 .pro-buy-item .pro-buy-top {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
 }
 .pro-buy-item .pro-buy-top .img {
   width: 155px;
@@ -4663,6 +4756,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .pro-buy-item .pro-buy-top .img .buy-img {
   width: 100%;
@@ -4689,6 +4783,16 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .title.lg {
   font-size: 16px;
   font-family: fontDemi;
+}
+.pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn {
+  position: absolute;
+  top: 0px;
+}
+html[lang=en] .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn {
+  right: 0px;
+}
+html[lang=ar] .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn {
+  left: 0px;
 }
 .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .pro-icon {
   color: #1D71B8;
@@ -4723,6 +4827,11 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   color: #6c757d;
   width: 350px;
   line-height: 1.7;
+}
+@media screen and (max-width: 425px) {
+  .pro-buy-item .pro-buy-down {
+    width: 100%;
+  }
 }
 .pro-buy-item:hover .buy-img {
   transform: rotate(-3deg) scale(1.1);
