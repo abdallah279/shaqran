@@ -249,10 +249,12 @@
     }
   }
 
-  .main-btn .sm2{
+  .main-btn.sm2{
     @media screen and (max-width:$screen-sm) {
-      width: 120px;
+      width: fit-content;
       font-size: 14px;
+      padding: 0 10px;
+      height: 38px;
     }
   }
 }
@@ -1140,6 +1142,12 @@
   @media screen and (max-width:$screen-lg) {
     flex-direction: column;
   }
+  
+  &.stor-wrap{
+    @media screen and (max-width:$screen-lg) {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .flex-1{
@@ -1185,6 +1193,10 @@
   @media screen and (max-width:$screen-sm) {
     padding: 20px 15px;
   }
+
+  @media screen and (max-width:$screen-sm) {
+    padding: 14px 12px;
+  }
 }
 
 .main-card-title{
@@ -1228,6 +1240,10 @@
 
   &.lg{
     font-size: 18px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    font-size: 14px;
   }
 }
 
@@ -1432,12 +1448,20 @@
 .main-item-first{
   color: $light5;
   font-size: 15px;
+
+  @media screen and (max-width:$screen-xs) {
+    font-size: 13px;
+  }
 }
 
 .main-item-secound{
   color: $black;
   font-size: 15px;
   font-family: fontDemi;
+
+  @media screen and (max-width:$screen-xs) {
+    font-size: 13px;
+  }
 }
 
 .light-span{
@@ -1447,6 +1471,10 @@
   border-radius: 5px;
   font-size: 14px;
 
+  @media screen and (max-width:$screen-xs) {
+    font-size: 13px;
+  }
+
   &.lg{
     display: inline-block;
     @include center;
@@ -1454,6 +1482,10 @@
     height: 44px;
     padding: 8px 15px;
     font-size: 15px;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -1995,19 +2027,6 @@
     color: $white;
   }
 }
-
-// .anchor{
-//   margin-top: 10px;
-
-//   .forget-anchor{
-//     font-size: 14px;
-//     transition: $main-transition;
-  
-//     &:hover{
-//       text-decoration: underline;
-//     }
-//   }
-// }
 
 .forget-container{
   text-align: end;

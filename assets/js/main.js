@@ -27,7 +27,7 @@ $('.close').on('click', function(){
   $('.overlay-m').fadeOut(500);
 });
 
-// Toggle SideBar
+// Toggle SideBar Filter
 $(".open-side-icon").on('click', function(){
   $(this).next(".side-filter-cards").addClass('open-side');
   $('.overlay-m').fadeIn(500);
@@ -35,7 +35,7 @@ $(".open-side-icon").on('click', function(){
 
 // User Account SideBar
 $('.side-bar-open').on('click', function(){
-  $('.side-bar').addClass('open');
+  $('.side-links-con').addClass('open');
   $('.overlay-m').fadeIn(500);
 })
 
@@ -43,7 +43,7 @@ $('.overlay-m').on('click', function(){
   $('.search-form').removeClass('active');
   $('.links').removeClass('active');
   $(".side-filter-cards").removeClass('open-side');
-  $('.side-bar').removeClass('open');
+  $('.side-links-con').removeClass('open');
   $(this).fadeOut(500);
 });
 
