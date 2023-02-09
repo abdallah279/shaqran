@@ -446,7 +446,7 @@ html[lang=en] .main-title .anchor i {
 }
 @media screen and (max-width: 425px) {
   .page-title .title {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1397,6 +1397,12 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   font-size: 14px;
   color: #707070;
   line-height: 1.9;
+}
+@media screen and (max-width: 425px) {
+  .desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
 }
 .desc.sm {
   font-size: 12px;
@@ -3654,6 +3660,11 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 768px) {
+  .home-section {
+    padding: 20px 10px;
+  }
+}
 .home-section .home-item {
   padding: 200px 0;
   color: #fff;
@@ -3661,6 +3672,11 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 @media screen and (max-width: 992px) {
   .home-section .home-item {
     padding: 150px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-section .home-item {
+    padding: 100px 0;
   }
 }
 .home-section .home-item::after {
@@ -3725,6 +3741,12 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   .home-section .home-item .home-content .home-desc {
     font-size: 16px;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-section .owl-item {
+    border-radius: 12px;
+    overflow: hidden;
   }
 }
 .home-section .owl-dots {
@@ -3798,7 +3820,6 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   gap: 32px;
   position: relative;
   align-items: flex-start;
-  overflow: hidden;
 }
 .side-filter-cards .filter-side {
   width: 235px;
@@ -3909,7 +3930,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   cursor: pointer;
-  z-index: 3;
+  z-index: 13;
 }
 .cards-container .card-m .card-m-body .card-content {
   background-color: #fff;
@@ -4070,7 +4091,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   transition: all 0.3s ease;
   position: relative;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .cards-container.verticale .card-m {
     gap: 14px;
   }
@@ -4080,9 +4101,24 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   width: 280px;
   flex-shrink: 0;
 }
+@media screen and (max-width: 768px) {
+  .cards-container.verticale .card-m .card-head {
+    width: 220px;
+  }
+}
 @media screen and (max-width: 576px) {
   .cards-container.verticale .card-m .card-head {
-    width: 145px;
+    width: 185px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cards-container.verticale .card-m .card-head {
+    width: 160px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cards-container.verticale .card-m .card-head {
+    width: 120px;
   }
 }
 .cards-container.verticale .card-m .card-m-body {
@@ -4090,17 +4126,27 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 @media screen and (max-width: 576px) {
   .cards-container.verticale .card-m .card-m-body {
-    padding: 19px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 0;
   }
 }
 .cards-container.verticale .card-m .card-m-body .card-title.lg {
   width: 230px;
 }
+@media screen and (max-width: 768px) {
+  .cards-container.verticale .card-m .card-m-body .card-title.lg {
+    width: auto;
+    height: auto;
+  }
+}
 @media screen and (max-width: 576px) {
   .cards-container.verticale .card-m .card-m-body .card-title.lg {
     width: auto;
     font-size: 14px;
+    height: auto;
   }
 }
 .cards-container.verticale .card-m .card-m-body .card-content {
@@ -4112,6 +4158,13 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   .cards-container.verticale .card-m .card-m-body .card-content {
     padding: 0;
     margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards-container.verticale .card-m .card-m-body .main-btn {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 30px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -4587,6 +4640,11 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 425px) {
+  .stor-item .text {
+    font-size: 13px;
+  }
+}
 .stor-item img {
   max-width: 20px;
   max-height: 16px;
@@ -4611,7 +4669,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 @media screen and (max-width: 992px) {
   .pro-slide-img {
-    height: 400px !important;
+    height: 380px !important;
   }
 }
 
@@ -4801,6 +4859,17 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   flex-wrap: wrap;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .pro-buy-item .pro-buy-top {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .pro-buy-item .pro-buy-top {
+    gap: 10px;
+    align-items: center;
+  }
+}
 .pro-buy-item .pro-buy-top .img {
   width: 155px;
   height: 110px;
@@ -4808,6 +4877,24 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .pro-buy-item .pro-buy-top .img {
+    width: 130px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pro-buy-item .pro-buy-top .img {
+    width: 100px;
+    height: 85px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .pro-buy-item .pro-buy-top .img {
+    width: 92px;
+    height: 85px;
+  }
 }
 .pro-buy-item .pro-buy-top .img .buy-img {
   width: 100%;
@@ -4848,6 +4935,11 @@ html[lang=ar] .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn 
 .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .pro-icon {
   color: #1D71B8;
   font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .pro-icon {
+    display: none;
+  }
 }
 .pro-buy-item .pro-buy-top .pro-buy-content .buy-buttons {
   display: flex;
@@ -5106,9 +5198,21 @@ html[lang=ar] .side-links .side-link::after {
   height: 120px;
   border-width: 2px;
 }
+@media screen and (max-width: 576px) {
+  .img-order-con.lg {
+    width: 120px;
+    height: 100px;
+  }
+}
 .img-order-con.lg .order-img {
   width: 75px;
   height: 42px;
+}
+@media screen and (max-width: 576px) {
+  .img-order-con.lg .order-img {
+    width: 60px;
+    height: 32px;
+  }
 }
 
 .order-item {

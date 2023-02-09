@@ -245,7 +245,7 @@
     font-family: fontDemi;
 
     @media screen and (max-width:$screen-xs) {
-      font-size: 18px;
+      font-size: 17px;
     }
   }
 
@@ -1221,6 +1221,11 @@
   font-size: 14px;
   color: $light;
   line-height: 1.9;
+
+  @media screen and (max-width:$screen-xs) {
+    font-size: 13px;
+    line-height: 1.6;
+  }
 
   &.sm{
     font-size: 12px;

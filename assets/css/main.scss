@@ -7,12 +7,20 @@
     position: relative;
     z-index: 2;
 
+    @media screen and (max-width:$screen-md) {
+        padding: 20px 10px;
+    }
+
     .home-item{
         padding: 200px 0;
         color: #fff;
 
         @media screen and (max-width:$screen-lg) {
             padding: 150px 0;
+        }
+
+        @media screen and (max-width:$screen-md) {
+            padding: 100px 0;
         }
 
         &::after{
@@ -73,6 +81,15 @@
 
         }
 
+        
+
+    }
+
+    .owl-item{
+        @media screen and (max-width:$screen-md) {
+            border-radius: 12px;
+            overflow: hidden;
+        }
     }
 
     .owl-dots{
@@ -150,7 +167,7 @@
     gap: 32px;
     position: relative;
     align-items: flex-start;
-    overflow: hidden;
+    // overflow: hidden;
 
     .filter-side{
         width: 235px;
@@ -257,7 +274,7 @@
                 background-color: rgba($color: #000000, $alpha: .5);
                 color: $white;
                 cursor: pointer;
-                z-index: 3;
+                z-index: 13;
             }
 
     
@@ -453,7 +470,7 @@
             transition: $main-transition ;
             position: relative;
 
-            @media screen and (max-width:$screen-sm) {
+            @media screen and (max-width:$screen-md) {
                 gap: 14px;
             }
 
@@ -462,27 +479,48 @@
                 width: 280px;
                 flex-shrink: 0;
 
+                @media screen and (max-width:$screen-md) {
+                    width: 220px;
+                }
+
                 @media screen and (max-width:$screen-sm) {
-                    width: 145px;
-                    // height: 130px;
+                    width: 185px;
+                }
+
+                @media screen and (max-width:$screen-xs) {
+                    width: 160px;
+                }
+
+                @media screen and (max-width:$screen-xxs) {
+                    width: 120px;
                 }
             }
 
             .card-m-body{
                 padding: 0 0 10px;
                 @media screen and (max-width:$screen-sm ){
-                    padding: 19px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
                     margin-bottom: 0;
                 }
 
                 .card-title.lg{
                     width: 230px;
 
+                    @media screen and (max-width:$screen-md) {
+                        width: auto;
+                        height: auto;
+                    }
+
                     @media screen and (max-width:$screen-sm) {
                         width: auto;
                         font-size: 14px;
+                        height: auto;
                     }
                 }
+
                 .card-content{
                     transform: translateY(0px);
                     border: none;
@@ -494,6 +532,11 @@
                 }
 
                 .main-btn{
+                    @media screen and (max-width:$screen-md){
+                        width: fit-content;
+                        padding: 0 30px;
+                    }
+
                     @media screen and (max-width:$screen-sm) {
                         width: fit-content;
                         padding: 0 12px;
@@ -1016,6 +1059,10 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @media screen and (max-width:$screen-xs) {
+            font-size: 13px;
+        }
     }
 
     img{
@@ -1048,7 +1095,7 @@
     }
 
     @media screen and (max-width:$screen-lg) {
-        height: 400px !important;
+        height: 380px !important;
     }
 }
 
@@ -1282,6 +1329,15 @@
         flex-wrap: wrap;
         position: relative;
 
+        @media screen and (max-width:$screen-md) {
+            gap: 15px;
+        }
+
+        @media screen and (max-width:$screen-xs) {
+            gap: 10px;
+            align-items: center;
+        }
+
         .img{
             width: 155px;
             height: 110px;
@@ -1289,6 +1345,21 @@
             border-radius: 8px;
             overflow: hidden;
             flex-shrink: 0;
+            
+            @media screen and (max-width:$screen-md) {
+                width: 130px;
+                height: 100px;
+            }
+            
+            @media screen and (max-width:$screen-sm) {
+                width: 100px;
+                height: 85px;
+            }
+            
+            @media screen and (max-width:$screen-xs) {
+                width: 92px;
+                height: 85px;
+            }
 
             .buy-img{
                 width: 100%;
@@ -1326,6 +1397,10 @@
                 .pro-icon{
                     color: $blue2;
                     font-size: 16px;
+
+                    @media screen and (max-width:$screen-md) {
+                        display: none;
+                    }
                 }
             }
 
@@ -1605,9 +1680,19 @@
         height: 120px;
         border-width: 2px;
 
+        @media screen and (max-width: $screen-sm) {
+            width: 120px;
+            height: 100px;
+        }
+
         .order-img{
             width: 75px;
             height: 42px;
+
+            @media screen and (max-width: $screen-sm) {
+                width: 60px;
+                height: 32px;
+            }
         }
     }
 }
