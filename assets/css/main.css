@@ -127,14 +127,14 @@ input:focus::placeholder {
 }
 
 *::-moz-placeholder {
-  color: #BFBFBF;
+  color: #adabab;
   font-size: 13px;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 *::placeholder {
-  color: #BFBFBF;
+  color: #adabab;
   font-size: 13px;
   transition: all 0.3s ease;
 }
@@ -1266,6 +1266,12 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   font-family: fontDemi;
 }
 
+@media screen and (max-width: 425px) {
+  .px-sm-2 {
+    padding: 0 15px !important;
+  }
+}
+
 .main-border {
   border: 1px solid #D5D5D5;
 }
@@ -1806,18 +1812,18 @@ html[lang=ar] .live-p {
   display: flex;
   align-items: center;
   font-size: 13px;
-  color: #BFBFBF;
+  color: #adabab;
   cursor: pointer;
 }
 .input-g .main-input .input-me::-moz-placeholder {
   font-size: 13px;
-  color: #BFBFBF;
+  color: #adabab;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .input-g .main-input .input-me::placeholder {
   font-size: 13px;
-  color: #BFBFBF;
+  color: #adabab;
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 425px) {
@@ -1871,7 +1877,7 @@ html[lang=ar] .live-p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #E9E9E9;
+  color: #b1b0b0;
   font-size: 14px;
   cursor: pointer;
   pointer-events: none;
@@ -2075,7 +2081,7 @@ html[lang=ar] .select-filter ~ .select2-container--filter-m .select2-selection--
   }
 }
 .select ~ .select2 .select2-selection--single .select2-selection__rendered, .select ~ .select2 .select2-selection--multiple .select2-selection__rendered, .select-multi ~ .select2 .select2-selection--single .select2-selection__rendered, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__rendered {
-  color: #BFBFBF;
+  color: #adabab;
   font-size: 13px;
   display: flex;
   flex-wrap: wrap;
@@ -2118,11 +2124,11 @@ html[lang=ar] .select ~ .select2 .select2-selection--single .select2-selection__
   padding: 0 8px;
 }
 .select2-container .select2-search--inline .select2-search__field::-moz-placeholder {
-  color: #BFBFBF;
+  color: #adabab;
   font-size: 13px;
 }
 .select2-container .select2-search--inline .select2-search__field::placeholder {
-  color: #BFBFBF;
+  color: #adabab;
   font-size: 13px;
 }
 
@@ -3607,6 +3613,11 @@ html[lang=ar] .navbar-m .navbar-content .buttons-m {
     margin-bottom: 15px;
   }
 }
+@media screen and (max-width: 425px) {
+  .footer .foot-content .footer-head {
+    font-size: 16px;
+  }
+}
 .footer .foot-content .footer-links .link {
   display: flex;
   align-items: center;
@@ -3635,7 +3646,6 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
     font-size: 15px;
   }
 }
-
 .copy {
   padding: 14px;
   border-top: 2px solid #D5D5D5;
@@ -3891,6 +3901,13 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
   gap: 30px 20px;
 }
+@media screen and (max-width: 576px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    gap: 18px 12px;
+  }
+}
 .cards-container .card-m {
   position: relative;
   transition: all 0.6s cubic-bezier(0.68, -0.3, 0.265, 2.1);
@@ -3903,9 +3920,14 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 576px) {
+  .cards-container .card-m .card-head {
+    height: 210px;
+  }
+}
 @media screen and (max-width: 425px) {
   .cards-container .card-m .card-head {
-    height: 200px;
+    height: 180px;
   }
 }
 .cards-container .card-m .card-head .card-img {
@@ -3983,6 +4005,13 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   gap: 10px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 576px) {
+  .cards-container .card-m .card-m-body .card-content .card-items .card-item {
+    height: auto;
+    margin-bottom: 6px;
+    gap: 6px;
+  }
+}
 .cards-container .card-m .card-m-body .card-content .card-items .card-item:last-of-type {
   margin-bottom: 0;
 }
@@ -3993,9 +4022,20 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 576px) {
+  .cards-container .card-m .card-m-body .card-content .card-items .card-item .text {
+    font-size: 13px;
+  }
+}
 .cards-container .card-m .card-m-body .card-content .card-items .card-item img {
   max-width: 20px;
   max-height: 20px;
+}
+@media screen and (max-width: 576px) {
+  .cards-container .card-m .card-m-body .card-content .card-items .card-item img {
+    max-width: 17px;
+    max-height: 17px;
+  }
 }
 .cards-container .card-m .card-m-body .card-content .card-info-con {
   margin-top: 8px;
@@ -4061,6 +4101,15 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   opacity: 0;
   pointer-events: none;
 }
+@media screen and (max-width: 425px) {
+  .cards-container .card-m .card-m-body .main-btn {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 43px;
+  }
+}
 .cards-container .card-m:hover .card-head {
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -4108,12 +4157,12 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 @media screen and (max-width: 576px) {
   .cards-container.verticale .card-m .card-head {
-    width: 185px;
+    width: 175px;
   }
 }
 @media screen and (max-width: 425px) {
   .cards-container.verticale .card-m .card-head {
-    width: 160px;
+    width: 145px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -4884,18 +4933,6 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
     height: 100px;
   }
 }
-@media screen and (max-width: 576px) {
-  .pro-buy-item .pro-buy-top .img {
-    width: 100px;
-    height: 85px;
-  }
-}
-@media screen and (max-width: 425px) {
-  .pro-buy-item .pro-buy-top .img {
-    width: 92px;
-    height: 85px;
-  }
-}
 .pro-buy-item .pro-buy-top .img .buy-img {
   width: 100%;
   height: 100%;
@@ -5655,7 +5692,7 @@ html[lang=ar] .chat-form .chat-btn {
   align-items: center;
   gap: 6px;
   font-size: 26px;
-  color: #E9E9E9;
+  color: #b1b0b0;
 }
 .rating-content .icons .color {
   color: #FCB91D;

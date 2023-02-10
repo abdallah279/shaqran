@@ -1097,6 +1097,11 @@
   font-family: fontDemi;
 }
 
+.px-sm-2{
+  @media screen and (max-width:$screen-xs) {
+    padding: 0 15px !important;
+  }
+}
 
 .main-border{
   border: 1px solid $border-color;

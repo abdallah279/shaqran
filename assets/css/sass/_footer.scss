@@ -91,6 +91,10 @@
                 font-size: 18px;
                 margin-bottom: 15px;
             }
+
+            @media screen and (max-width:$screen-xs) {
+                font-size: 16px;
+            }
         }
 
         .footer-links{
@@ -120,6 +124,9 @@
 
                 @media screen and (max-width:$screen-sm){
                     font-size: 15px;
+                }
+
+                @media screen and (max-width:$screen-xs) {
                 }
             }
         }

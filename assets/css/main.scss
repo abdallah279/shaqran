@@ -235,10 +235,10 @@
 // Start cards-container
 .cards-container{
     @include grid(234px, 20px);
-    // padding: 5px;
-    // transition: all .6s cubic-bezier(0.68, -0.30, 0.265, 2.1);
-
-
+    
+    @media screen and (max-width:$screen-sm) {
+        @include grid(185px, 12px);
+    }
 
     .card-m{
         position: relative;
@@ -252,8 +252,12 @@
             position: relative;
             z-index: 1;
 
+            @media screen and (max-width:$screen-sm) {
+                height: 210px;
+             }
+
             @media screen and (max-width:$screen-xs) {
-                height: 200px;
+                height: 180px;
              }
 
             .card-img{
@@ -333,7 +337,13 @@
                         align-items: center;
                         gap: 10px;
                         margin-bottom: 10px;
-                        
+
+                        @media screen and (max-width:$screen-sm) {
+                            height: auto;
+                            margin-bottom: 6px;
+                            gap: 6px;
+                        }
+
                         &:last-of-type{
                             margin-bottom: 0;
                         }
@@ -344,11 +354,20 @@
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
+
+                            @media screen and (max-width:$screen-sm) {
+                               font-size: 13px;
+                            }
                         }
     
                         img{
                             max-width: 20px;
                             max-height: 20px;
+                            
+                            @media screen and (max-width:$screen-sm) {
+                                max-width: 17px;
+                                max-height: 17px;
+                            }
                         }
                     }
                 }
@@ -419,10 +438,13 @@
                 opacity: 0;
                 pointer-events: none;
 
-                // @media screen and (max-width:$screen-xs) {
-                //     opacity: 1;
-                //     pointer-events: auto;
-                // }
+                @media screen and (max-width:$screen-xs) {
+                    opacity: 1;
+                    pointer-events: auto;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    height: 43px;
+                }
             }
         }
 
@@ -484,11 +506,11 @@
                 }
 
                 @media screen and (max-width:$screen-sm) {
-                    width: 185px;
+                    width: 175px;
                 }
 
                 @media screen and (max-width:$screen-xs) {
-                    width: 160px;
+                    width: 145px;
                 }
 
                 @media screen and (max-width:$screen-xxs) {
@@ -1349,16 +1371,6 @@
             @media screen and (max-width:$screen-md) {
                 width: 130px;
                 height: 100px;
-            }
-            
-            @media screen and (max-width:$screen-sm) {
-                width: 100px;
-                height: 85px;
-            }
-            
-            @media screen and (max-width:$screen-xs) {
-                width: 92px;
-                height: 85px;
             }
 
             .buy-img{
