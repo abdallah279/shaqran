@@ -1384,6 +1384,10 @@
 
         .pro-buy-content{
             flex: 1;
+            @media screen and (max-width:$screen-xs) {
+                width: 100%;
+                flex: auto;
+            }
 
             .pro-buy-head{
                 @include between;
@@ -1395,17 +1399,19 @@
                     font-family: fontDemi;
                     width: 230px;
 
+                    @media screen and (max-width:$screen-sm) {
+                        width: auto;
+                    }
+
                     &.lg{
                         font-size: 16px;
                         font-family: fontDemi;
                     }
                 }
 
-                // .sm-btn{
-                //     position: absolute;
-                //     top: 0px;
-                //     @include dir-right(0px);
-                // }
+                .sm-btn{
+                    flex-shrink: 0;
+                }
 
                 .pro-icon{
                     color: $blue2;
