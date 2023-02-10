@@ -5153,7 +5153,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
     padding: 20px;
     height: 100%;
     background-color: #fff;
-    z-index: 9992;
+    z-index: 1000;
   }
   html[lang=en] .side-links-con {
     left: 0;
@@ -5183,7 +5183,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
     padding: 20px;
     height: 100%;
     background-color: #fff;
-    z-index: 9992;
+    z-index: 1000;
   }
   html[lang=en] .accordion-con {
     left: 0;

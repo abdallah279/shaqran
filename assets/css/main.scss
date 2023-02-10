@@ -1554,7 +1554,7 @@
         padding: 20px;
         height: 100%;
         background-color: $white;
-        z-index: 9992;
+        z-index: 1000;
         #{$ltr} & {
             transform: translateX(-150%);
         }
@@ -1579,7 +1579,7 @@
         padding: 20px;
         height: 100%;
         background-color: $white;
-        z-index: 9992;
+        z-index: 1000;
         #{$ltr} & {
             transform: translateX(-150%);
         }
