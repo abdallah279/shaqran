@@ -3987,15 +3987,17 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   height: 52px;
   font-size: 16px;
 }
+@media screen and (max-width: 576px) {
+  .cards-container .card-m .card-m-body .card-content .card-title.lg {
+    width: auto;
+    font-size: 14px;
+    height: auto;
+  }
+}
 @media screen and (max-width: 425px) {
   .cards-container .card-m .card-m-body .card-content .card-title {
     height: auto !important;
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .cards-container .card-m .card-m-body .card-content .card-title {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 .cards-container .card-m .card-m-body .card-content .card-items .card-item {
@@ -4718,7 +4720,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 @media screen and (max-width: 992px) {
   .pro-slide-img {
-    height: 380px !important;
+    height: 340px !important;
   }
 }
 
