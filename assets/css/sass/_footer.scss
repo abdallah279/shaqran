@@ -23,14 +23,11 @@
 
         .footer-info{
             color: $dark;
-            font-size: 16px;
-            line-height: 2;
-            @media screen and (max-width:$screen-lg) {
-                font-size: 16px;
-            }
+            font-size: 15px;
+            line-height: 1.8;
 
             @media screen and (max-width:$screen-sm) {
-                font-size: 15px;
+                font-size: 14px;
                 width: 350px;
             }
 
@@ -43,38 +40,42 @@
 
         .footer-social{
             @include center;
-            gap: 18px;
+            gap: 16px;
             margin-top: 20px;
 
             .social-icon{
                 @include center;
-                @include circle(45px);
+                @include circle(42px);
                 box-shadow:  0 1px 7px rgb(0 0 0 / 6%);
                 transition: $main-transition;
                 border: 1px solid transparent;
-                outline: 3px solid transparent;
+                // outline: 3px solid transparent;
 
                 @media screen and (max-width:$screen-xs) {
                     @include circle(38px);
                 }
 
                 img{
-                    max-width: 18px;
-                    max-height: 18px;
+                    max-width: 16px;
+                    max-height: 16px;
                     transition: $main-transition;
                     
                     @media screen and (max-width:$screen-xs) {
-                        max-width: 15px;
-                        max-height: 15px;
+                        max-width: 14px;
+                        max-height: 14px;
                     }
     
                 }
 
                 &:hover{
-                    transform: translateY(-3px);
+                    // transform: translateY(-3px);
                     border-color: $blue2;
-                    outline-color: $white;
+                    // outline-color: $white;
                     box-shadow: none;
+
+                    img{
+                        transform: rotate(360deg);
+                    }
                 }
             }
         }
@@ -83,12 +84,11 @@
     .foot-content{
         .footer-head{
             margin-bottom: 25px;
-            font-size: 19px;
+            font-size: 17px;
             color: $black;
             font-weight: 600;
 
             @media screen and (max-width:$screen-sm) {
-                font-size: 18px;
                 margin-bottom: 15px;
             }
 
@@ -106,7 +106,7 @@
                 width: fit-content;
                 color: $dark;
                 transition: $main-transition;
-                font-size: 17px;
+                font-size: 16px;
 
                 &:hover{
                     #{$ltr} & {
@@ -133,22 +133,47 @@
     }
 }
 
-.copy{
-    padding: 14px;
-    border-top: 2px solid $border-color;
+.copy-right{
+    padding: 10px;
+    border-top: 1px solid $border-color;
+    position: relative;
+    z-index: 5;
 
-    .copy-text{
-        @include center;
-        gap: 10px;
-        font-size: 16px;
-        color: $black;
+    .down-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
 
-        a{
-            color: $black;
-            transition: $main-transition;
+        @media screen and (max-width : $screen-md) {
+            flex-direction: column;
+            gap: 12px;
+        }
 
-            &:hover{
-                color: $blue2;
+        .right-spe{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 13px;
+
+            .footer-new-img{
+                width: 70px;
+                margin-bottom: 8px;
+            }
+
+            .links-spe{
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    transition: all 0.4s ease-in-out;
+
+                    &:hover{
+                        color: $blue2;
+                    }
+                }
             }
         }
     }

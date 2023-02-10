@@ -34,8 +34,14 @@ $(".open-side-icon").on('click', function(){
 })
 
 // User Account SideBar
-$('.side-bar-open').on('click', function(){
+$('.user-link-open').on('click', function(){
   $('.side-links-con').addClass('open');
+  $('.overlay-m').fadeIn(500);
+})
+
+// User Account filter
+$('.filter-open').on('click', function(){
+  $('.accordion-con').addClass('open');
   $('.overlay-m').fadeIn(500);
 })
 
@@ -44,6 +50,7 @@ $('.overlay-m').on('click', function(){
   $('.links').removeClass('active');
   $(".side-filter-cards").removeClass('open-side');
   $('.side-links-con').removeClass('open');
+  $('.accordion-con').removeClass('open');
   $(this).fadeOut(500);
 });
 
