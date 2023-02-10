@@ -3702,7 +3702,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 @media screen and (max-width: 768px) {
   .home-section .home-item {
-    padding: 100px 0;
+    padding: 90px 0;
   }
 }
 .home-section .home-item::after {
@@ -4947,7 +4947,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 @media screen and (max-width: 768px) {
   .pro-buy-item .pro-buy-top .img {
-    width: 130px;
+    width: 160px;
     height: 100px;
   }
 }
@@ -4976,16 +4976,6 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .title.lg {
   font-size: 16px;
   font-family: fontDemi;
-}
-.pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn {
-  position: absolute;
-  top: 0px;
-}
-html[lang=en] .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn {
-  right: 0px;
-}
-html[lang=ar] .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .sm-btn {
-  left: 0px;
 }
 .pro-buy-item .pro-buy-top .pro-buy-content .pro-buy-head .pro-icon {
   color: #1D71B8;

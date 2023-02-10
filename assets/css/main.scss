@@ -20,7 +20,7 @@
         }
 
         @media screen and (max-width:$screen-md) {
-            padding: 100px 0;
+            padding: 90px 0;
         }
 
         &::after{
@@ -1370,7 +1370,7 @@
             flex-shrink: 0;
             
             @media screen and (max-width:$screen-md) {
-                width: 130px;
+                width: 160px;
                 height: 100px;
             }
 
@@ -1401,11 +1401,11 @@
                     }
                 }
 
-                .sm-btn{
-                    position: absolute;
-                    top: 0px;
-                    @include dir-right(0px);
-                }
+                // .sm-btn{
+                //     position: absolute;
+                //     top: 0px;
+                //     @include dir-right(0px);
+                // }
 
                 .pro-icon{
                     color: $blue2;
