@@ -195,7 +195,8 @@
             width: 100%;
             
             @media screen and (max-width:$screen-lg) {
-                overflow: auto;
+                overflow-y: auto;
+                overflow-x: clip;
                 height: 98%;
                 padding: 20px;
                 display: flex;
@@ -234,6 +235,7 @@
 // Start cards-container
 .cards-container{
     @include grid(234px, 20px);
+    position: relative;
     
     @media screen and (max-width:$screen-sm) {
         @include grid(175px, 12px);

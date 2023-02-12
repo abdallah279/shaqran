@@ -229,6 +229,49 @@ input:focus {
     transform: rotateY(360deg);
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.load {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  margin: 110px auto 0;
+  border: solid 4px #1D71B8;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transition: all 0.4s ease-in;
+  animation-name: rotate;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 10;
+  display: none;
+}
+.load.lg {
+  margin: 330px auto 0;
+}
+
+.load-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9;
+  display: none;
+}
+
 .search {
   display: flex;
   align-items: center;
@@ -543,11 +586,6 @@ html[lang=ar] .filter-search .main-icon {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-@media screen and (min-width: 992px) {
-  .open-side-icon {
-    display: none;
-  }
 }
 .open-side-icon img {
   width: 30px;
@@ -3921,7 +3959,8 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 @media screen and (max-width: 992px) {
   .side-filter-cards .filter-side .accordion {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: clip;
     height: 98%;
     padding: 20px;
     display: flex;
@@ -3956,6 +3995,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
   gap: 30px 20px;
+  position: relative;
 }
 @media screen and (max-width: 576px) {
   .cards-container {

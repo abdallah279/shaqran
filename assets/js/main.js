@@ -141,9 +141,30 @@ $( 'input[type="checkbox"]' ).click( function () {
       this.closest('.check-boxs').querySelector('.check-all').checked = false;
     }
   }
-})
 
-// Filter
+  filterLoader(this)
+});
+
+$('.radio-box').click( function () {
+  filterLoader(this)
+});
+
+// Filter Loader
+function filterLoader(el){
+  $(el).parents('.side-filter-cards').find('.load').fadeIn();
+  $(el).parents('.side-filter-cards').find('.load-bg').fadeIn(200);
+  $(el).parents('.account-section').find('.load').fadeIn();
+  $(el).parents('.account-section').find('.load-bg').fadeIn(200);
+  
+  setTimeout(() =>{
+    $(el).parents('.side-filter-cards').find('.load').fadeOut(200);
+    $(el).parents('.side-filter-cards').find('.load-bg').fadeOut();
+    $(el).parents('.account-section').find('.load').fadeOut(200);
+    $(el).parents('.account-section').find('.load-bg').fadeOut();
+  }, 700)
+}
+
+// verticale Or linear
 $('.select-filter').on('change', function(){
   if(this.options[this.selectedIndex].getAttribute('data-filter') == 'linear'){
       $(this).parents('.filter-container').find('.cards-container').addClass('verticale');

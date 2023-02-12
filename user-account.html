@@ -203,12 +203,12 @@
             <!-- Open Side Button -->
 
             <div class="d-flex gap-2 mb-4">
-                <div class="open-side-icon user-link-open">
+                <div class="open-side-icon user-link-open d-lg-none">
                     <img src="assets/imgs/icons/user-menu.png" alt="">
                 </div>
     
                 <!-- Open Side Button -->
-                <div class="open-side-icon filter-open tabs-show adv mazadat">
+                <div class="open-side-icon filter-open tabs-show adv mazadat d-lg-none">
                     <img src="assets/imgs/icons/filter.png" alt="">
                 </div>
             </div>
@@ -498,10 +498,10 @@
                                             </button>
         
                                             <!-- DropDown -->
-                                            <ul class="dropdown-menu check-boxs shoesMzadat">
+                                            <ul class="dropdown-menu check-boxs shoeMzadats">
         
                                                 <div class="check-box">
-                                                    <input type="checkbox" name="" id="all5" class="check-all" data-check="shoeMzadats">
+                                                    <input type="checkbox" name="" id="all5Mzadat" class="check-all" data-check="shoeMzadats">
                                                     <label class="check" for="all5Mzadat"></label>
                                                     <label class="check-text" for="all5Mzadat">
                                                         الكل
@@ -3379,6 +3379,492 @@
 
                     <div class="row">
                         <div class="col-xl-12">
+
+                            <!-- Start Adv Secion -->
+                            <div class="tabs-show filter-container adv">
+                                <!-- Tabs -->
+                                <div class="nav nav-pills mb-3">
+                                    <div class="nav-link sm active">العادية</div>
+                                    <div class="nav-link sm">المروجة</div>
+                                </div>
+
+                                <!-- Section Filter -->
+                                <div class="section-heading">
+
+                                     <!-- Search -->
+                                    <form action="" class="mb-2">
+
+                                        <div class="filter-search input-g">
+                                            <div class="main-input">
+                                                <input type="text" placeholder="ابحث عن ما تريد" class="input-me">
+                                                <button type="submit" class="main-icon search-ic">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="filter-select">
+                                        <label class="label-filter">
+                                            طريقة العرض
+                                        </label>
+                                        <select class="select-filter">
+                                            <option value="" data-filter="grid">شبكة</option>
+                                            <option value="" data-filter="linear">طولي</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <!-- adv Crads-Container -->
+                                <div class="cards-container">
+
+                                    <!-- Loader -->
+                                    <div class="load lg"></div>
+                                    <div class="load-bg"></div>
+
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">بيع</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">تأجير</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+            
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">بيع</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">تأجير</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                حالى
+                                            </div>
+
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">شراء</span>
+                                            </span>
+
+                                            <!-- Video -->
+                                            <video class="card-img" poster="assets/imgs/ads2.png">
+                                                <source src="assets/imgs/1.mp4" type="video/mp4">
+                                            </video>
+
+                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="card-m">
+
+                                        <!-- Img -->
+                                        <div class="card-head">
+                                            <!-- White Type -->
+                                            <div class="white-type">
+                                                سابق
+                                            </div>
+                                            <!-- Type -->
+                                            <span class="type-p">
+                                                <span class="transparent"></span>
+                                                <span class="text">تأجير</span>
+                                            </span>
+
+                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
+                                        </div>
+
+                                        <!-- Content And Button -->
+                                        <div class="card-m-body">
+                    
+                                            <div class="card-content">
+                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
+                    
+                                                <div class="card-items">
+                    
+                                                    <div class="card-item">
+                                                        <img src="assets/imgs/icons/map-card.png" alt="">
+                                                        <span class="text">السعودية , الرياض, حي الياس</span>
+                                                    </div>
+                    
+                                                    <div class="card-item">
+                                                        <span class="price">150 ر.س</span>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+
+                                            <!-- Button -->
+                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End Adv Secion -->
+
                             <!-- Start Mazadat Secion -->
                             <div class="tabs-show filter-container mazadat">
    
@@ -3419,6 +3905,10 @@
                             
                                 <!-- Crads-Container -->
                                 <div class="cards-container">
+
+                                    <!-- Loader -->
+                                    <div class="load lg"></div>
+                                    <div class="load-bg"></div>
                 
                                     <!-- Card -->
                                     <div class="card-m">
@@ -4132,482 +4622,6 @@
                             </div>
                             <!-- End Mazadat Secion -->
 
-                            <div class="tabs-show filter-container adv">
-                                <!-- Tabs -->
-                                <div class="nav nav-pills mb-3">
-                                    <div class="nav-link sm active">العادية</div>
-                                    <div class="nav-link sm">المروجة</div>
-                                </div>
-
-                                <!-- Section Filter -->
-                                <div class="section-heading">
-
-                                     <!-- Search -->
-                                    <form action="" class="mb-2">
-
-                                        <div class="filter-search input-g">
-                                            <div class="main-input">
-                                                <input type="text" placeholder="ابحث عن ما تريد" class="input-me">
-                                                <button type="submit" class="main-icon search-ic">
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                    <div class="filter-select">
-                                        <label class="label-filter">
-                                            طريقة العرض
-                                        </label>
-                                        <select class="select-filter">
-                                            <option value="" data-filter="grid">شبكة</option>
-                                            <option value="" data-filter="linear">طولي</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <!-- adv Crads-Container -->
-                                <div class="cards-container">
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                حالى
-                                            </div>
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">بيع</span>
-                                            </span>
-
-                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                حالى
-                                            </div>
-
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">شراء</span>
-                                            </span>
-
-                                            <!-- Video -->
-                                            <video class="card-img" poster="assets/imgs/ads2.png">
-                                                <source src="assets/imgs/1.mp4" type="video/mp4">
-                                            </video>
-
-                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
-                                                <i class="fa-solid fa-play"></i>
-                                            </a>
-
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                سابق
-                                            </div>
-
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">تأجير</span>
-                                            </span>
-
-                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                حالى
-                                            </div>
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">شراء</span>
-                                            </span>
-
-                                            <!-- Video -->
-                                            <video class="card-img" poster="assets/imgs/ads2.png">
-                                                <source src="assets/imgs/1.mp4" type="video/mp4">
-                                            </video>
-
-                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
-                                                <i class="fa-solid fa-play"></i>
-                                            </a>
-
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                سابق
-                                            </div>
-            
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">بيع</span>
-                                            </span>
-
-                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                حالى
-                                            </div>
-
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">شراء</span>
-                                            </span>
-
-                                            <!-- Video -->
-                                            <video class="card-img" poster="assets/imgs/ads2.png">
-                                                <source src="assets/imgs/1.mp4" type="video/mp4">
-                                            </video>
-
-                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
-                                                <i class="fa-solid fa-play"></i>
-                                            </a>
-
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                سابق
-                                            </div>
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">تأجير</span>
-                                            </span>
-
-                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                حالى
-                                            </div>
-
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">شراء</span>
-                                            </span>
-
-                                            <!-- Video -->
-                                            <video class="card-img" poster="assets/imgs/ads2.png">
-                                                <source src="assets/imgs/1.mp4" type="video/mp4">
-                                            </video>
-
-                                            <a class="fancybox play-v" data-fancybox-group="gallery" href="assets/imgs/1.mp4">
-                                                <i class="fa-solid fa-play"></i>
-                                            </a>
-
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Card -->
-                                    <div class="card-m">
-
-                                        <!-- Img -->
-                                        <div class="card-head">
-                                            <!-- White Type -->
-                                            <div class="white-type">
-                                                سابق
-                                            </div>
-                                            <!-- Type -->
-                                            <span class="type-p">
-                                                <span class="transparent"></span>
-                                                <span class="text">تأجير</span>
-                                            </span>
-
-                                            <img src="assets/imgs/ads1.png" class="card-img" alt="">
-                                        </div>
-
-                                        <!-- Content And Button -->
-                                        <div class="card-m-body">
-                    
-                                            <div class="card-content">
-                                                <h3 class="card-title lg">شقة مميزة بإطلالة فاخرة ومساحة واسعة</h3>
-                    
-                                                <div class="card-items">
-                    
-                                                    <div class="card-item">
-                                                        <img src="assets/imgs/icons/map-card.png" alt="">
-                                                        <span class="text">السعودية , الرياض, حي الياس</span>
-                                                    </div>
-                    
-                                                    <div class="card-item">
-                                                        <span class="price">150 ر.س</span>
-                                                    </div>
-                    
-                                                </div>
-                                            </div>
-
-                                            <!-- Button -->
-                                            <a href="ads-detailes.html" class="main-btn transparent">تفاصيل الاعلان</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
 
                             <!-- Start invoices -->
                             <div class="invoices tabs-show">
