@@ -26,7 +26,7 @@
 
 
     <!-- Start Header -->
-    <header class="header-m">
+    <header class="header-m not-print">
 
         <div class="header-top">
             <div class="container">
@@ -144,7 +144,7 @@
 
 
     <!-- Start Navbar -->
-    <nav class="navbar-m">
+    <nav class="navbar-m not-print">
         <div class="container">
             <div class="navbar-content">
 
@@ -187,7 +187,7 @@
 
 
     <!--  Main Content  -->
-    <div class="bg-light main-padding">
+    <div class="bg-light main-padding not-print">
 
         <div class="container">
 
@@ -562,7 +562,7 @@
     </div>
 
     <!-- Buttons -->
-    <div class="cart-buttons-con bg-white sec-padding">
+    <div class="cart-buttons-con bg-white sec-padding not-print">
         <div class="container">
             <div class="buttons-m lg">
                 <a href="#" class="main-btn transparent-red lg" data-bs-target="#cancelModal" data-bs-toggle="modal">إلغاء الطلب</a>
@@ -572,11 +572,11 @@
         </div>
     </div>
 
-    <div class="bg-light sec-padding"></div>
+    <div class="bg-light sec-padding not-print"></div>
 
 
     <!-- Start Footer -->
-    <footer class="footer">
+    <footer class="footer not-print">
         <div class="container">
             <div class="row footer-cards gy-4">
 
@@ -663,7 +663,7 @@
     <!-- End Footer -->
 
     <!-- Start Copy Right -->
-    <div class="copy-right">
+    <div class="copy-right not-print">
         <div class="container">
 
             <div class="down-footer">
@@ -722,186 +722,184 @@
     </div>
 
     <!-- Start invoice Modal -->
-    <div class="modal fade " id="invoiceModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal fade " id="invoiceModal">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content print">
 
-            <div class="modal-body print-doctor">
+            <div class="modal-body print-invoice">
 
-                <div class="content w-100">
-                    <div class="head-btns">
-                        <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-        
-                        <button type="button" class="print-modal">
-                            <img src="assets/imgs/icons/print.png" alt="print-icon" class="print-icon">
-                        </button>
-                    </div>
+                <div class="head-btns w-100">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
     
-                    <img src="assets/imgs/logo_black.png" alt="logo" title="logo-black" class="logo-black">
+                    <button type="button" class="print-modal">
+                        <img src="assets/imgs/icons/print.png" alt="print-icon" class="print-icon">
+                    </button>
+                </div>
 
-                    <div class="invoice-items">
+                <img src="assets/imgs/logo_black.png" alt="logo" title="logo-black" class="logo-black">
 
-                        <div class="invoice-item py-3">
-                            <div class="row gy-3">
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>رقم الفاتورة:</span>
-                                        <span>567</span>
-                                    </div>
+                <div class="invoice-items">
+
+                    <div class="invoice-item py-3">
+                        <div class="row gy-3">
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>رقم الفاتورة:</span>
+                                    <span>567</span>
                                 </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>رقم الطلب:</span>
-                                        <span>567</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>تاريخ ارسال الطلب:</span>
-                                        <span>25/9/2023</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>وقت ارسال الطلب:</span>
-                                        <span>10pm</span>
-                                    </div>
-                                </div>
-        
                             </div>
-                        </div>
-
-                        <div class="invoice-item py-3">
-                            <div class="row gy-3">
-        
-                                <div class="col-12">
-                                    <div class="text-item">
-                                        <span>تفاصيل الطلب:</span>
-                                    </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>رقم الطلب:</span>
+                                    <span>567</span>
                                 </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>اسم المنتج:</span>
-                                        <span>كنزة صوف</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>سعر المنتج</span>
-                                        <span>150 ر.س</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>اسم المنتج:</span>
-                                        <span>كنزة صوف</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>سعر المنتج</span>
-                                        <span>150 ر.س</span>
-                                    </div>
-                                </div>
-        
                             </div>
-                        </div>
-
-                        <div class="invoice-item py-3">
-                            <div class="row gy-3">
-        
-                                <div class="col-12">
-                                    <div class="text-item">
-                                        <span>تفاصيل المتجر</span>
-                                    </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>تاريخ ارسال الطلب:</span>
+                                    <span>25/9/2023</span>
                                 </div>
-        
-                                <div class="col-12">
-                                    <div class="text-item">
-                                        <span>اسم المتجر:</span>
-                                        <span>اسم المتجر</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-12">
-                                    <div class="text-item">
-                                        <span>رقم السجل التجاري</span>
-                                        <span>1505060</span>
-                                    </div>
-                                </div>
-        
                             </div>
-                        </div>
-
-                        <div class="invoice-item py-3">
-                            <div class="row gy-3">
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>عدد المنتجات:</span>
-                                        <span>2</span>
-                                    </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>وقت ارسال الطلب:</span>
+                                    <span>10pm</span>
                                 </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>طريقة الدفع:</span>
-                                        <span>إلكتروني</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>سعر المنتجات:</span>
-                                        <span>160 ر.س</span>
-                                    </div>
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>شركة الشحن</span>
-                                        <span>اكسبريس</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>رسوم التوصيل</span>
-                                        <span>160 ر.س</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>قيمة الخصم</span>
-                                        <span>160 ر.س</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="text-item">
-                                        <span>السعر الإجمالي:</span>
-                                        <span>160 ر.س</span>
-                                    </div>
-                                </div>
-        
                             </div>
+    
                         </div>
-
                     </div>
 
-                    <img src="assets/imgs/code.png" alt="code" title="Qr Code" class="code-img">
+                    <div class="invoice-item py-3">
+                        <div class="row gy-3">
+    
+                            <div class="col-12">
+                                <div class="text-item">
+                                    <span>تفاصيل الطلب:</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>اسم المنتج:</span>
+                                    <span>كنزة صوف</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>سعر المنتج</span>
+                                    <span>150 ر.س</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>اسم المنتج:</span>
+                                    <span>كنزة صوف</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>سعر المنتج</span>
+                                    <span>150 ر.س</span>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="invoice-item py-3">
+                        <div class="row gy-3">
+    
+                            <div class="col-12">
+                                <div class="text-item">
+                                    <span>تفاصيل المتجر</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-12">
+                                <div class="text-item">
+                                    <span>اسم المتجر:</span>
+                                    <span>اسم المتجر</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-12">
+                                <div class="text-item">
+                                    <span>رقم السجل التجاري</span>
+                                    <span>1505060</span>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <div class="invoice-item py-3">
+                        <div class="row gy-3">
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>عدد المنتجات:</span>
+                                    <span>2</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>طريقة الدفع:</span>
+                                    <span>إلكتروني</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>سعر المنتجات:</span>
+                                    <span>160 ر.س</span>
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>شركة الشحن</span>
+                                    <span>اكسبريس</span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>رسوم التوصيل</span>
+                                    <span>160 ر.س</span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>قيمة الخصم</span>
+                                    <span>160 ر.س</span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="text-item">
+                                    <span>السعر الإجمالي:</span>
+                                    <span>160 ر.س</span>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
                 </div>
+
+                <img src="assets/imgs/code.png" alt="code" title="Qr Code" class="code-img">
             </div>
 
           </div>
@@ -1288,11 +1286,21 @@
         }
     </script>
 
+    <!-- Print -->
     <script>
         $('.print-modal').on('click', function(){
             window.print();
         })
-        
+
+        window.addEventListener("beforeprint", () => {
+            let m = document.querySelector(".modal.show")
+            if (m != null) {
+                document.body.classList.add("modal-print")
+            }
+        })
+        window.addEventListener("afterprint", () => {
+            document.body.classList.remove("modal-print")
+        })
     </script>
 
     <!-- Main Js -->

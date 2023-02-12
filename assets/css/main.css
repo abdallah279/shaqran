@@ -546,6 +546,11 @@ html[lang=en] .main-title .anchor i {
   font-family: fontDemi;
   color: #202020;
 }
+@media screen and (max-width: 425px) {
+  .filter-select .label-filter {
+    font-size: 15px;
+  }
+}
 
 .filter-search {
   width: 350px;
@@ -829,6 +834,11 @@ html[lang=ar] .dropdown-m-container .dropdown-m {
   font-size: 16px;
   border-radius: 0;
   padding: 5px;
+}
+@media screen and (max-width: 425px) {
+  .nav.nav-pills .nav-link.color-none {
+    font-size: 14px;
+  }
 }
 .nav.nav-pills .nav-link.color-none.active, .nav.nav-pills .nav-link.color-none:hover {
   background-color: transparent;
@@ -2061,6 +2071,11 @@ html[lang=ar] .select-filter ~ .select2-container--filter-m .select2-selection--
   color: #707070;
   font-size: 15px;
   padding: 0 !important;
+}
+@media screen and (max-width: 425px) {
+  .select-filter ~ .select2-container--filter-m .select2-selection--single .select2-selection__rendered {
+    font-size: 14px;
+  }
 }
 .select-filter ~ .select2-container--filter-m .select2-selection--single .select2-selection__arrow {
   position: absolute;
@@ -3420,16 +3435,16 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
 }
 .navbar-m .navbar-content .mobile-buttons .mobile-btn span {
   background-color: #1D71B8;
-  width: 25px;
+  width: 15px;
   height: 3px;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 .navbar-m .navbar-content .mobile-buttons .mobile-btn span:nth-child(1) {
-  width: 20px;
+  width: 23px;
 }
 .navbar-m .navbar-content .mobile-buttons .mobile-btn span:nth-child(3) {
-  width: 12px;
+  width: 23px;
 }
 .navbar-m .navbar-content .mobile-buttons .mobile-btn i {
   font-size: 18px;
@@ -5308,7 +5323,6 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  margin-bottom: 0 !important;
 }
 @media screen and (max-width: 992px) {
   .side-links {
@@ -5318,6 +5332,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
     overflow: unset;
     flex-shrink: 0;
     box-shadow: none;
+    margin-bottom: 0 !important;
   }
 }
 .side-links .side-link {
@@ -5533,6 +5548,13 @@ html[lang=ar] .side-links .side-link::after {
      object-fit: contain;
   margin: 10px auto 20px;
 }
+@media screen and (max-width: 576px) {
+  .logo-black {
+    width: 130px;
+    height: 65px;
+    margin: 5px auto 10px;
+  }
+}
 
 .invoice-item {
   border-bottom: 1px solid #D5D5D5;
@@ -5546,6 +5568,16 @@ html[lang=ar] .side-links .side-link::after {
   display: flex;
   gap: 5px;
 }
+@media screen and (max-width: 576px) {
+  .invoice-item .text-item {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .invoice-item .text-item {
+    font-size: 14px;
+  }
+}
 
 .code-img {
   width: 80px;
@@ -5553,21 +5585,55 @@ html[lang=ar] .side-links .side-link::after {
   margin: 10px auto 0;
   display: block;
 }
+@media screen and (max-width: 425px) {
+  .code-img {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 @media print {
-  body * {
-    visibility: hidden !important;
+  body.modal-print .not-print {
+    visibility: hidden;
+    display: none;
   }
-  .print-doctor,
-  .print-doctor *:not(.head-btns *) {
-    visibility: visible !important;
-    color: black;
+  body.modal-print .head-btns {
+    display: none;
   }
-  .print-doctor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  body.modal-print .logo-black {
+    height: 50px;
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  body.modal-print .modal.show {
+    position: relative;
+  }
+  body.modal-print .modal.show .modal-dialog {
+    width: 60vw;
+    max-width: none;
+    margin: 0 auto;
+  }
+  body.modal-print .modal.show .modal-dialog .modal-content {
+    height: 100%;
+    border: 0;
+  }
+  body.modal-print .modal.show .modal-dialog .modal-body {
+    overflow-y: visible;
+    gap: 10px;
+  }
+  body.modal-print .modal.show .modal-dialog .modal-body .row {
+    --bs-gutter-y: 0.5rem;
+  }
+  body.modal-print .modal.show .modal-dialog .modal-footer {
+    visibility: hidden;
+    display: none;
+  }
+  body.modal-print .modal-backdrop {
+    visibility: hidden;
+    display: none;
+  }
+  body.modal-print .modal-dialog {
+    page-break-after: always;
   }
 }
 .invoice-img {
@@ -5779,14 +5845,9 @@ html[lang=ar] .chat-form .chat-btn {
 }
 .not-item .not-text {
   color: #202020;
-  font-size: 17px;
+  font-size: 16px;
   font-family: fontDemi;
   transition: all 0.3s ease;
-}
-@media screen and (max-width: 576px) {
-  .not-item .not-text {
-    font-size: 16px;
-  }
 }
 @media screen and (max-width: 425px) {
   .not-item .not-text {

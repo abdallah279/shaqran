@@ -227,17 +227,17 @@
 
                 span{
                     background-color: $blue2;
-                    width: 25px;
+                    width: 15px;
                     height: 3px;
                     border-radius: 5px;
                     transition: $main-transition;
 
                     &:nth-child(1){
-                        width: 20px;
+                        width: 23px;
                     }
 
                     &:nth-child(3){
-                        width: 12px;
+                        width: 23px;
                     }
                 }
 

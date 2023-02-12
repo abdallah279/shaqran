@@ -1626,8 +1626,7 @@
     border-radius: 4px;
     overflow: hidden;
     box-shadow: $side-shadow;
-    margin-bottom: 0 !important;
-
+    
     @media screen and (max-width:$screen-lg) {
         flex-direction: row;
         align-items: center;
@@ -1635,6 +1634,7 @@
         overflow: unset;
         flex-shrink: 0;
         box-shadow: none;
+        margin-bottom: 0 !important;
     }
 
     .side-link{
@@ -1672,6 +1672,9 @@
         &.active{
             background-color: $white2;
             color: $blue2;
+            // @media screen and (max-width:$screen-lg) {
+            //     border: 1px solid $blue2;
+            // }
         }
 
         &::after{
@@ -1859,6 +1862,12 @@
     height: 78px;
     object-fit: contain;
     margin: 10px auto 20px;
+    
+    @media screen and (max-width:$screen-sm) {
+        width: 130px;
+        height: 65px;
+        margin: 5px auto 10px;
+    }
 }
 
 .invoice-item{
@@ -1873,6 +1882,14 @@
         color: $light;
         display: flex;
         gap: 5px;
+
+        @media screen and (max-width:$screen-sm) {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width:$screen-xs) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -1881,24 +1898,70 @@
     height: 80px;
     margin: 10px auto 0;
     display: block;
+    
+    @media screen and (max-width:$screen-xs) {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 @media print {
-    body * {
-      visibility: hidden !important;
-    }
-    .print-doctor,
-    .print-doctor *:not(.head-btns *) {
-      visibility: visible !important;
-      color: black;
-    }
-    .print-doctor {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
+	body.modal-print {
+		.not-print {
+			visibility: hidden;
+			display: none;
+		}
+
+        .head-btns{
+            display: none;
+        }
+
+        .logo-black{
+            height: 50px;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+		.modal.show {
+			position: relative;
+
+			.modal-dialog {
+				width: 60vw;
+				max-width: none;
+				margin: 0 auto;
+
+				.modal-content {
+					height: 100%;
+					border: 0;
+				}
+
+				.modal-body {
+					overflow-y: visible;
+                    gap: 10px;
+
+                    .row{
+                        --bs-gutter-y: 0.5rem;
+                    }
+				}
+
+				.modal-footer {
+					visibility: hidden;
+					display: none;
+				}
+			}
+		}
+
+		.modal-backdrop {
+			visibility: hidden;
+			display: none;
+		}
+
+        .modal-dialog {
+            page-break-after: always;
+        }
+	}
 }
+
 
 
 // invoice-img
@@ -2106,13 +2169,9 @@
     
     .not-text{
         color: $black;
-        font-size: 17px;
+        font-size: 16px;
         font-family: fontDemi;
         transition: $main-transition;
-    
-        @media screen and (max-width: $screen-sm) {
-            font-size: 16px;
-        }
     
         @media screen and (max-width: $screen-xs) {
             font-size: 15px;
@@ -2424,7 +2483,6 @@
         }
     }
 }
-
 
 // product-m-containter
 .product-m-containter{

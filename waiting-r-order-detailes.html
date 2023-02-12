@@ -24,7 +24,7 @@
 
 
     <!-- Start Header -->
-    <header class="header-m">
+    <header class="header-m not-print">
 
         <div class="header-top">
             <div class="container">
@@ -142,7 +142,7 @@
 
 
     <!-- Start Navbar -->
-    <nav class="navbar-m">
+    <nav class="navbar-m not-print">
         <div class="container">
             <div class="navbar-content">
 
@@ -185,7 +185,7 @@
 
 
     <!--  Main Content  -->
-    <div class="bg-light main-padding">
+    <div class="bg-light main-padding not-print">
 
         <div class="container">
 
@@ -556,7 +556,7 @@
     </div>
 
     <!-- Buttons -->
-    <div class="cart-buttons-con bg-white sec-padding">
+    <div class="cart-buttons-con bg-white sec-padding not-print">
         <div class="container">
             <div class="buttons-m lg">
                 <a href="#" class="main-btn transparent-red lg" data-bs-target="#cancelModal" data-bs-toggle="modal">إلغاء الطلب</a>
@@ -564,11 +564,11 @@
         </div>
     </div>
 
-    <div class="bg-light sec-padding"></div>
+    <div class="bg-light sec-padding not-print"></div>
 
 
     <!-- Start Footer -->
-    <footer class="footer">
+    <footer class="footer not-print">
         <div class="container">
             <div class="row footer-cards gy-4">
 
@@ -655,7 +655,7 @@
     <!-- End Footer -->
 
     <!-- Start Copy Right -->
-    <div class="copy-right">
+    <div class="copy-right not-print">
         <div class="container">
 
             <div class="down-footer">
@@ -908,6 +908,23 @@
     <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- Select 2 -->
     <script src="./assets/plugins/select2/select2.js"></script>
+
+    <!-- Print -->
+    <script>
+        $('.print-modal').on('click', function(){
+            window.print();
+        })
+
+        window.addEventListener("beforeprint", () => {
+            let m = document.querySelector(".modal.show")
+            if (m != null) {
+                document.body.classList.add("modal-print")
+            }
+        })
+        window.addEventListener("afterprint", () => {
+            document.body.classList.remove("modal-print")
+        })
+    </script>
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
