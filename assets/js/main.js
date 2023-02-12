@@ -164,14 +164,71 @@ function filterLoader(el){
   }, 700)
 }
 
+// let oldHref;
 // verticale Or linear
-$('.select-filter').on('change', function(){
-  if(this.options[this.selectedIndex].getAttribute('data-filter') == 'linear'){
+$(document).on("change", ".select-filter", function () {
+  
+  if(this.options[this.selectedIndex].getAttribute('data-filter') == 'verticale'){
       $(this).parents('.filter-container').find('.cards-container').addClass('verticale');
+      sessionStorage.setItem("filter", JSON.stringify('verticale'));
     } else{
       $(this).parents('.filter-container').find('.cards-container').removeClass('verticale');
+      sessionStorage.setItem("filter", JSON.stringify('linear'));
   }
+
+  // oldHref = document.location.href
+
 });
+
+let dataFilter = sessionStorage.getItem("filter");
+let mySelect = document.querySelector('.select-filter');
+
+
+$('a').on('click', function(){
+  sessionStorage.setItem("filter", JSON.stringify('linear'));
+})
+
+$('.search-form').on('submit', function(){
+  sessionStorage.setItem("filter", JSON.stringify('linear'));
+})
+
+if(dataFilter){
+    filterClass = JSON.parse(dataFilter);
+    
+    // for(i = 0; i < mySelect.length; i++) {
+    //   trend = mySelect[i];
+
+    //   if (trend.getAttribute('data-filter') == filterClass) {
+    //     console.log(trend);
+    //     trend.selected = 'selected';
+    //   }
+    // }
+
+    $('.select-filter').val(filterClass)
+    $('.select-filter').trigger('change')
+
+    $('.filter-container').find('.cards-container').addClass(filterClass);
+    
+  } else{
+    $('.filter-container').find('.cards-container').removeClass('verticale');
+  
+}
+
+
+
+
+
+
+
+//   $('.select-filter').on('change', function(){
+// });
+
+
+
+
+
+
+
 
 // Input Number
 $(document).ready(function() {

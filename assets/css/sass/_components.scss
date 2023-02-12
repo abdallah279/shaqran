@@ -2981,6 +2981,14 @@
   display: none !important;
 }
 
+.accordion-collapse .dropdown-menu{
+  display: none;
+}
+
+.accordion-collapse.show .dropdown-menu{
+  display: block;
+}
+
 
 /********************* pagenation *********************/
 .product-pagenation{

@@ -3129,6 +3129,14 @@ html[lang=ar] .dropdown-menu.drop-lang.show {
   display: none !important;
 }
 
+.accordion-collapse .dropdown-menu {
+  display: none;
+}
+
+.accordion-collapse.show .dropdown-menu {
+  display: block;
+}
+
 /********************* pagenation *********************/
 .product-pagenation {
   display: flex;

@@ -3384,8 +3384,8 @@
                             <div class="tabs-show filter-container adv">
                                 <!-- Tabs -->
                                 <div class="nav nav-pills mb-3">
-                                    <div class="nav-link sm active">العادية</div>
-                                    <div class="nav-link sm">المروجة</div>
+                                    <div class="nav-link nav-link-adv sm active">العادية</div>
+                                    <div class="nav-link nav-link-adv sm">المروجة</div>
                                 </div>
 
                                 <!-- Section Filter -->
@@ -3409,8 +3409,8 @@
                                             طريقة العرض
                                         </label>
                                         <select class="select-filter">
-                                            <option value="" data-filter="grid">شبكة</option>
-                                            <option value="" data-filter="linear">طولي</option>
+                                            <option value="linear" data-filter="linear">شبكة</option>
+                                            <option value="verticale" data-filter="verticale">طولي</option>
                                         </select>
                                     </div>
 
@@ -3870,9 +3870,9 @@
    
                                 <!-- Tabs -->
                                 <div class="nav nav-pills mb-3">
-                                    <div class="nav-link sm active">أضفتها</div>
-                                    <div class="nav-link sm">فزت بها</div>
-                                    <div class="nav-link sm">اشتركت بها</div>
+                                    <div class="nav-link nav-link-mazad sm active">أضفتها</div>
+                                    <div class="nav-link nav-link-mazad sm">فزت بها</div>
+                                    <div class="nav-link nav-link-mazad sm">اشتركت بها</div>
                                 </div>
 
                                 <!-- Section Filter -->
@@ -3896,8 +3896,8 @@
                                             طريقة العرض
                                         </label>
                                         <select class="select-filter">
-                                            <option value="" data-filter="grid">شبكة</option>
-                                            <option value="" data-filter="linear">طولي</option>
+                                            <option value="linear" data-filter="linear">شبكة</option>
+                                            <option value="verticale" data-filter="verticale">طولي</option>
                                         </select>
                                     </div>
 
@@ -5349,8 +5349,15 @@
 
     <!-- Inner Tabs -->
     <script>
-        $(".nav .nav-link").on("click", function () {
-            $(".nav .nav-link").removeClass("active");
+        $(".nav .nav-link-adv").on("click", function () {
+            $(".nav .nav-link-adv").removeClass("active");
+            $(this).addClass("active");
+            $('.cards-container').fadeOut(0);
+            $('.cards-container').fadeIn(800);
+        });
+
+        $(".nav .nav-link-mazad").on("click", function () {
+            $(".nav .nav-link-mazad").removeClass("active");
             $(this).addClass("active");
             $('.cards-container').fadeOut(0);
             $('.cards-container').fadeIn(800);
