@@ -109,11 +109,15 @@
       border: 1px solid $border-color;
       
       @media screen and (max-width:$screen-sm) {
-        width: 220px;
+        width: 250px;
       }
       
       @media screen and (max-width:$screen-xs) {
-        width: 180px;
+        width: 220px;
+      }
+      
+      @media screen and (max-width:$screen-xxs) {
+        width: 175px;
       }
 
       #{$ltr} & {
@@ -1036,6 +1040,7 @@
   .sm-btn-img{
     max-width: 18px;
     max-height: 18px;
+    transition: $main-transition;
   }
 
   &.blue{
@@ -1063,12 +1068,19 @@
     &:hover, &.active{
       background-color: $white2;
       color: $blue2;
+      img{
+        filter: unset;
+      }
     }
   }
 
   &:hover, &.active{
     background-color: $blue2;
     color: $white;
+
+    img{
+      filter: grayscale(100%) brightness(450%) sepia(100%) hue-rotate(956deg) saturate(1000%) contrast(0.8);
+    }
   }
 }
 

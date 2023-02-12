@@ -299,12 +299,17 @@ input:focus {
 }
 @media screen and (max-width: 576px) {
   .search .search-input {
-    width: 220px;
+    width: 250px;
   }
 }
 @media screen and (max-width: 425px) {
   .search .search-input {
-    width: 180px;
+    width: 220px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .search .search-input {
+    width: 175px;
   }
 }
 html[lang=en] .search .search-input {
@@ -1200,6 +1205,7 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
 .sm-btn .sm-btn-img {
   max-width: 18px;
   max-height: 18px;
+  transition: all 0.3s ease;
 }
 .sm-btn.blue {
   background-color: #1D71B8;
@@ -1223,9 +1229,15 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   background-color: #F7FAFC;
   color: #1D71B8;
 }
+.sm-btn.light:hover img, .sm-btn.light.active img {
+  filter: unset;
+}
 .sm-btn:hover, .sm-btn.active {
   background-color: #1D71B8;
   color: #fff;
+}
+.sm-btn:hover img, .sm-btn.active img {
+  filter: grayscale(100%) brightness(450%) sepia(100%) hue-rotate(956deg) saturate(1000%) contrast(0.8);
 }
 
 .buttons-m {
@@ -3301,7 +3313,7 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
 @media screen and (max-width: 576px) {
   .header-m .head-down .head-down-con > .search {
     width: calc(100% - 30px);
-    height: 100px;
+    height: 120px;
   }
 }
 .header-m .head-down .head-down-con .contact-container {
@@ -4831,6 +4843,11 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 .pro-slide-img.lg {
   height: 734px;
+}
+@media screen and (max-width: 992px) {
+  .pro-slide-img.lg {
+    height: 420px !important;
+  }
 }
 @media screen and (max-width: 992px) {
   .pro-slide-img {

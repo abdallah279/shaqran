@@ -1120,6 +1120,10 @@
 
     &.lg{
         height: 734px;
+
+        @media screen and (max-width:$screen-lg) {
+            height: 420px !important;
+        }
     }
 
     @media screen and (max-width:$screen-lg) {
