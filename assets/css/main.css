@@ -1678,6 +1678,9 @@ html[lang=ar] .live-p {
   flex-direction: column;
   height: calc(100% - 65px);
 }
+.card-dir .main-btn {
+  flex-shrink: 0;
+}
 
 .main-items {
   display: flex;
@@ -3438,8 +3441,10 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
     background-color: #fff;
     box-shadow: 0 3px 26px rgba(133, 133, 133, 0.05);
     z-index: 1000;
-    padding: 60px 20px;
+    padding: 80px 20px;
     gap: 8px;
+    overflow-y: auto;
+    overflow-x: clip;
   }
   html[lang=en] .navbar-m .navbar-content .links {
     left: 0;
@@ -3456,6 +3461,16 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
   .navbar-m .navbar-content .links.active {
     transform: translateX(0) !important;
   }
+  .navbar-m .navbar-content .links::-webkit-scrollbar {
+    width: 5px;
+  }
+  .navbar-m .navbar-content .links::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .navbar-m .navbar-content .links::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: #1D71B8;
+  }
 }
 .navbar-m .navbar-content .links .link {
   font-size: 15px;
@@ -3471,6 +3486,7 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
     width: 100%;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
   }
   .navbar-m .navbar-content .links .link::before {
     position: absolute;
@@ -3560,22 +3576,16 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
     cursor: pointer;
   }
   html[lang=en] .navbar-m .navbar-content .links .close {
-    right: -45px;
+    right: 12px;
   }
   html[lang=ar] .navbar-m .navbar-content .links .close {
-    left: -45px;
+    left: 12px;
   }
 }
 @media screen and (max-width: 425px) {
   .navbar-m .navbar-content .links .close {
     max-width: 28px;
     max-height: 28px;
-  }
-  html[lang=en] .navbar-m .navbar-content .links .close {
-    right: -35px;
-  }
-  html[lang=ar] .navbar-m .navbar-content .links .close {
-    left: -35px;
   }
 }
 html[lang=en] .navbar-m .navbar-content .buttons-m {
@@ -3723,6 +3733,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   border-top: 1px solid #D5D5D5;
   position: relative;
   z-index: 5;
+  background-color: #fff;
 }
 .copy-right .down-footer {
   display: flex;
@@ -3744,8 +3755,8 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   font-size: 13px;
 }
 .copy-right .down-footer .right-spe .footer-new-img {
-  width: 70px;
-  margin-bottom: 8px;
+  max-width: 70px;
+  margin-bottom: 12px;
 }
 .copy-right .down-footer .right-spe .links-spe {
   display: flex;
@@ -3770,7 +3781,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   }
 }
 .home-section .home-item {
-  padding: 200px 0;
+  padding: 170px 0;
   color: #fff;
 }
 @media screen and (max-width: 992px) {
@@ -3812,7 +3823,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   text-align: center;
 }
 .home-section .home-item .home-content .home-title .text {
-  font-size: 23px;
+  font-size: 20px;
 }
 @media screen and (max-width: 992px) {
   .home-section .home-item .home-content .home-title .text {
@@ -3821,7 +3832,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 .home-section .home-item .home-content .home-title .title {
   font-family: fontDemi;
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 10px;
 }
 @media screen and (max-width: 992px) {
@@ -3831,7 +3842,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 .home-section .home-item .home-content .home-desc {
   line-height: 1.6;
-  font-size: 19px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   font-family: fontReg;
@@ -4566,8 +4577,15 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   max-height: 425px;
   overflow: auto;
 }
+@media screen and (max-width: 576px) {
+  .rating-items {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    overflow: unset;
+  }
+}
 .rating-items::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 .rating-items::-webkit-scrollbar-track {
   background: transparent;
