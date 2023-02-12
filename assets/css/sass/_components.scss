@@ -347,9 +347,9 @@
 // Transform Betwwen Cards
 .filter-select{
   width: fit-content;
-  margin-right: auto;
   display: flex;
   align-items: center;
+  @include dir-margin-left(auto);
 
   .label-filter{
     font-size: 16px;
@@ -3051,6 +3051,10 @@
 
       i{
         font-size: 15px;
+
+        #{$ltr} & {
+          transform: rotateY(180deg);
+        }
       }
 
       &:focus{

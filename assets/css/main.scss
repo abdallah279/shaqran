@@ -1659,6 +1659,7 @@
         i{
             #{$ltr} & {
                 margin-left: auto;
+                transform: rotateY(180deg);
             }
             #{$rtl} & {
                 margin-right: auto;
@@ -1961,8 +1962,6 @@
         }
 	}
 }
-
-
 
 // invoice-img
 .invoice-img{

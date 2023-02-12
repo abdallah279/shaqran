@@ -537,9 +537,14 @@ html[lang=en] .main-title .anchor i {
 .filter-select {
   width: -moz-fit-content;
   width: fit-content;
-  margin-right: auto;
   display: flex;
   align-items: center;
+}
+html[lang=en] .filter-select {
+  margin-left: auto;
+}
+html[lang=ar] .filter-select {
+  margin-right: auto;
 }
 .filter-select .label-filter {
   font-size: 16px;
@@ -3210,6 +3215,9 @@ html[lang=ar] .product-pagenation .pagenation-text .numbers {
 .product-pagenation .pagination-me .page-link i {
   font-size: 15px;
 }
+html[lang=en] .product-pagenation .pagination-me .page-link i {
+  transform: rotateY(180deg);
+}
 .product-pagenation .pagination-me .page-link:focus {
   box-shadow: none;
   background-color: transparent;
@@ -5360,6 +5368,7 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
 }
 html[lang=en] .side-links .side-link i {
   margin-left: auto;
+  transform: rotateY(180deg);
 }
 html[lang=ar] .side-links .side-link i {
   margin-right: auto;
