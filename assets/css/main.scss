@@ -1041,6 +1041,10 @@
             gap: 8px;
             padding-bottom: 15px;
 
+            @media screen and (max-width:$screen-xxs) {
+                gap: 3px;
+            }
+
             .store-btn{
                 display: flex;
                 align-items: center;
@@ -1052,13 +1056,14 @@
 
                 @media screen and (max-width:$screen-xxs) {
                     font-size: 14px;
+                    gap: 3px;
                 }
 
                 .ic{
                     font-size: 14px;
 
                     @media screen and (max-width:$screen-xxs) {
-                        font-size: 12px;
+                        font-size: 11px;
                     }
                 }
 
@@ -1306,13 +1311,21 @@
         color: $blue2;
         font-family: fontDemi;
         line-height: 1.7;
-    }
 
+        @media screen and (max-width:$screen-xs) {
+            font-size: 14px;
+        }
+    }
+    
     .old-price{
         font-size: 16px;
         color: $light;
         text-decoration: line-through;
         line-height: 1.7;
+
+        @media screen and (max-width:$screen-xs) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -1410,6 +1423,10 @@
 
                     @media screen and (max-width:$screen-sm) {
                         width: auto;
+                    }
+
+                    @media screen and (max-width:$screen-xs) {
+                        font-size: 14px;
                     }
 
                     &.lg{
