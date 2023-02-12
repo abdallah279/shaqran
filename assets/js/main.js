@@ -33,12 +33,6 @@ $(".open-side-icon").on('click', function(){
   $('.overlay-m').fadeIn(500);
 })
 
-// User Account SideBar
-$('.user-link-open').on('click', function(){
-  $('.side-links-con').addClass('open');
-  $('.overlay-m').fadeIn(500);
-})
-
 // User Account filter
 $('.filter-open').on('click', function(){
   $('.accordion-con').addClass('open');
@@ -156,15 +150,14 @@ function filterLoader(el){
   $(el).parents('.account-section').find('.load').fadeIn();
   $(el).parents('.account-section').find('.load-bg').fadeIn(200);
   
-  setTimeout(() =>{
-    $(el).parents('.side-filter-cards').find('.load').fadeOut(200);
-    $(el).parents('.side-filter-cards').find('.load-bg').fadeOut();
-    $(el).parents('.account-section').find('.load').fadeOut(200);
-    $(el).parents('.account-section').find('.load-bg').fadeOut();
-  }, 700)
+  // setTimeout(() =>{
+  //   $(el).parents('.side-filter-cards').find('.load').fadeOut(200);
+  //   $(el).parents('.side-filter-cards').find('.load-bg').fadeOut();
+  //   $(el).parents('.account-section').find('.load').fadeOut(200);
+  //   $(el).parents('.account-section').find('.load-bg').fadeOut();
+  // }, 700)
 }
 
-// let oldHref;
 // verticale Or linear
 $(document).on("change", ".select-filter", function () {
   
@@ -175,8 +168,6 @@ $(document).on("change", ".select-filter", function () {
       $(this).parents('.filter-container').find('.cards-container').removeClass('verticale');
       sessionStorage.setItem("filter", JSON.stringify('linear'));
   }
-
-  // oldHref = document.location.href
 
 });
 
@@ -192,17 +183,9 @@ $('.search-form').on('submit', function(){
   sessionStorage.setItem("filter", JSON.stringify('linear'));
 })
 
+// Get Value From Local Storage
 if(dataFilter){
     filterClass = JSON.parse(dataFilter);
-    
-    // for(i = 0; i < mySelect.length; i++) {
-    //   trend = mySelect[i];
-
-    //   if (trend.getAttribute('data-filter') == filterClass) {
-    //     console.log(trend);
-    //     trend.selected = 'selected';
-    //   }
-    // }
 
     $('.select-filter').val(filterClass)
     $('.select-filter').trigger('change')
@@ -213,21 +196,6 @@ if(dataFilter){
     $('.filter-container').find('.cards-container').removeClass('verticale');
   
 }
-
-
-
-
-
-
-
-//   $('.select-filter').on('change', function(){
-// });
-
-
-
-
-
-
 
 
 // Input Number
