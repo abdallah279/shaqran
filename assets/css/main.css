@@ -1837,11 +1837,9 @@ html[lang=ar] .live-p {
 }
 
 .new-badge {
-  padding: 5px;
   display: inline-block;
+  height: 10px;
   border-radius: 50%;
-  width: 8px;
-  height: 8px;
 }
 html[lang=en] .new-badge {
   margin-right: 3px;
@@ -3863,7 +3861,7 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   }
 }
 .home-section .home-item {
-  padding: 170px 0;
+  padding: 200px 0;
   color: #fff;
 }
 @media screen and (max-width: 992px) {
@@ -5672,46 +5670,47 @@ html[lang=ar] .side-links .side-link::after {
 }
 
 @media print {
-  body.modal-print .not-print {
+  body .not-print {
     visibility: hidden;
     display: none;
+    height: 0;
   }
-  body.modal-print .head-btns {
-    display: none;
-  }
-  body.modal-print .logo-black {
+  body .logo-black {
     height: 50px;
     width: 120px;
     margin-bottom: 10px;
   }
-  body.modal-print .modal.show {
+  body .modal.show {
     position: relative;
   }
-  body.modal-print .modal.show .modal-dialog {
-    width: 60vw;
+  body .modal.show .head-btns {
+    display: none;
+  }
+  body .modal.show .modal-dialog {
+    width: 100vw;
     max-width: none;
     margin: 0 auto;
   }
-  body.modal-print .modal.show .modal-dialog .modal-content {
+  body .modal.show .modal-dialog .modal-content {
     height: 100%;
     border: 0;
   }
-  body.modal-print .modal.show .modal-dialog .modal-body {
+  body .modal.show .modal-dialog .modal-body {
     overflow-y: visible;
     gap: 10px;
   }
-  body.modal-print .modal.show .modal-dialog .modal-body .row {
+  body .modal.show .modal-dialog .modal-body .row {
     --bs-gutter-y: 0.5rem;
   }
-  body.modal-print .modal.show .modal-dialog .modal-footer {
+  body .modal.show .modal-dialog .modal-footer {
     visibility: hidden;
     display: none;
   }
-  body.modal-print .modal-backdrop {
+  body .modal-backdrop {
     visibility: hidden;
     display: none;
   }
-  body.modal-print .modal-dialog {
+  body .modal-dialog {
     page-break-after: always;
   }
 }

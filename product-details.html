@@ -272,14 +272,16 @@
                                         <label for="" class="main-label">اللون</label>
                                         <div class="main-input">
 
-                                            <select class="select-color">
-                                                <option value="1" data-badge="" data-color="red">
+                                            <select class="select-color" >
+                                                <option value="" data-badge="" data-color="" data-width="0" selected disabled>اختر اللون</option>
+
+                                                <option value="1" data-badge="" data-color="red" data-width="10px">
                                                     احمر
                                                 </option>
-                                                <option value="2" data-badge="" data-color="blue">
+                                                <option value="2" data-badge="" data-color="blue" data-width="10px">
                                                     أزرق
                                                 </option>
-                                                <option value="3" data-badge="" data-color="yellow">
+                                                <option value="3" data-badge="" data-color="yellow" data-width="10px">
                                                     أصفر
                                                 </option>
                                               </select>
@@ -339,7 +341,7 @@
                                         </span>
                                     </div>
 
-                                    <button type="submit" class="add-to-cart">
+                                    <button type="button" class="add-to-cart">
                                         <i class="fas fa-shopping-cart"></i>
                                         أضف للسلة
                                     </button>
@@ -1037,19 +1039,23 @@
             templateSelection: iformat,
             templateResult: iformat,
             allowHtml: true,
-            allowClear: true,
             dir: isRtl2 ? "rtl" : "ltr",
             minimumResultsForSearch: Infinity,
+            // placeholder: 'اختر اللون',
+            allowClear: true,
         });
         function iformat(icon, badge, color) {
             var originalOption = icon.element;
             var originalOptionBadge = $(originalOption).data("badge");
             var originalOptionColor = $(originalOption).data("color");
+            var originalOptionWidth = $(originalOption).data("width");
             return $(
-            `<span class="flex-span">  <span class="new-badge" style="background-color: ${originalOptionColor} ;">${originalOptionBadge}</span> <sapn>${icon.text}</span></span>`
+            `<span class="flex-span">  <span class="new-badge" style="background-color: ${originalOptionColor} ; width:${originalOptionWidth}">${originalOptionBadge}</span> <sapn>${icon.text}</span></span>`
             );
         }
         });
+
+        
     </script>
 
     <!-- Main Js -->

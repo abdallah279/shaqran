@@ -1642,10 +1642,10 @@
 }
 
 .new-badge {
-  padding: 5px;
   @include dir-margin-right(3px);
   display: inline-block;
-  @include circle(8px);
+  height: 10px;
+  border-radius: 50%;
 }
 
 
@@ -2003,7 +2003,6 @@
         padding: 6px auto;
       }
 
-
       .select2-selection__arrow {
         top: 50%;
         transform: translateY(-50%);
@@ -2022,6 +2021,7 @@
           justify-content: center;
         }
       }
+  
       @media (max-width: $screen-xs) {
         padding: 10px 5px;
       }

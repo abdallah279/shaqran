@@ -914,16 +914,6 @@
         $('.print-modal').on('click', function(){
             window.print();
         })
-
-        window.addEventListener("beforeprint", () => {
-            let m = document.querySelector(".modal.show")
-            if (m != null) {
-                document.body.classList.add("modal-print")
-            }
-        })
-        window.addEventListener("afterprint", () => {
-            document.body.classList.remove("modal-print")
-        })
     </script>
 
     <!-- Main Js -->
