@@ -195,7 +195,7 @@
 
             <!-- Start Carsoul Information -->
             <div class="carousel-information card-style card-padding mb-4">
-                <div class="row gy-5">
+                <div class="row gy-4">
 
                     <div class="col-xl-7 col-lg-6">
 
@@ -271,12 +271,19 @@
                                     <div class="input-g">
                                         <label for="" class="main-label">اللون</label>
                                         <div class="main-input">
-                                            <select name="" id="" class="select">
-                                                <option value="" selected disabled>اختر اللون</option>
-                                                <option value="">احمر</option>
-                                                <option value="">ابيض</option>
-                                                <option value="">اصفر</option>
-                                            </select>
+
+                                            <select class="select-color">
+                                                <option value="1" data-badge="" data-color="red">
+                                                    احمر
+                                                </option>
+                                                <option value="2" data-badge="" data-color="blue">
+                                                    أزرق
+                                                </option>
+                                                <option value="3" data-badge="" data-color="yellow">
+                                                    أصفر
+                                                </option>
+                                              </select>
+                    
                                         </div>
                                     </div>
     
@@ -332,7 +339,7 @@
                                         </span>
                                     </div>
 
-                                    <button type="button" class="add-to-cart">
+                                    <button type="submit" class="add-to-cart">
                                         <i class="fas fa-shopping-cart"></i>
                                         أضف للسلة
                                     </button>
@@ -342,8 +349,8 @@
                                     </button>
 
                                     <button type="button" class="sm-btn">
-                                    <img src="assets/imgs/icons/shar.png" class="sm-btn-img" alt="">
-                                </button>
+                                        <img src="assets/imgs/icons/shar.png" class="sm-btn-img" alt="">
+                                    </button>
 
                                 </div>
                             </form>
@@ -1018,6 +1025,31 @@
         } else {
             $('.store-med').removeClass('vert');
         }
+    </script>
+
+    <!-- Color Select -->
+    <script>
+        let isRtl2 = $('html[lang="ar"]').length > 0;
+
+        $(document).ready(function () {
+        $(".select-color").select2({
+            width: "100%",
+            templateSelection: iformat,
+            templateResult: iformat,
+            allowHtml: true,
+            allowClear: true,
+            dir: isRtl2 ? "rtl" : "ltr",
+            minimumResultsForSearch: Infinity,
+        });
+        function iformat(icon, badge, color) {
+            var originalOption = icon.element;
+            var originalOptionBadge = $(originalOption).data("badge");
+            var originalOptionColor = $(originalOption).data("color");
+            return $(
+            `<span class="flex-span">  <span class="new-badge" style="background-color: ${originalOptionColor} ;">${originalOptionBadge}</span> <sapn>${icon.text}</span></span>`
+            );
+        }
+        });
     </script>
 
     <!-- Main Js -->

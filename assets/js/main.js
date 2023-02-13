@@ -1,6 +1,6 @@
 // loader js
 $(window).on("load", function () {
-    $(".loader").delay(400).fadeOut(1000);
+    $(".loader").delay(300).fadeOut(1000);
 });
 
 // Active Link
@@ -86,6 +86,7 @@ $(".select").select2({
   dir: isRtl ? "rtl" : "ltr",
   minimumResultsForSearch: Infinity,
 });
+
 
 // Search Select To
 $(".select-search").select2({

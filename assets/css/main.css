@@ -1217,10 +1217,23 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   cursor: pointer;
   transition: all 0.3s ease;
 }
+@media screen and (max-width: 425px) {
+  .sm-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
 .sm-btn .sm-btn-img {
   max-width: 18px;
   max-height: 18px;
   transition: all 0.3s ease;
+}
+@media screen and (max-width: 425px) {
+  .sm-btn .sm-btn-img {
+    max-width: 16px;
+    max-height: 16px;
+  }
 }
 .sm-btn.blue {
   background-color: #1D71B8;
@@ -1673,6 +1686,13 @@ html[lang=ar] .live-p {
     padding: 20px 15px;
   }
 }
+@media screen and (max-width: 425px) {
+  .form-style .main-btn {
+    width: 140px;
+    height: 46px;
+    font-size: 14px;
+  }
+}
 
 .form-img {
   display: block;
@@ -1814,6 +1834,20 @@ html[lang=ar] .live-p {
 .form-btns {
   display: flex;
   gap: 10px;
+}
+
+.new-badge {
+  padding: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+html[lang=en] .new-badge {
+  margin-right: 3px;
+}
+html[lang=ar] .new-badge {
+  margin-left: 3px;
 }
 
 .height-full {
@@ -2140,10 +2174,10 @@ html[lang=ar] .select-filter ~ .select2-container--filter-m .select2-selection--
   font-size: 14px;
 }
 
-.select ~ .select2, .select-multi ~ .select2 {
+.select ~ .select2, .select-multi ~ .select2, .select-color ~ .select2 {
   width: 100% !important;
 }
-.select ~ .select2 .select2-selection--single, .select ~ .select2 .select2-selection--multiple, .select-multi ~ .select2 .select2-selection--single, .select-multi ~ .select2 .select2-selection--multiple {
+.select ~ .select2 .select2-selection--single, .select ~ .select2 .select2-selection--multiple, .select-multi ~ .select2 .select2-selection--single, .select-multi ~ .select2 .select2-selection--multiple, .select-color ~ .select2 .select2-selection--single, .select-color ~ .select2 .select2-selection--multiple {
   min-height: 48px;
   display: flex;
   align-items: center;
@@ -2154,11 +2188,11 @@ html[lang=ar] .select-filter ~ .select2-container--filter-m .select2-selection--
   border: 1px solid #D5D5D5;
 }
 @media (max-width: 425px) {
-  .select ~ .select2 .select2-selection--single, .select ~ .select2 .select2-selection--multiple, .select-multi ~ .select2 .select2-selection--single, .select-multi ~ .select2 .select2-selection--multiple {
+  .select ~ .select2 .select2-selection--single, .select ~ .select2 .select2-selection--multiple, .select-multi ~ .select2 .select2-selection--single, .select-multi ~ .select2 .select2-selection--multiple, .select-color ~ .select2 .select2-selection--single, .select-color ~ .select2 .select2-selection--multiple {
     height: 44px;
   }
 }
-.select ~ .select2 .select2-selection--single .select2-selection__rendered, .select ~ .select2 .select2-selection--multiple .select2-selection__rendered, .select-multi ~ .select2 .select2-selection--single .select2-selection__rendered, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__rendered {
+.select ~ .select2 .select2-selection--single .select2-selection__rendered, .select ~ .select2 .select2-selection--multiple .select2-selection__rendered, .select-multi ~ .select2 .select2-selection--single .select2-selection__rendered, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__rendered, .select-color ~ .select2 .select2-selection--single .select2-selection__rendered, .select-color ~ .select2 .select2-selection--multiple .select2-selection__rendered {
   color: #adabab;
   font-size: 13px;
   display: flex;
@@ -2166,19 +2200,19 @@ html[lang=ar] .select-filter ~ .select2-container--filter-m .select2-selection--
   gap: 8px;
   padding: 6px auto;
 }
-.select ~ .select2 .select2-selection--single .select2-selection__arrow, .select ~ .select2 .select2-selection--multiple .select2-selection__arrow, .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow {
+.select ~ .select2 .select2-selection--single .select2-selection__arrow, .select ~ .select2 .select2-selection--multiple .select2-selection__arrow, .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow, .select-color ~ .select2 .select2-selection--single .select2-selection__arrow, .select-color ~ .select2 .select2-selection--multiple .select2-selection__arrow {
   top: 50%;
   transform: translateY(-50%);
   height: auto;
   border: 0;
 }
-html[lang=en] .select ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=en] .select ~ .select2 .select2-selection--multiple .select2-selection__arrow, html[lang=en] .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=en] .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow {
+html[lang=en] .select ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=en] .select ~ .select2 .select2-selection--multiple .select2-selection__arrow, html[lang=en] .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=en] .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow, html[lang=en] .select-color ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=en] .select-color ~ .select2 .select2-selection--multiple .select2-selection__arrow {
   right: 12px;
 }
-html[lang=ar] .select ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=ar] .select ~ .select2 .select2-selection--multiple .select2-selection__arrow, html[lang=ar] .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=ar] .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow {
+html[lang=ar] .select ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=ar] .select ~ .select2 .select2-selection--multiple .select2-selection__arrow, html[lang=ar] .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=ar] .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow, html[lang=ar] .select-color ~ .select2 .select2-selection--single .select2-selection__arrow, html[lang=ar] .select-color ~ .select2 .select2-selection--multiple .select2-selection__arrow {
   left: 12px;
 }
-.select ~ .select2 .select2-selection--single .select2-selection__arrow::after, .select ~ .select2 .select2-selection--multiple .select2-selection__arrow::after, .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow::after, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow::after {
+.select ~ .select2 .select2-selection--single .select2-selection__arrow::after, .select ~ .select2 .select2-selection--multiple .select2-selection__arrow::after, .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow::after, .select-multi ~ .select2 .select2-selection--multiple .select2-selection__arrow::after, .select-color ~ .select2 .select2-selection--single .select2-selection__arrow::after, .select-color ~ .select2 .select2-selection--multiple .select2-selection__arrow::after {
   content: "\f0dd";
   font-family: "Font Awesome 5 Free";
   display: flex;
@@ -2189,11 +2223,11 @@ html[lang=ar] .select ~ .select2 .select2-selection--single .select2-selection__
   justify-content: center;
 }
 @media (max-width: 425px) {
-  .select ~ .select2 .select2-selection--single, .select ~ .select2 .select2-selection--multiple, .select-multi ~ .select2 .select2-selection--single, .select-multi ~ .select2 .select2-selection--multiple {
+  .select ~ .select2 .select2-selection--single, .select ~ .select2 .select2-selection--multiple, .select-multi ~ .select2 .select2-selection--single, .select-multi ~ .select2 .select2-selection--multiple, .select-color ~ .select2 .select2-selection--single, .select-color ~ .select2 .select2-selection--multiple {
     padding: 10px 5px;
   }
 }
-.select ~ .select2 .select2-selection--single .select2-selection__arrow b, .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow b {
+.select ~ .select2 .select2-selection--single .select2-selection__arrow b, .select-multi ~ .select2 .select2-selection--single .select2-selection__arrow b, .select-color ~ .select2 .select2-selection--single .select2-selection__arrow b {
   display: none;
 }
 
@@ -2208,6 +2242,10 @@ html[lang=ar] .select ~ .select2 .select2-selection--single .select2-selection__
 .select2-container .select2-search--inline .select2-search__field::placeholder {
   color: #adabab;
   font-size: 13px;
+}
+
+.select2-selection__clear {
+  display: none;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
@@ -2297,10 +2335,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
 }
 @media screen and (max-width: 425px) {
   .number-input {
-    border: none;
-    justify-content: space-between;
-    gap: 5px;
-    height: 24px;
+    height: 40px;
   }
 }
 .number-input input {
@@ -2311,12 +2346,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
 }
 @media screen and (max-width: 425px) {
   .number-input input {
-    border: 1px solid #D5D5D5;
-    background-color: #fff;
-    width: 36px;
-    border-radius: 4px;
     font-size: 15px;
-    height: 100%;
   }
 }
 .number-input .btn-num {
@@ -2326,14 +2356,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
 }
 @media screen and (max-width: 425px) {
   .number-input .btn-num {
-    border-radius: 4px;
-    width: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #F7FAFC;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -2350,6 +2373,12 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
   gap: 8px;
   color: #2D2E83;
   background-color: transparent;
+}
+@media screen and (max-width: 425px) {
+  .add-to-cart {
+    height: 40px;
+    font-size: 14px;
+  }
 }
 .add-to-cart:hover {
   background-color: #2D2E83;
@@ -3023,6 +3052,11 @@ html[lang=ar] .modal-dialog .close-model-btn {
   border: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
+@media screen and (max-width: 425px) {
+  .accordion-item .accordion-button {
+    font-size: 15px;
+  }
+}
 .accordion-item .accordion-button::after {
   background-image: none;
   content: "\f107";
@@ -3056,6 +3090,11 @@ html[lang=ar] .accordion-item .accordion-button::after {
   cursor: pointer;
   background: none;
   width: 100%;
+}
+@media screen and (max-width: 425px) {
+  .accordion-item .accordion-body .link {
+    font-size: 14px;
+  }
 }
 html[lang=en] .accordion-item .accordion-body .link i {
   transform: rotateY(180deg);
@@ -4361,6 +4400,10 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
     margin-bottom: 0;
   }
 }
+.cards-container.verticale .card-m .card-m-body .main-btn {
+  width: 210px;
+  border-radius: 6px;
+}
 @media screen and (max-width: 768px) {
   .cards-container.verticale .card-m .card-m-body .main-btn {
     width: -moz-fit-content;
@@ -4954,6 +4997,11 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   align-items: center;
   gap: 8px;
 }
+@media screen and (max-width: 425px) {
+  .product-content .product-name {
+    font-size: 16px;
+  }
+}
 .product-content .product-items .product-item {
   margin-bottom: 18px;
 }
@@ -4962,9 +5010,19 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   color: #777777;
   margin-bottom: 8px;
 }
+@media screen and (max-width: 425px) {
+  .product-content .product-items .product-item .product-item-top {
+    font-size: 15px;
+  }
+}
 .product-content .product-items .product-item .product-item-bottom {
   font-size: 15px;
   color: #202020;
+}
+@media screen and (max-width: 425px) {
+  .product-content .product-items .product-item .product-item-bottom {
+    font-size: 14px;
+  }
 }
 .product-content .product-items .product-item .pr-ic {
   max-height: 15px;
@@ -5306,6 +5364,8 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
     height: 100%;
     background-color: #fff;
     z-index: 1000;
+    overflow-y: auto;
+    overflow-x: clip;
   }
   html[lang=en] .accordion-con {
     left: 0;
@@ -5318,6 +5378,16 @@ html[lang=ar] .cards-container .card-m .card-m-body .card-content .card-info-con
   }
   html[lang=ar] .accordion-con {
     transform: translateX(150%);
+  }
+  .accordion-con::-webkit-scrollbar {
+    width: 4px;
+  }
+  .accordion-con::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .accordion-con::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: #1D71B8;
   }
   .accordion-con.open {
     transform: translateX(0) !important;
@@ -5977,6 +6047,16 @@ html[lang=ar] .chat-form .chat-btn {
   color: #202020;
   font-family: fontDemi;
 }
+@media screen and (max-width: 576px) {
+  .rating-content .rating-head {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .rating-content .rating-head {
+    font-size: 28px;
+  }
+}
 .rating-content .icons {
   display: flex;
   align-items: center;
@@ -5984,12 +6064,22 @@ html[lang=ar] .chat-form .chat-btn {
   font-size: 26px;
   color: #b1b0b0;
 }
+@media screen and (max-width: 425px) {
+  .rating-content .icons {
+    font-size: 22px;
+  }
+}
 .rating-content .icons .color {
   color: #FCB91D;
 }
 .rating-content .rating-text {
   font-size: 20px;
   color: #6c757d;
+}
+@media screen and (max-width: 425px) {
+  .rating-content .rating-text {
+    font-size: 18px;
+  }
 }
 
 .conversation-item {
@@ -6028,13 +6118,28 @@ html[lang=ar] .chat-form .chat-btn {
   color: #202020;
   font-family: fontDemi;
 }
+@media screen and (max-width: 425px) {
+  .conversation-item .conversation-right .conversation-info .conversation-name {
+    font-size: 14px;
+  }
+}
 .conversation-item .conversation-right .conversation-info .conversation-text {
   font-size: 14px;
   color: #707070;
 }
+@media screen and (max-width: 425px) {
+  .conversation-item .conversation-right .conversation-info .conversation-text {
+    font-size: 13px;
+  }
+}
 .conversation-item .conversation-left .conversation-date {
   font-size: 15px;
   color: #6c757d;
+}
+@media screen and (max-width: 425px) {
+  .conversation-item .conversation-left .conversation-date {
+    font-size: 13px;
+  }
 }
 
 .address-item {
@@ -6088,8 +6193,8 @@ html[lang=ar] .chat-form .chat-btn {
 }
 @media screen and (max-width: 425px) {
   .invoices-table thead th {
-    font-size: 16px;
-    padding: 20px 10px 15px;
+    font-size: 15px;
+    padding: 15px 12px;
   }
 }
 .invoices-table tbody tr {
@@ -6104,8 +6209,8 @@ html[lang=ar] .chat-form .chat-btn {
 }
 @media screen and (max-width: 425px) {
   .invoices-table tbody tr td {
-    font-size: 15px;
-    padding: 16px 10px;
+    font-size: 14px;
+    padding: 15px 12px;
   }
 }
 

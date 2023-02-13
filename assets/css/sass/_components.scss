@@ -1045,10 +1045,21 @@
   cursor: pointer;
   transition: $main-transition;
 
+  @media screen and (max-width:$screen-xs) {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
   .sm-btn-img{
     max-width: 18px;
     max-height: 18px;
     transition: $main-transition;
+    
+    @media screen and (max-width:$screen-xs) {
+      max-width: 16px;
+      max-height: 16px;
+    }
   }
 
   &.blue{
@@ -1487,6 +1498,15 @@
     }
   }
 
+
+  .main-btn{
+    @media screen and (max-width:$screen-xs) {
+      width: 140px;
+      height: 46px;
+      font-size: 14px;
+    }
+  }
+
 }
 
 .form-img{
@@ -1619,6 +1639,13 @@
 .form-btns{
   display: flex;
   gap: 10px;
+}
+
+.new-badge {
+  padding: 5px;
+  @include dir-margin-right(3px);
+  display: inline-block;
+  @include circle(8px);
 }
 
 
@@ -1947,7 +1974,7 @@
 
 
 // Normal Select Two
-.select, .select-multi {
+.select, .select-multi, .select-color {
   ~ .select2 {
     width: 100% !important;
 
@@ -2014,6 +2041,10 @@
     color: $placholder-color;
     font-size: 13px;
   }
+}
+
+.select2-selection__clear{
+  display: none;
 }
 
 
@@ -2090,10 +2121,7 @@
   height: 42px;
   
   @media screen and (max-width:$screen-xs) {
-    border: none;
-    justify-content: space-between;
-    gap: 5px;
-    height: 24px;
+    height: 40px;
   }
 
   input{
@@ -2103,12 +2131,7 @@
     text-align: center;
 
     @media screen and (max-width:$screen-xs) {
-      border: 1px solid $border-color;
-      background-color: $white;
-      width: 36px;
-      border-radius: 4px;
       font-size: 15px;
-      height: 100%;
     }
   }
   .btn-num{
@@ -2117,12 +2140,7 @@
     cursor: pointer;
     
     @media screen and (max-width:$screen-xs) {
-      border-radius: 4px;
-      width: 26px;
-      @include center;
-      height: 100%;
-      background-color: $white2;
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 }
@@ -2138,6 +2156,11 @@
   gap: 8px;
   color: $blue;
   background-color: transparent;
+
+  @media screen and (max-width:$screen-xs) {
+    height: 40px;
+    font-size: 14px;
+  }
 
   &:hover{
     background-color: $blue;
@@ -2846,6 +2869,10 @@
     color: $blue2 !important;
     border: none;
     box-shadow: $sec-shadow ;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 15px;
+    }
     
     &::after {
         background-image: none;
@@ -2882,6 +2909,10 @@
       cursor: pointer;
       background: none;
       width: 100%;
+
+      @media screen and (max-width:$screen-xs) {
+        font-size: 14px;
+      }
 
       i{
         #{$ltr} & {
